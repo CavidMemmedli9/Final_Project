@@ -681,10 +681,6 @@
       "PackagePath": "staticwebassets\\assets\\images\\popular-categories\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\3-Cavid1234.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\popular-categories\\3-Cavid1234.jpg"
-    },
-    {
       "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\popular-categories\\3.jpg"
     },
@@ -891,6 +887,18 @@
     {
       "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\testimonials\\pic3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\testimonials\\pic3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\testimonials\\pic4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonials\\pic4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\testimonials\\pic5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonials\\pic5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\testimonials\\pic6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonials\\pic6.jpg"
     },
     {
       "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic1.jpg",

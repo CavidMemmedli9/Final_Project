@@ -11410,7 +11410,7 @@ opacity:1;
 
   height: 500px;
 
-  background-image: url("../assets/images/whychoose/pic1.jpg");
+  background-image: url("/assets/images/whychoose/pic1.jpg");
 
   background-position: center;
 
@@ -19881,7 +19881,7 @@ Catesgories
 
   margin-bottom: -120px;
 
-  background-image: url("../assets/images/cat-pic.jpg");
+  background-image: url("../images/cat-pic.jpg");
 
   background-size: cover;
 

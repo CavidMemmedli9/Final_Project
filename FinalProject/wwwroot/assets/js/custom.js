@@ -966,7 +966,7 @@
 
 		jQuery('.owl-caty-carousel').owlCarousel({
 
-        loop:true,
+        loop:false,
 
 		margin:30,
 
@@ -1000,7 +1000,7 @@
 
             1024:{
 
-                items:4
+                items:3
 
             }
 

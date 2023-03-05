@@ -1,0 +1,502 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="windows8">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+<div class="page-wraper">
+    <!-- HEADER START -->
+    <header class="site-header header-style-2 mobile-sider-drawer-menu header-full-width">
+        <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+            <div class="main-bar">
+
+                <div class="container clearfix">
+                    <!--Logo section start-->
+                    <div class="logo-header">
+                        <div class="logo-header-inner logo-header-one">
+                            <a href="index-2.html">
+                                <img src="~/assets/images/logo-dark.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!--Logo section End-->
+                    <!-- NAV Toggle Button -->
+                    <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar icon-bar-first"></span>
+                        <span class="icon-bar icon-bar-two"></span>
+                        <span class="icon-bar icon-bar-three"></span>
+                    </button>
+
+                    <!-- MAIN Vav -->
+                    <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
+
+                        <ul class=" nav navbar-nav">
+                            <li class="has-child current-menu-item">
+                                <a href="javascript:;">Home</a>
+                                <ul class="sub-menu">
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Pages</a>
+                                <ul class="sub-menu">
+                                    <li><a asp-controller="about" asp-action="index">About us</a></li>
+                                    <li>
+                                        <a href="javascript:;">Categories</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="categories-detail.html">Categories Detail</a></li>
+                                        </ul>
+                                    </li>
+
+                                 
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Profile</a>
+                                
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Jobs</a>
+                                <ul class="sub-menu">
+                                    <li><a href="job-detail.html">Job detail</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Blog</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-detail.html">Blog detail</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Header Right Section-->
+                    <div class="extra-nav header-2-nav">
+                        <div class="extra-cell">
+                            <!--Login-->
+                            <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                                <i class="fa fa-user"></i> Login
+                            </button>
+                            <!--Sign up-->
+                            <a href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                <i class="fa fa-plus"></i> Add Listing
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- Content -->
+    <div class="page-content">
+
+        <div class="section-content sf-allCaty-info-wrap">
+            <div class="container">
+                <!--Category Detail Section Start-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="sf-caty-pic">@*
+                            <div class="sf-caty-btn">View Providers</div>
+                            <div class="sf-caty-cirle"><i class="fa fa-arrow-circle-down"></i></div>*@
+                        </div>
+                    </div>
+                    <!--Category Detail Right-->
+                  <div class="col-md-6">
+                            <div class="sf-caty-info">
+                                <div class="m-b10"><strong>Project categories</strong> / House cleaning services</div>
+                                <h3>House Cleaning Services</h3>
+                                <div class="sf-caty-text">
+                                    <p>Pro house cleaners work with you to assess your home cleaning needs. Whether you need weekly, bi-weekly, or monthly services, 
+                                        house cleaning professionals can schedule cleanings, so that your home has routine care They can also deep clean the house in 
+                                        between cleaning, before special occasions, or for move-in and move-out cleaning.</p>
+                                    <p>On average, house cleaners on Zaarly cost $30 - $50 per hour per house cleaner. The price will depend on factors like size of the home, supplies needed, and special cleaning circumstances. A 2000 square foot home will typically cost $250. One-time deep cleanings will 
+                                        cost more and signing up for regular cleaning usually will be more cost-effective. </p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!--Category Detail Section End-->
+            </div>
+        </div>
+
+        <div class="section-content sf-allCaty-grid-wrap sf-owl-arrow">
+            <div class="container">
+                <!--Title Section Start-->
+                <div class="section-head">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="sf-title text-white">All Categories</h2>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+                <!--Title Section End-->
+
+                <div class="section-content">
+                    <div class="owl-carousel owl-caty-carousel sf-owl-arrow">
+
+                        <!-- COLUMNS 1 -->
+                        <div class="item sf-caty-item-col">
+                            <div class="sf-catyitem-box">
+                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/1.jpg)">
+                                    <span class="sf-caty-num"></span>
+                                    <a href="#" class="sf-caty-link"></a>
+                                </div>
+                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Sales Manager</a></h5>
+                            </div>
+                            <div class="sf-catyitem-box">
+                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/2.jpg)">
+                                    <span class="sf-caty-num"></span>
+                                    <a href="#" class="sf-caty-link"></a>
+                                </div>
+                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Teacher</a></h5>
+                            </div>
+                        </div>
+                        <!-- COLUMNS 2 -->
+                        <div class="item sf-caty-item-col">
+                            <div class="sf-catyitem-box">
+                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/5.jpg)">
+                                    <span class="sf-caty-num"></span>
+                                    <a href="#" class="sf-caty-link"></a>
+                                </div>
+                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Front-End Developer</a></h5>
+                            </div>
+                            <div class="sf-catyitem-box">
+                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/6.jpg)">
+                                    <span class="sf-caty-num"></span>
+                                    <a href="#" class="sf-caty-link"></a>
+                                </div>
+                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Back-End Developer</a></h5>
+                            </div>
+                        </div>
+                        <!-- COLUMNS 3 -->
+                        <div class="item sf-caty-item-col">
+                            <div class="sf-catyitem-box">
+                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/4.jpg)">
+                                    <span class="sf-caty-num"></span>
+                                    <a href="#" class="sf-caty-link"></a>
+                                </div>
+                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Police</a></h5>
+                            </div>
+                            <div class="sf-catyitem-box">
+                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/3.jpg)">
+                                    <span class="sf-caty-num"></span>
+                                    <a href="#" class="sf-caty-link"></a>
+                                </div>
+                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Lawyer</a></h5>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section-content sf-caty-listResult-wrap">
+            <div class="container">
+
+                <div class="section-content">
+                    <!--Showing results topbar Start-->
+                    <div class="sf-search-result-top flex-wrap d-flex justify-content-between">
+                      
+                    </div>
+                    <!--Showing results topbar End-->
+                    <div class="row">
+                        <!--BLock 1-->
+                        <div class="col-md-6">
+                            <div class="sf-vender-list-wrap">
+                                <div class="sf-vender-list-box d-flex">
+                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/testimonials/pic1.jpg)">
+                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                    </div>
+                                    <div class="sf-vender-list-info">
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Mark, Homestay </a></h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <div class="sf-ow-pro-rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star text-gray"></span>
+                                        </div>
+                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
+                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+
+                                        <div class="dropdown action-dropdown dropdown-left">
+                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+                                          
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--BLock 2-->
+                        <div class="col-md-6">
+                            <div class="sf-vender-list-wrap">
+                                <div class="sf-vender-list-box d-flex">
+                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/testimonials/pic2.jpg)">
+                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                    </div>
+                                    <div class="sf-vender-list-info">
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Alicia</a></h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <div class="sf-ow-pro-rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star text-gray"></span>
+                                        </div>
+                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
+                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+
+                                        <div class="dropdown action-dropdown dropdown-left">
+                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+                                          
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--BLock 3-->
+                        <div class="col-md-6">
+                            <div class="sf-vender-list-wrap">
+                                <div class="sf-vender-list-box d-flex">
+                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/testimonials/pic3.jpg)">
+                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                    </div>
+                                    <div class="sf-vender-list-info">
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Alex</a></h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <div class="sf-ow-pro-rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star text-gray"></span>
+                                        </div>
+                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
+                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+
+                                        <div class="dropdown action-dropdown dropdown-left">
+                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;"><i class="feather-sliders"></i> Display Services</a></li>
+                                                <li><a href="javascript:;"><i class="feather-save"></i> 0 Review Comments</a></li>
+                                                <li><a href="javascript:;"><i class="feather-trash"></i> Request A Quote</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--BLock 4-->
+                        <div class="col-md-6">
+                            <div class="sf-vender-list-wrap">
+                                <div class="sf-vender-list-box d-flex">
+                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/testimonials/pic4.jpg)">
+                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                    </div>
+                                    <div class="sf-vender-list-info">
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Brisa</a></h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <div class="sf-ow-pro-rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star text-gray"></span>
+                                        </div>
+                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
+                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+
+                                        <div class="dropdown action-dropdown dropdown-left">
+                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+                                           
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--BLock 5-->
+                        <div class="col-md-6">
+                            <div class="sf-vender-list-wrap">
+                                <div class="sf-vender-list-box d-flex">
+                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/testimonials/pic5.jpg)">
+                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                    </div>
+                                    <div class="sf-vender-list-info">
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Evan</h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <div class="sf-ow-pro-rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star text-gray"></span>
+                                        </div>
+                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
+                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+
+                                        <div class="dropdown action-dropdown dropdown-left">
+                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+                                          
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--BLock 6-->
+                        <div class="col-md-6">
+                            <div class="sf-vender-list-wrap">
+                                <div class="sf-vender-list-box d-flex">
+                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/testimonials/pic6.jpg)">
+                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                    </div>
+                                    <div class="sf-vender-list-info">
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Barney</a></h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <div class="sf-ow-pro-rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star text-gray"></span>
+                                        </div>
+                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
+                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+
+                                        <div class="dropdown action-dropdown dropdown-left">
+                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+                                           
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--BLock 7-->
+                       @* <div class="col-md-6">
+                            <div class="sf-vender-list-wrap">
+                                <div class="sf-vender-list-box d-flex">
+                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/categories/pic7.jpg)">
+                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                    </div>
+                                    <div class="sf-vender-list-info">
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Mila Kunis</a></h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <div class="sf-ow-pro-rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star text-gray"></span>
+                                        </div>
+                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
+                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+
+                                        <div class="dropdown action-dropdown dropdown-left">
+                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;"><i class="feather-sliders"></i> Display Services</a></li>
+                                                <li><a href="javascript:;"><i class="feather-save"></i> 0 Review Comments</a></li>
+                                                <li><a href="javascript:;"><i class="feather-trash"></i> Request A Quote</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                        <!--BLock 8-->
+                 @*       <div class="col-md-6">
+                            <div class="sf-vender-list-wrap">
+                                <div class="sf-vender-list-box d-flex">
+                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/categories/pic8.jpg)">
+                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                    </div>
+                                    <div class="sf-vender-list-info">
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Javier Bardem</a></h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <div class="sf-ow-pro-rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star text-gray"></span>
+                                        </div>
+                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
+                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+
+                                        <div class="dropdown action-dropdown dropdown-left">
+                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;"><i class="feather-sliders"></i> Display Services</a></li>
+                                                <li><a href="javascript:;"><i class="feather-save"></i> 0 Review Comments</a></li>
+                                                <li><a href="javascript:;"><i class="feather-trash"></i> Request A Quote</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>

@@ -1,0 +1,457 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class="loading-area">
+        <div class="loading-box"></div>
+        <div class="loading-pic">
+            <div class="windows8">
+                <div class="wBall" id="wBall_1">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_2">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_3">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_4">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_5">
+                    <div class="wInnerBall"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOADING AREA  END ====== -->
+	<div class="page-wraper">        <!-- HEADER START -->
+        <header class="site-header header-style-2 mobile-sider-drawer-menu header-full-width">
+          <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+            <div class="main-bar">  
+
+            <div class="container clearfix"> 
+                <!--Logo section start-->
+                <div class="logo-header">
+                    <div class="logo-header-inner logo-header-one">
+                      <a href="index-2.html">
+                      <img src="~/assets/images/logo-dark.png" alt="">
+                      </a>
+                    </div>
+                </div>  
+                <!--Logo section End-->
+
+                <!-- NAV Toggle Button -->
+                <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar icon-bar-first"></span>
+                    <span class="icon-bar icon-bar-two"></span>
+                    <span class="icon-bar icon-bar-three"></span>
+                </button> 
+
+                <!-- MAIN Vav -->
+                <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
+
+                    <ul class=" nav navbar-nav">
+                      <li class="has-child current-menu-item"><a href="javascript:;">Home</a>
+                          <ul class="sub-menu">
+                          </ul>
+                      </li>
+
+                      <li class="has-child">
+                          <a href="javascript:;">Pages</a>
+                          <ul class="sub-menu">
+                              <li><a href="about-us.html">About us</a></li>
+                              <li><a href="javascript:;">Categories</a>
+                                  <ul class="sub-menu">
+                                <li><a asp-controller="category" asp-action="index" >Categories Detail</a></li>
+                                  </ul>
+                              </li>
+
+                          </ul>                                
+                      </li>
+
+                      <li class="has-child"><a href="javascript:;">Profile</a>  
+                      </li>
+
+                      <li class="has-child"><a href="javascript:;">Jobs</a>
+                          <ul class="sub-menu">
+                              <li><a href="job-detail.html">Job detail</a></li>                                        
+                          </ul>                                
+                      </li>
+
+                      <li class="has-child"><a href="javascript:;">Blog</a>
+                          <ul class="sub-menu">
+                              <li><a href="blog-detail.html">Blog detail</a></li>
+                          </ul>                                
+                      </li>
+
+                      <li><a href="contact-us.html">Contact</a></li>  
+                    </ul>
+
+                </div>
+
+                <!-- Header Right Section-->
+                <div class="extra-nav header-2-nav">
+                            <div class="extra-cell">
+                                <!--Login-->
+                                <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                                    <i class="fa fa-user"></i> Login
+                                </button>
+                                <!--Sign up-->
+                                <a href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                    <i class="fa fa-plus"></i> Add Listing
+                                </a>
+                            </div>
+                                
+                            </div>                             
+            </div>    
+
+            </div>
+          </div>
+        </header>
+        <!-- HEADER END -->
+    
+        <!-- Content -->
+        <div class="page-content">
+            
+            <!-- Banner Area -->
+            <div class="aon-page-benner-area">
+                <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/job-banner.jpg)">
+                <div class="sf-overlay-main" style="opacity:0.8; background-color:#022279;"></div>
+                <div class="sf-banner-heading-wrap">
+                  <div class="sf-banner-heading-area">
+                    <div class="sf-banner-heading-large">About Us</div>
+                    <div class="sf-banner-breadcrumbs-nav">
+                      <ul class="list-inline">
+                        <li><a href="index-2.html"> Home </a></li>
+                        <li>About Us</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>   
+
+
+        <!-- Banner Area End -->
+            <!-- Why Choose us -->
+            <section class="aon-why-choose2-area">
+                <div class="container">
+
+                    <div class="aon-why-choose2-box">
+                        <div class="row">
+                            <!-- COLUMNS LEFT -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="aon-why-choose-info">
+                                    <!--Title Section Start-->
+                                    <div class="section-head">
+                                        <span class="aon-sub-title">Choose</span>
+                                        <h2 class="aon-title">Why Choose us</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <!--Title Section Start End-->
+
+                                    <ul class="aon-why-choose-steps list-unstyled">
+                                        <!-- COLUMNS 1 -->
+                                        <li class="d-flex">
+                                            <div class="aon-w-choose-left aon-icon-effect">
+                                                <div class="aon-w-choose-icon"><i class="aon-icon"><img src="~/assets/images/whychoose/1.png" alt=""></i></div>
+                                            </div>
+                                            <div class="aon-w-choose-right">
+                                                <h4 class="aon-title">Meet new customers</h4>
+                                                <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
+                                            </div>
+                                        </li>
+                                        <!-- COLUMNS 2 -->
+                                        <li class="d-flex">
+                                            <div class="aon-w-choose-left aon-icon-effect">
+                                                <div class="aon-w-choose-icon"><i class="aon-icon"><img src="~/assets/images/whychoose/2.png" alt=""></i></div>
+                                            </div>
+                                            <div class="aon-w-choose-right">
+                                                <h4 class="aon-title">Grow your revenue</h4>
+                                                <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
+                                            </div>
+                                        </li>
+                                        <!-- COLUMNS 3 -->
+                                        <li class="d-flex">
+                                            <div class="aon-w-choose-left aon-icon-effect">
+                                                <div class="aon-w-choose-icon"><i class="aon-icon"><img src="~/assets/images/whychoose/3.png" alt=""></i></div>
+                                            </div>
+                                            <div class="aon-w-choose-right">
+                                                <h4 class="aon-title">Build your online reputation</h4>
+                                                <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <!-- COLUMNS RIGHT -->
+                            <div class="col-lg-6 col-md-12">
+                                <div class="aon-why-choose2-line">
+                                    <div class="aon-why-choose2-pic"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Why Choose us END -->
+            <!-- About Area -->
+            <div class="aon-about-area">
+                <div class="container">
+
+                    <div class="section-content">
+                        <div class="row d-flex flex-wrap align-items-center a-b-none">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="aon-about-pic">
+                                    <img src="~/assets/images/about-pic.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <!--Title Section Start-->
+                                <div class="section-head">
+                                    <span class="aon-sub-title">About</span>
+                                    <h2 class="sf-title">Upgrade Your Skills With Service Finder</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidal abore et dolore magna aliqua. </p>
+                                </div>
+                                <!--Title Section End-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- About Area END -->
+            <!-- How it Work -->
+            <!-- How it Work END -->
+            <!-- Statics -->
+            <div class="site-bg-primary aon-statics-area">
+                <div class="container">
+
+                    <div class="section-content">
+                        <div class="row d-flex flex-wrap align-items-center a-b-none">
+                            <div class="col-lg-6 col-md-12">
+                                <!--Title Section Start-->
+                                <div class="section-head">
+                                    <span class="aon-sub-title">Statics</span>
+                                    <h2 class="sf-title">Trusted by thousands of people all over the world</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                                </div>
+                                <!--Title Section End-->
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <!--Statics-blocks Section Start-->
+                                <div class="aon-statics-blocks">
+                                    <div class="row">
+                                        <!--Block 1-->
+                                        <div class="col-lg-6 m-b30 aon-static-position-1">
+                                            <div class="media-bg-animate media-statics aon-icon-effect">
+                                                <div class="aon-static-section aon-t-blue">
+                                                    <div class="aon-company-static-num counter aon-icon">5</div>
+                                                    <div class="aon-company-static-name">Providers</div>
+                                                </div>
+                                            </div>
+                                            <div class="media-bg-animate media-statics aon-icon-effect">
+                                                <div class="aon-static-section aon-t-yellow">
+                                                    <div class="aon-company-static-num counter aon-icon">6</div>
+                                                    <div class="aon-company-static-name">Jobs</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Block 2-->
+                                        <div class="col-lg-6 m-b30 aon-static-position-2">
+                                            <div class="media-bg-animate media-statics aon-icon-effect">
+                                                <div class="aon-static-section aon-t-green">
+                                                    <div class="aon-company-static-num counter aon-icon">10</div>
+                                                    <div class="aon-company-static-name">Customer</div>
+                                                </div>
+                                            </div>
+                                       
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Statics-blocks Section End-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Provider END -->
+            <!-- Testimonial Section -->
+            <div class="aon-testmonials-area sf-curve-pos">
+                <div class="container">
+                    <!--Title Section Start-->
+                    <div class="section-head">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <span class="sf-sub-title">Testimonial</span>
+                                <h2 class="sf-title">What People Say</h2>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do usmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Title Section End-->
+
+
+                <div class="section-content">
+                    <!--testimonial top-->
+                    <div class="slider-vertical-wrap">
+                        <!-- THUMBNAILS -->
+                        <div class="slick-testimonials-thumbnails">
+                            <!-- COLUMNS 1 -->
+                            <div class="slick-item">
+                                <div class="sf-testimonial-user">
+                                    <div class="sf-testimonial-media"><img src="~/assets/images/testimonials/pic1.jpg" alt=""></div>
+                                    <div class="sf-testimonial-user-detail">
+                                        <div class="sf-testi-user-name">Mark, Homestay </div>
+                                        <div class="sf-testi-user-position">Sales Manager</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- COLUMNS 1 -->
+                            <div class="slick-item">
+                                <div class="sf-testimonial-user">
+                                    <div class="sf-testimonial-media"><img src="~/assets/images/testimonials/pic2.jpg" alt=""></div>
+                                    <div class="sf-testimonial-user-detail">
+                                        <div class="sf-testi-user-name">Alicia </div>
+                                        <div class="sf-testi-user-position">Teacher</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- COLUMNS 1 -->
+                            <div class="slick-item">
+                                <div class="sf-testimonial-user">
+                                    <div class="sf-testimonial-media"><img src="~/assets/images/testimonials/pic3.jpg" alt=""></div>
+                                    <div class="sf-testimonial-user-detail">
+                                        <div class="sf-testi-user-name">Alex </div>
+                                        <div class="sf-testi-user-position">Lawyer</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- COLUMNS 1 -->
+                            <div class="slick-item">
+                                <div class="sf-testimonial-user">
+                                    <div class="sf-testimonial-media"><img src="~/assets/images/testimonials/pic4.jpg" alt=""></div>
+                                    <div class="sf-testimonial-user-detail">
+                                        <div class="sf-testi-user-name">Brisa</div>
+                                        <div class="sf-testi-user-position">Front-End Developer</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="slick-item">
+                                <div class="sf-testimonial-user">
+                                    <div class="sf-testimonial-media"><img src="~/assets/images/testimonials/pic5.jpg" alt=""></div>
+                                    <div class="sf-testimonial-user-detail">
+                                        <div class="sf-testi-user-name">Evan</div>
+                                        <div class="sf-testi-user-position">Back-End Developer</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="slick-item">
+                                <div class="sf-testimonial-user">
+                                    <div class="sf-testimonial-media"><img src="~/assets/images/testimonials/pic6.jpg" alt=""></div>
+                                    <div class="sf-testimonial-user-detail">
+                                        <div class="sf-testi-user-name">Barney</div>
+                                        <div class="sf-testi-user-position">Police</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!-- MAIN SLIDES -->
+                        <div class="slick-testimonials-carousel">
+                            <!-- COLUMNS 1 -->
+                            <div class="slick-item">
+                                <div class="sf-testimonial-info text-center">
+                                    <div class="sf-testimonial-title">It was a great experience</div>
+                                    <div class="sf-ow-pro-rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star tsaext-gray"></span>
+                                    </div>
+                                    <div class="sf-testimonial-text">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin</p>
+                                    </div>
+                                    <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 1 -->
+                            <div class="slick-item">
+                                <div class="sf-testimonial-info text-center">
+                                    <div class="sf-testimonial-title">It was a great experience</div>
+                                    <div class="sf-ow-pro-rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star text-gray"></span>
+                                    </div>
+                                    <div class="sf-testimonial-text">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin</p>
+                                    </div>
+                                    <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 1 -->
+                            <div class="slick-item">
+                                <div class="sf-testimonial-info text-center">
+                                    <div class="sf-testimonial-title">It was a great experience</div>
+                                    <div class="sf-ow-pro-rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star text-gray"></span>
+                                    </div>
+                                    <div class="sf-testimonial-text">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin</p>
+                                    </div>
+                                    <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 1 -->
+                            <div class="slick-item">
+                                <div class="sf-testimonial-info text-center">
+                                    <div class="sf-testimonial-title">It was a great experience</div>
+                                    <div class="sf-ow-pro-rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star text-gray"></span>
+                                    </div>
+                                    <div class="sf-testimonial-text">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin</p>
+                                    </div>
+                                    <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            
+
+      
