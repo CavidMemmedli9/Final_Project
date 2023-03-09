@@ -77,7 +77,7 @@
                             </li>
 
                             <li class="has-child">
-                                <a href="javascript:;">Profile</a>
+                                <a asp-controller="profile" asp-action="index"  >Profile</a>
                                 
                             </li>
 
@@ -127,9 +127,8 @@
                 <!--Category Detail Section Start-->
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="sf-caty-pic">@*
-                            <div class="sf-caty-btn">View Providers</div>
-                            <div class="sf-caty-cirle"><i class="fa fa-arrow-circle-down"></i></div>*@
+                        <div class="sf-caty-pic">
+                      
                         </div>
                     </div>
                     <!--Category Detail Right-->
@@ -209,14 +208,14 @@
                                     <span class="sf-caty-num"></span>
                                     <a href="#" class="sf-caty-link"></a>
                                 </div>
-                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Police</a></h5>
+                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Design</a></h5>
                             </div>
                             <div class="sf-catyitem-box">
                                 <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/3.jpg)">
                                     <span class="sf-caty-num"></span>
                                     <a href="#" class="sf-caty-link"></a>
                                 </div>
-                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Lawyer</a></h5>
+                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Accountant</a></h5>
                             </div>
                         </div>
                       
@@ -245,7 +244,7 @@
                                     </div>
                                     <div class="sf-vender-list-info">
                                         <h4 class="sf-venders-title"><a href="profile-full.html">Mark, Homestay </a></h4>
-                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Sales Manager, United States</span>
                                         <div class="sf-ow-pro-rating">
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
@@ -275,7 +274,7 @@
                                     </div>
                                     <div class="sf-vender-list-info">
                                         <h4 class="sf-venders-title"><a href="profile-full.html">Alicia</a></h4>
-                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Teacher, United States</span>
                                         <div class="sf-ow-pro-rating">
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
@@ -305,7 +304,7 @@
                                     </div>
                                     <div class="sf-vender-list-info">
                                         <h4 class="sf-venders-title"><a href="profile-full.html">Alex</a></h4>
-                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Accountant, United States</span>
                                         <div class="sf-ow-pro-rating">
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
@@ -339,7 +338,7 @@
                                     </div>
                                     <div class="sf-vender-list-info">
                                         <h4 class="sf-venders-title"><a href="profile-full.html">Brisa</a></h4>
-                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Front-End Developer, United States</span>
                                         <div class="sf-ow-pro-rating">
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
@@ -369,7 +368,7 @@
                                     </div>
                                     <div class="sf-vender-list-info">
                                         <h4 class="sf-venders-title"><a href="profile-full.html">Evan</h4>
-                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Back-End Developer, United States</span>
                                         <div class="sf-ow-pro-rating">
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
@@ -398,8 +397,8 @@
                                         <a class="sf-vender-pic-link" href="profile-full.html"></a>
                                     </div>
                                     <div class="sf-vender-list-info">
-                                        <h4 class="sf-venders-title"><a href="profile-full.html">Barney</a></h4>
-                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
+                                        <h4 class="sf-venders-title"><a href="profile-full.html">Gloria</a></h4>
+                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Dizayn, United States</span>
                                         <div class="sf-ow-pro-rating">
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star"></span>
@@ -420,83 +419,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!--BLock 7-->
-                       @* <div class="col-md-6">
-                            <div class="sf-vender-list-wrap">
-                                <div class="sf-vender-list-box d-flex">
-                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/categories/pic7.jpg)">
-                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
-                                    </div>
-                                    <div class="sf-vender-list-info">
-                                        <h4 class="sf-venders-title"><a href="profile-full.html">Mila Kunis</a></h4>
-                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
-                                        <div class="sf-ow-pro-rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star text-gray"></span>
-                                        </div>
-                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
-                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
-                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-
-                                        <div class="dropdown action-dropdown dropdown-left">
-                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="javascript:;"><i class="feather-sliders"></i> Display Services</a></li>
-                                                <li><a href="javascript:;"><i class="feather-save"></i> 0 Review Comments</a></li>
-                                                <li><a href="javascript:;"><i class="feather-trash"></i> Request A Quote</a></li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>*@
-                        <!--BLock 8-->
-                 @*       <div class="col-md-6">
-                            <div class="sf-vender-list-wrap">
-                                <div class="sf-vender-list-box d-flex">
-                                    <div class="sf-vender-list-pic" style="background-image:url(/assets/images/categories/pic8.jpg)">
-                                        <a class="sf-vender-pic-link" href="profile-full.html"></a>
-                                    </div>
-                                    <div class="sf-vender-list-info">
-                                        <h4 class="sf-venders-title"><a href="profile-full.html">Javier Bardem</a></h4>
-                                        <span class="sf-venders-address"><i class="fa fa-map-marker"></i>Queens, United States</span>
-                                        <div class="sf-ow-pro-rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star text-gray"></span>
-                                        </div>
-                                        <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
-                                        <div class="sf-pro-check"><span><i class="fa fa-check"></i></span></div>
-                                        <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-
-                                        <div class="dropdown action-dropdown dropdown-left">
-                                            <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="javascript:;"><i class="feather-sliders"></i> Display Services</a></li>
-                                                <li><a href="javascript:;"><i class="feather-save"></i> 0 Review Comments</a></li>
-                                                <li><a href="javascript:;"><i class="feather-trash"></i> Request A Quote</a></li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>*@
-
+                       
                         
-
                     </div>
                 </div>
-
             </div>
         </div>
-
-
-
     </div>

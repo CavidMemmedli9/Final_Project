@@ -5,11 +5,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&amp;display=swap");
 
 
-
+.mfp-arrow{
+    display:none !important;
+}
 .site-text-primary {
-
-  color:#022279;
-
+    color: #022279;
 }
 
 .site-text-black {
@@ -13989,7 +13989,7 @@ input:checked + .slider:before {
 
   height: 200px;
 
-  background-image: url("../assets/images/job-gallery/pic.jpg");
+  background-image: url("/assets/images/job-gallery/pic.jpg");
 
   background-position: center;
 
@@ -14022,8 +14022,8 @@ input:checked + .slider:before {
   height: calc(100% - 30px);
 
   margin: 15px;
-
-  background: #032379;
+/*
+  background: #032379;*/
 
   opacity: 0;
 
@@ -17715,7 +17715,7 @@ justify-content: space-between;
 
 .sf-proBnrfull-left {
 
-  background-image: url("../assets/images/banner/pro-banner.jpg");
+  background-image: url("assets/images/banner/pro-banner.jpg");
 
   background-position: center;
 
@@ -17905,7 +17905,7 @@ justify-content: space-between;
 
 .sf-proBnrfull-left {
 
-  background-image: url("../assets/images/banner/pro-banner.jpg");
+  background-image: url("/assets/images/banner/pro-banner.jpg");
 
   background-position: center;
 
