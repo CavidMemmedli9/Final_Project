@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2Vkjf1GIfYh1npLwbr4KMIGDwsDq9jPf3crV37rqm3s=",
+  "Hash": "GP7+IUuAf3fYncUjIu1ot1ftIzx9XPHhXvEQpD1BKKw=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -3876,12 +3876,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\user.jpg"
     },
     {
-      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic1.jpg",
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic1.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
-      "RelativePath": "assets/images/user-avtar/pic1.jpg",
+      "RelativePath": "assets/images/user-avtar/pic1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3890,7 +3890,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\user-avtar\\pic1.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\user-avtar\\pic1.png"
     },
     {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic2.jpg",
@@ -3910,12 +3910,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\user-avtar\\pic2.jpg"
     },
     {
-      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic3.jpg",
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic3.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
-      "RelativePath": "assets/images/user-avtar/pic3.jpg",
+      "RelativePath": "assets/images/user-avtar/pic3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3924,7 +3924,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\user-avtar\\pic3.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\user-avtar\\pic3.png"
     },
     {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic4.jpg",
@@ -3942,6 +3942,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\user-avtar\\pic4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic5.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/user-avtar/pic5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\user-avtar\\pic5.png"
+    },
+    {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic6.jpg",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/user-avtar/pic6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\user-avtar\\pic6.jpg"
     },
     {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\vender-list\\1.jpg",

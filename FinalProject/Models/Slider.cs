@@ -10,7 +10,6 @@ namespace FinalProject.Models
 
         public string Title { get; set; }
 
-
         [NotMapped]
         public IFormFile Photo { get; set; }
     }

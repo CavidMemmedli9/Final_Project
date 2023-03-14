@@ -901,20 +901,28 @@
       "PackagePath": "staticwebassets\\assets\\images\\testimonials\\pic6.jpg"
     },
     {
-      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic1.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\user-avtar\\pic1.jpg"
+      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\user-avtar\\pic1.png"
     },
     {
       "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\user-avtar\\pic2.jpg"
     },
     {
-      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic3.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\user-avtar\\pic3.jpg"
+      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\user-avtar\\pic3.png"
     },
     {
       "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\user-avtar\\pic4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\user-avtar\\pic5.png"
+    },
+    {
+      "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user-avtar\\pic6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user-avtar\\pic6.jpg"
     },
     {
       "Id": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\user.jpg",
