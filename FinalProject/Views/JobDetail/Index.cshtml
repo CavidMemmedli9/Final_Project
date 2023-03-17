@@ -1,4 +1,5 @@
-﻿
+﻿@model JobInfo
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -126,7 +127,7 @@
                 <div class="sf-banner-job-heading-wrap">
                     <div class="sf-banner-job-heading-area">
                         <div class="sf-banner-job-logo-pic"><img src="~/assets/images/job4.jpg" alt=""></div>
-                        <div class="sf-banner-job-heading-large">Group Marketing Manager</div>
+                        <div class="sf-banner-job-heading-large">@Model.Vacancy.Title</div>
                         <ul class="sf-banner-job-dutation">
                             <li><i class="fa fa-clock-o"></i> Posted date: <span class="jobs-timing">2 years ago</span></li>
                             <li><i class="fa fa-hourglass-o"></i> Expries in: <span class="jobs-date-label">January 26, 2022</span></li>
@@ -199,31 +200,18 @@
 
                         <h3>Job Description</h3>
 
-                        <p>As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.</p><br>
-
+                       <p> @Model.JobDesc </p>
                         <h3>Key Responsibilities</h3>
 
-                        <ul class="square-list-style">
-                            <li>Be involved in every step of the product design cycle from discovery to developer handoff and user </li>
-                            <li>Work with BAs, product managers and tech teams to lead the Product Design</li>
-                            <li>Maintain quality of the design process and ensure that when designs are translated into code they accurately reflect the design specifications.</li>
-                            <li>Accurately estimate design tickets during planning sessions.</li>
-                            <li>Contribute to sketching sessions involving non-designersCreate, iterate and maintain UI deliverables including sketch files, style guides, high fidelity prototypes,</li>
-                            <li>Ensure design choices are data led by identifying assumptions to test each sprint, and work with the analysts in your team to plan moderated usability test sessions.</li>
-                            <li>
-                                Design pixel perfect responsive UI’s and understand that adopting common interface patterns is better for UX than reinventing the wheel
-                                Present your work to the wider business at Show &amp; Tell sessions.
-                            </li>
-                        </ul><br>
+                      <p>   </p>
+                        
+                        <br>
 
                         <h3>Skill &amp; Experience</h3>
 
-                        <ul class="square-list-style">
-                            <li>You have at least 3 years’ experience working as a Product Designer.</li>
-                            <li>You have experience using Sketch and InVision or Framer X</li>
-                            <li>You have some previous experience working in an agile environment – Think two-week sprints.</li>
-                            <li>You are familiar using Jira and Confluence in your workflow</li>
-                        </ul><br>
+                       <p>    </p>
+                        
+                        <br>
 
 
 

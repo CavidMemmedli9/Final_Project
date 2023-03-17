@@ -283,6 +283,36 @@ namespace FinalProject.Migrations
                     b.ToTable("Job");
                 });
 
+            modelBuilder.Entity("FinalProject.Models.JobInfo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("JobDesc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KeyResponse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Skill")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VacancyId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VacancyId");
+
+                    b.ToTable("JobInfo");
+                });
+
             modelBuilder.Entity("FinalProject.Models.News_Articles", b =>
                 {
                     b.Property<int>("Id")
@@ -450,6 +480,31 @@ namespace FinalProject.Migrations
                     b.ToTable("Statics");
                 });
 
+            modelBuilder.Entity("FinalProject.Models.Vacancy", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Desc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vacancy");
+                });
+
             modelBuilder.Entity("FinalProject.Models.Job", b =>
                 {
                     b.HasOne("FinalProject.Models.Category", "Category")
@@ -469,6 +524,17 @@ namespace FinalProject.Migrations
                     b.Navigation("Provider");
                 });
 
+            modelBuilder.Entity("FinalProject.Models.JobInfo", b =>
+                {
+                    b.HasOne("FinalProject.Models.Vacancy", "Vacancy")
+                        .WithMany("JobInfo")
+                        .HasForeignKey("VacancyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Vacancy");
+                });
+
             modelBuilder.Entity("FinalProject.Models.Category", b =>
                 {
                     b.Navigation("Job");
@@ -477,6 +543,11 @@ namespace FinalProject.Migrations
             modelBuilder.Entity("FinalProject.Models.Provider", b =>
                 {
                     b.Navigation("Job");
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Vacancy", b =>
+                {
+                    b.Navigation("JobInfo");
                 });
 #pragma warning restore 612, 618
         }

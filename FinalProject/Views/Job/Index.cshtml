@@ -1,4 +1,5 @@
-﻿
+﻿@model JobVM
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -121,7 +122,7 @@
 
         <!-- Banner Area -->
         <div class="aon-page-benner-area">
-            <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/job-banner.jpg)">
+            <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/@Model.Background.ImageUrl)">
                 <div class="sf-overlay-main" style="opacity:0.8; background-color:#022279;"></div>
                 <div class="sf-banner-heading-wrap">
                     <div class="sf-banner-heading-area">
@@ -203,137 +204,34 @@
 
                         <ul class="job_listings job_listings-two">
                             <!-- COLUMNS 1 -->
-                            <li class="job_listing type-job_listing job-type-hourly">
-                                <a class="job-clickable-box" href="job-detail.html"></a>
-                                <div class="job-comapny-logo"><img class="company_logo" src="~/assets/images/popular-categories/4.jpg" alt=""></div>
-                                <div class="job-comapny-info">
-                                    <div class="position">
-                                        <h3> Designer Required in Baku</h3>
-                                        <div class="company"> <strong>Code Academy</strong> </div>
+                            @foreach (var item in Model.Vacancy)
+                            {
+                                <li class="job_listing type-job_listing job-type-hourly">
+                                    <a class="job-clickable-box" asp-controller="job" asp-action="jobdetail" asp-route-id="@item.Id"></a>
+                                     <div class="job-comapny-logo"><img class="company_logo" src="~/assets/images/popular-categories/@item.ImageUrl" alt="">
+                                        </div>
+                                 
+                                    <div class="job-comapny-info">
+                                        
+                                            <div class="position">
+                                            <h3>@item.Title</h3>
+                                            <div class="company"> <a asp-controller="job" asp-action="jobdetail">  <strong>@item.Desc</strong>  </a> </div>
+                                            </div> 
+
+                                        <ul class="meta">
+                                            <li class="date">
+                                            </li>
+                                        </ul>
+
+                                        <div class="job-location"><i class="fa fa-map-marker"></i> Baku </div>
+                                        <div class="job-amount"><i class="fa fa-money"></i> <span>1000 Azn</span> </div>
+
+                                        <div class="job-label">  <img src="~/assets/images/label.html" alt="">   </div>
+
                                     </div>
-
-                                    <ul class="meta">
-                                        <li class="date">
-                                        </li>
-                                    </ul>
-
-                                    <div class="job-location"><i class="fa fa-map-marker"></i> Baku </div>
-                                    <div class="job-amount"><i class="fa fa-money"></i> <span>1000 Azn</span> </div>
-
-                                    <div class="job-label"><img src="~/assets/images/label.html" alt=""></div>
-
-                                </div>
-                            </li>
-                            <!-- COLUMNS 2 -->
-                            <li class="job_listing type-job_listing job-type-hourly">
-                                <a class="job-clickable-box" href="job-detail.html"></a>
-                                <div class="job-comapny-logo"><img class="company_logo" src="~/assets/images/popular-categories/5.jpg" alt=""></div>
-                                <div class="job-comapny-info">
-                                    <div class="position">
-                                        <h3>Front-End Developer Required in Baku</h3>
-                                        <div class="company"> <strong>Kapital Bank</strong> </div>
-                                    </div>
-
-                                    <ul class="meta">
-                                        <li class="date">
-                                        </li>
-                                    </ul>
-
-                                    <div class="job-location"><i class="fa fa-map-marker"></i> Baku </div>
-                                    <div class="job-amount"><i class="fa fa-money"></i> <span>1200 Azn</span> </div>
-
-                                    <div class="job-label"><img src="~/assets/images/label.html" alt=""></div>
-
-                                </div>
-                            </li>
-                            <!-- COLUMNS 3 -->
-                            <li class="job_listing type-job_listing job-type-hourly">
-                                <a class="job-clickable-box" href="job-detail.html"></a>
-                                <div class="job-comapny-logo"><img class="company_logo" src="~/assets/images/popular-categories/6.jpg" alt=""></div>
-                                <div class="job-comapny-info">
-                                    <div class="position">
-                                        <h3>Back-End Developer Required in Brooklyn</h3>
-                                        <div class="company"> <strong>Code Academy</strong> </div>
-                                    </div>
-
-                                    <ul class="meta">
-                                        <li class="date">
-                                        </li>
-                                    </ul>
-
-                                    <div class="job-location"><i class="fa fa-map-marker"></i> Baku </div>
-                                    <div class="job-amount"><i class="fa fa-money"></i> <span>1400 Azn</span> </div>
-
-                                    <div class="job-label"><img src="~/assets/images/label.html" alt=""></div>
-
-                                </div>
-                            </li>
-                            <!-- COLUMNS 4 -->
-                            <li class="job_listing type-job_listing job-type-hourly">
-                                <a class="job-clickable-box" href="job-detail.html"></a>
-                                <div class="job-comapny-logo"><img class="company_logo" src="~/assets/images/popular-categories/2.jpg" alt=""></div>
-                                <div class="job-comapny-info">
-                                    <div class="position">
-                                        <h3>Teacher Required in Baku</h3>
-                                        <div class="company"> <strong>Code Academy</strong> </div>
-                                    </div>
-
-                                    <ul class="meta">
-                                        <li class="date">
-                                        </li>
-                                    </ul>
-
-                                    <div class="job-location"><i class="fa fa-map-marker"></i> Baku </div>
-                                    <div class="job-amount"><i class="fa fa-money"></i> <span>900 Azn</span> </div>
-
-                                    <div class="job-label"><img src="~/assets/images/label.html" alt=""></div>
-
-                                </div>
-                            </li>
-                            <!-- COLUMNS 5 -->
-                            <li class="job_listing type-job_listing job-type-hourly">
-                                <a class="job-clickable-box" href="job-detail.html"></a>
-                                <div class="job-comapny-logo"><img class="company_logo" src="~/assets/images/popular-categories/1.jpg" alt=""></div>
-                                <div class="job-comapny-info">
-                                    <div class="position">
-                                        <h3>Sales Manager Required in Baku</h3>
-                                        <div class="company"> <strong>Kapital Bank</strong> </div>
-                                    </div>
-
-                                    <ul class="meta">
-                                        <li class="date">
-                                        </li>
-                                    </ul>
-
-                                    <div class="job-location"><i class="fa fa-map-marker"></i> Baku </div>
-                                    <div class="job-amount"><i class="fa fa-money"></i> <span>700 Azn</span> </div>
-
-                                    <div class="job-label"><img src="~/assets/images/label.html" alt=""></div>
-
-                                </div>
-                            </li>
-                            <!-- COLUMNS 6 -->
-                            <li class="job_listing type-job_listing job-type-hourly">
-                                <a class="job-clickable-box" href="job-detail.html"></a>
-                                <div class="job-comapny-logo"><img class="company_logo" src="~/assets/images/popular-categories/3.jpg" alt=""></div>
-                                <div class="job-comapny-info">
-                                    <div class="position">
-                                        <h3>Accountant Required in Baku</h3>
-                                        <div class="company"> <strong>Kapital Bank</strong> </div>
-                                    </div>
-
-                                    <ul class="meta">
-                                        <li class="date">
-                                        </li>
-                                    </ul>
-
-                                    <div class="job-location"><i class="fa fa-map-marker"></i> Baku </div>
-                                    <div class="job-amount"><i class="fa fa-money"></i> <span>800 Azn</span> </div>
-
-                                    <div class="job-label"><img src="~/assets/images/label.html" alt=""></div>
-
-                                </div>
-                            </li>
+                                </li>
+                            }
+                        
                         </ul>
 
                     

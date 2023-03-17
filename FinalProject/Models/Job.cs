@@ -1,4 +1,6 @@
-﻿namespace FinalProject.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FinalProject.Models
 {
     public class Job
     {

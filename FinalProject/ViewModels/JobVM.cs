@@ -4,8 +4,9 @@ namespace FinalProject.ViewModels
 {
     public class JobVM
     {
-        public List<Job> Job { get; set; }
+        public Background Background { get; set; }
 
+        public List<Vacancy> Vacancy { get; set; }
 
     }
 }

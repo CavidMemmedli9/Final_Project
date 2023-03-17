@@ -33,6 +33,10 @@ namespace FinalProject.DAL
         public DbSet<News_Articles> News_Articles { get; set; }
         public DbSet<AboutProvider> AboutProvider { get; set; }
 
+        public DbSet<Vacancy> Vacancy { get; set; }
+
+        public DbSet<JobInfo> JobInfo { get; set; }
+
 
     }
 }

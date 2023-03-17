@@ -1,0 +1,451 @@
+﻿
+@model JobInfo
+
+@{
+    ViewData["Title"] = "JobDetail";
+}
+
+
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="windows8">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+<div class="page-wraper">
+    <!-- HEADER START -->
+    <header class="site-header header-style-2 mobile-sider-drawer-menu header-full-width">
+        <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+            <div class="main-bar">
+
+                <div class="container clearfix">
+                    <!--Logo section start-->
+                    <div class="logo-header">
+                        <div class="logo-header-inner logo-header-one">
+                            <a href="index-2.html">
+                                <img src="~/assets/images/logo-dark.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar icon-bar-first"></span>
+                        <span class="icon-bar icon-bar-two"></span>
+                        <span class="icon-bar icon-bar-three"></span>
+                    </button>
+
+                    <!-- MAIN Vav -->
+
+                    <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
+
+                        <ul class=" nav navbar-nav">
+                            <li class="has-child current-menu-item">
+                                <a asp-controller="home" asp-action="index">Home</a>
+                                <ul class="sub-menu">
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Pages</a>
+                                <ul class="sub-menu">
+                                    <li><a href="about-us.html">About us</a></li>
+                                    <li>
+                                        <a asp-controller="category" asp-action="index">Categories</a>
+
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a asp-controller="profile" asp-action="index">Profile</a>
+
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Jobs</a>
+                                <ul class="sub-menu">
+                                    <li><a href="job-detail.html">Job detail</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Blog</a>
+                                <ul class="sub-menu">
+                                    <li><a asp-controller="blog" asp-action="index">Blog detail</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Header Right Section-->
+                    <div class="extra-nav header-2-nav">
+                        <div class="extra-cell">
+                            <!--Login-->
+                            <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                                <i class="fa fa-user"></i> Login
+                            </button>
+                            <!--Sign up-->
+                            <a href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                <i class="fa fa-plus"></i> Add Listing
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- Content -->
+    <div class="page-content bg-white">
+
+        <div class="sf-job-benner sf-overlay-wrapper">
+            <div class="banner-job-row">
+                <div class="sf-overlay-main" style="opacity:0;"></div>
+                <div class="sf-banner-job-heading-wrap">
+                    <div class="sf-banner-job-heading-area">
+                        <div class="sf-banner-job-logo-pic"><img src="~/assets/images/job4.jpg" alt=""></div>
+                        <div class="sf-banner-job-heading-large">Group Marketing Manager</div>
+                        <ul class="sf-banner-job-dutation">
+                            <li><i class="fa fa-clock-o"></i> Posted date: <span class="jobs-timing">2 years ago</span></li>
+                            <li><i class="fa fa-hourglass-o"></i> Expries in: <span class="jobs-date-label">January 26, 2022</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-content ">
+            <!-- Left & right section start -->
+            <div class="container">
+                <!--Job Information Start-->
+                <div class="sf-job-details-fileds sf-job-details-fileds-two">
+                    <ul class="job-listing-meta meta">
+                        <li class="location">
+                            <span class="job-meta-icon"><img src="~/assets/images/job-cin/location.png" alt=""></span>
+                            <div class="sf-job-meta-info">
+                                <h5 class="job-meta-title">Location:</h5>
+                                <span class="job-meta-text"><a class="google_map_link" href="http://maps.google.com/" target="_blank">Brooklyn</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="job-meta-icon"><img src="~/assets/images/job-cin/money.png" alt=""></span>
+                            <div class="sf-job-meta-info">
+                                <h5 class="job-meta-title">Price:</h5>
+                                <span class="job-meta-text text-red">$500 - $1,000 / month</span>
+                            </div>
+                        </li>
+                        <li class="job-type hourly">
+                            <span class="job-meta-icon"><img src="~/assets/images/job-cin/brifcase.png" alt=""></span>
+                            <div class="sf-job-meta-info">
+                                <h5 class="job-meta-title">Job Hours</h5>
+                                <span class="job-meta-text">9:00-18:00</span>
+                            </div>
+                        </li>
+                        <li class="location">
+                            <span class="job-meta-icon"><img src="~/assets/images/job-cin/tag.png" alt=""></span>
+                            <div class="sf-job-meta-info">
+                                <h5 class="job-meta-title">Categories:</h5>
+                                <span class="job-meta-text">Cleaning,Electician,Web Design</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="job-meta-icon"><img src="~/assets/images/job-cin/clock.png" alt=""></span>
+                            <div class="sf-job-meta-info">
+                                <h5 class="job-meta-title">Job Days</h5>
+                                <span class="job-meta-text">Bazar Ertesi-Cume</span>
+                            </div>
+                        </li>
+                        <li class="date-posted">
+                            <span class="job-meta-icon"><img src="~/assets/images/job-cin/user.png" alt=""></span>
+                            <div class="sf-job-meta-info">
+                                <h5 class="job-meta-title">Posted On:</h5>
+                                <span class="job-meta-text">3 years ago</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--Job Information End-->
+
+                <div class="row">
+
+                    <!-- Left part start -->
+                    <div class="col-lg-8 col-md-12">
+                        <!--Job Description Start-->
+                        <p>We are Looking for a skilled Ul/UX designer for our  as  product which includes a responsive web application, an Android app and an rOS app. Our ideal candidate should have the ability to turn client’s visions into intuitive designs.</p><br>
+
+
+
+                        <h3>Job Description</h3>
+
+                       <p> @Model.JobDesc </p>
+
+                        <h3>Key Responsibilities</h3>
+
+                        <p> @Model.KeyResponse   </p>
+
+                        <br>
+
+                        <h3>Skill &amp; Experience</h3>
+
+                       <p>  @Model.Skill   </p>
+
+                        <br>
+
+
+
+                        <div class="aon-job-gallery">
+                            <h3 class="m-b30">Photos</h3>
+                            <ul class="job-gallery clearfix mfp-gallery">
+                                <li>
+                                    <div class="job-gallery-pic" style="background-image:url(/assets/images/popular-categories/1.jpg)">
+                                        <a href="~/assets/images/popular-categories/1.jpg" class="mfp-link job-gallery-link"></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="job-gallery-pic" style="background-image:url(/assets/images/popular-categories/2.jpg)">
+                                        <a href="~/assets/images/popular-categories/2.jpg" class="mfp-link job-gallery-link"></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="job-gallery-pic" style="background-image:url(/assets/images/popular-categories/3.jpg)">
+                                        <a href="~/assets/images/popular-categories/3.jpg" class="mfp-link job-gallery-link"></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="job-gallery-pic" style="background-image:url(/assets/images/popular-categories/4.jpg)">
+                                        <a href="#" class="job-gallery-link">5+</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        @*   <div class="aon-job-video">
+                            <h3 class="m-b30">Video</h3>
+                            <div class="sf-pres-video">
+                                <div class="sf-pres-video-pic">
+                                    <img src="~/assets/images/vid-img.jpg" alt="">
+                                    <div class="overlay-vid"></div>
+                                    <!-- <a href="#" class="sf-pres-video-icon active"><i class="feather-play-circle"></i></a> -->
+                                    <a href="https://www.youtube.com/watch?v=c1XNqw2gSbU" class="mfp-video sf-pres-video-icon active">
+                                        <i class="feather-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>*@
+                        <!--Job Description End-->
+                    </div>
+                    <!-- Left part END -->
+                    <!-- Side bar start -->
+                    <div class="col-lg-4 col-md-12">
+
+                        <aside class="sf-jobdetail-sidebar">
+
+                            <div class="sf-jobdetail-blocks">
+                                <a class="sf-btn-large2" href="#">Apply Now <i class="fa fa-send"></i></a>
+                            </div>
+                            <!--Share this post-->
+                            @*    <div class="sf-jobdetail-blocks">
+                                <h4 class="sf-title">Share this post</h4>
+                                <ul class="sf-con-social">
+                                    <li><a href="#" class="sf-fb"><img src="~/assets/images/contact-us/facebook.png" alt="">Facebook</a></li>
+                                    <li><a href="#" class="sf-twitter"><img src="~/assets/images/contact-us/twitter.png" alt="">Twitter</a></li>
+                                    <li><a href="#" class="sf-pinterest"><img src="~/assets/images/contact-us/pinterest.png" alt="">Pinterest</a></li>
+                                </ul>
+                            </div>*@
+                            <!--Job Post-->
+                            <div class="sf-jobdetail-blocks">
+                                <div class="sf-related-jobs">
+                                    <div class="sf-related-job-pic">
+                                        <img src="~/assets/images/job4.jpg" alt="">
+                                    </div>
+                                    <div class="sf-related-job-location">
+                                        <i class="feather-map-pin"></i> Hà Nội
+                                    </div>
+                                    <div class="sf-related-job-name">
+                                        InwaveThemes  <span class="feather-check"></span>
+                                    </div>
+                                    <div class="sf-related-job-rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star text-gray"></span>
+                                        <span class="sf-rating-lable"> 5 Ratings </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Location-->
+                            @*   <div class="sf-jobdetail-blocks">
+                                <h4 class="sf-title">Location</h4>
+                                <a class="sf-btn-large2" href="#">Get Direction <i class="feather-map-pin"></i></a>
+                            </div>*@
+                            <!--Related Jobs-->
+                            <div class="sf-jobdetail-blocks">
+                                <h4 class="sf-title">Related Jobs</h4>
+                                <div class="owl-carousel sf-jobrelated-carousel aon-jobrelated-carousel aon-owl-arrow">
+
+                                    <!-- COLUMNS 1 -->
+                                    <div class="item">
+                                        <div class="sf-jobs-section">
+                                            <div class="sf-jobs-head">
+                                                <a href="javascript:void(0);" class="sf-jobs-media"><img src="~/assets/images/jobs/1.jpg" alt=""></a>
+                                                <span class="sf-jobs-position">Freelance</span>
+                                            </div>
+                                            <div class="sf-jobs-info">
+                                                <div class="sf-job-company">Blue Hills Pvt.LTD</div>
+                                                <h4 class="sf-title"><a href="javascript:void(0);">Electrician Required in Brooklyn</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse</p>
+                                            </div>
+                                            <div class="sf-jobs-footer">
+                                                <div class="sf-job-location"><i class="fa fa-map-marker"></i>London</div>
+                                                <div class="sf-jobs-cost"><span>$25</span>/hour</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="item">
+                                        <div class="sf-jobs-section">
+                                            <div class="sf-jobs-head">
+                                                <a href="javascript:void(0);" class="sf-jobs-media"><img src="~/assets/images/jobs/1.jpg" alt=""></a>
+                                                <span class="sf-jobs-position">Freelance</span>
+                                            </div>
+                                            <div class="sf-jobs-info">
+                                                <div class="sf-job-company">Blue Hills Pvt.LTD</div>
+                                                <h4 class="sf-title"><a href="javascript:void(0);">Electrician Required in Brooklyn</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse</p>
+                                            </div>
+                                            <div class="sf-jobs-footer">
+                                                <div class="sf-job-location"><i class="fa fa-map-marker"></i>London</div>
+                                                <div class="sf-jobs-cost"><span>$25</span>/hour</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 3 -->
+                                    <div class="item">
+                                        <div class="sf-jobs-section">
+                                            <div class="sf-jobs-head">
+                                                <a href="javascript:void(0);" class="sf-jobs-media"><img src="~/assets/images/jobs/1.jpg" alt=""></a>
+                                                <span class="sf-jobs-position">Freelance</span>
+                                            </div>
+                                            <div class="sf-jobs-info">
+                                                <div class="sf-job-company">Blue Hills Pvt.LTD</div>
+                                                <h4 class="sf-title"><a href="javascript:void(0);">Electrician Required in Brooklyn</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse</p>
+                                            </div>
+                                            <div class="sf-jobs-footer">
+                                                <div class="sf-job-location"><i class="fa fa-map-marker"></i>London</div>
+                                                <div class="sf-jobs-cost"><span>$25</span>/hour</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 4 -->
+                                    <div class="item">
+                                        <div class="sf-jobs-section">
+                                            <div class="sf-jobs-head">
+                                                <a href="javascript:void(0);" class="sf-jobs-media"><img src="~/assets/images/jobs/1.jpg" alt=""></a>
+                                                <span class="sf-jobs-position">Freelance</span>
+                                            </div>
+                                            <div class="sf-jobs-info">
+                                                <div class="sf-job-company">Blue Hills Pvt.LTD</div>
+                                                <h4 class="sf-title"><a href="javascript:void(0);">Electrician Required in Brooklyn</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse</p>
+                                            </div>
+                                            <div class="sf-jobs-footer">
+                                                <div class="sf-job-location"><i class="fa fa-map-marker"></i>London</div>
+                                                <div class="sf-jobs-cost"><span>$25</span>/hour</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 5 -->
+                                    <div class="item">
+                                        <div class="sf-jobs-section">
+                                            <div class="sf-jobs-head">
+                                                <a href="javascript:void(0);" class="sf-jobs-media"><img src="~/assets/images/jobs/1.jpg" alt=""></a>
+                                                <span class="sf-jobs-position">Freelance</span>
+                                            </div>
+                                            <div class="sf-jobs-info">
+                                                <div class="sf-job-company">Blue Hills Pvt.LTD</div>
+                                                <h4 class="sf-title"><a href="javascript:void(0);">Electrician Required in Brooklyn</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse</p>
+                                            </div>
+                                            <div class="sf-jobs-footer">
+                                                <div class="sf-job-location"><i class="fa fa-map-marker"></i>London</div>
+                                                <div class="sf-jobs-cost"><span>$25</span>/hour</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 6 -->
+                                    <div class="item">
+                                        <div class="sf-jobs-section">
+                                            <div class="sf-jobs-head">
+                                                <a href="javascript:void(0);" class="sf-jobs-media"><img src="~/assets/images/jobs/1.jpg" alt=""></a>
+                                                <span class="sf-jobs-position">Freelance</span>
+                                            </div>
+                                            <div class="sf-jobs-info">
+                                                <div class="sf-job-company">Blue Hills Pvt.LTD</div>
+                                                <h4 class="sf-title"><a href="javascript:void(0);">Electrician Required in Brooklyn</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse</p>
+                                            </div>
+                                            <div class="sf-jobs-footer">
+                                                <div class="sf-job-location"><i class="fa fa-map-marker"></i>London</div>
+                                                <div class="sf-jobs-cost"><span>$25</span>/hour</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 7 -->
+                                    <div class="item">
+                                        <div class="sf-jobs-section">
+                                            <div class="sf-jobs-head">
+                                                <a href="javascript:void(0);" class="sf-jobs-media"><img src="~/assets/images/jobs/1.jpg" alt=""></a>
+                                                <span class="sf-jobs-position">Freelance</span>
+                                            </div>
+                                            <div class="sf-jobs-info">
+                                                <div class="sf-job-company">Blue Hills Pvt.LTD</div>
+                                                <h4 class="sf-title"><a href="javascript:void(0);">Electrician Required in Brooklyn</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse</p>
+                                            </div>
+                                            <div class="sf-jobs-footer">
+                                                <div class="sf-job-location"><i class="fa fa-map-marker"></i>London</div>
+                                                <div class="sf-jobs-cost"><span>$25</span>/hour</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </aside>
+
+                    </div>
+                    <!-- Side bar END -->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
