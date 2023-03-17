@@ -1,0 +1,13 @@
+﻿@model List<Category>
+
+@foreach (var item in Model)
+{
+    <div class="item">
+        <div class="aon-cat-item">
+            <div class="aon-cat-pic media-bg-animate shine-hover">
+                <a class="shine-box" href="categories-detail.html"><img src="~/assets/images/popular-categories/@item.ImageUrl" alt=""></a>
+            </div>
+            <h4 class="aon-cat-title">@item.Name</h4>
+        </div>
+    </div>
+} 

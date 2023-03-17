@@ -1,0 +1,16 @@
+﻿@model List<Choose>
+
+    @foreach (var item in Model)
+{
+    <div class="sf-w-choose margin-b-20">
+        <div class="sf-w-choose-icon">
+            <span>
+                <img src="~/assets/images/whychoose/@item.ImageUrl" alt="">
+            </span>
+        </div>
+        <div class="sf-w-choose-info">
+            <h4 class="sf-title">@item.Title</h4>
+            <p>@item.Desc</p>
+        </div>
+    </div>
+}

@@ -1,18 +1,28 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FinalProject.DAL;
+using FinalProject.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinalProject.Controllers
 {
     public class AboutController : Controller
     {
-        private readonly ILogger<AboutController> _logger;
+        private readonly AppDbContext _context;
 
-        public AboutController(ILogger<AboutController> logger)
+        public AboutController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
+
         public IActionResult Index()
         {
-            return View();
+            AboutVM aboutVM = new AboutVM();
+            aboutVM.Slider = _context.Slider.FirstOrDefault();
+            aboutVM.About = _context.About.FirstOrDefault();
+            aboutVM.Statics = _context.Statics.FirstOrDefault();
+
+            aboutVM.Background = _context.Background.FirstOrDefault();
+            return View(aboutVM);
         }
     }
 }

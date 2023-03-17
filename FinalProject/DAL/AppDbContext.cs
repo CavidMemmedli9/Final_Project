@@ -20,5 +20,19 @@ namespace FinalProject.DAL
         public DbSet<Slider> Slider { get; set; }
 
         public DbSet<Statics> Statics { get; set; }
+
+        public DbSet<Background> Background { get; set; }
+        public DbSet<Choose> Choose { get; set; }
+
+        public DbSet<Cleaning_Services> Cleaning_Services { get; set; }
+
+        public DbSet<Person> Person { get; set; }
+
+        public DbSet<Related_Provider> Related_Provider { get; set; }
+
+        public DbSet<News_Articles> News_Articles { get; set; }
+        public DbSet<AboutProvider> AboutProvider { get; set; }
+
+
     }
 }

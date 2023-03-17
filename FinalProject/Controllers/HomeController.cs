@@ -1,25 +1,30 @@
-﻿using FinalProject.Models;
+﻿using FinalProject.DAL;
+using FinalProject.Models;
+using FinalProject.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System;
 
 namespace FinalProject.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+       private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            HomeVM homeVM = new HomeVM();
+            homeVM.Slider = _context.Slider.FirstOrDefault();
+            homeVM.Articles= _context.Articles.ToList();
+            homeVM.Choose = _context.Choose.ToList();
+            homeVM.Statics = _context.Statics.ToList();
+            return View(homeVM);
         }
-
-       
-
-
+        
     }
 }

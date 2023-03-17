@@ -1,26 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model HomeVM
+
+@{
+    ViewData["Title"] = "Index";
 }
 
         <div class="page-content">
 
             <section class="aon-banner-wrap">
+         
+            <div class="aon-banner-outer sf-overlay-wrapper">
+                <div class="aon-banner-pic">
+                    <div class="aon-curve-area"></div>
+                    <div class="aon-overlay-main" style="opacity:0.85; background-color:#022278;"></div>
+                    <img src="~/assets/images/banner/@Model.Slider.ImageUrl" width="1919" height="976" alt="">
+                </div>
+                <div class="aon-banner-text">
+                    <div class="container">
+                        <div class="aon-bnr-write">
+                            <h2 class="text-top-line">@Model.Slider.Title </h2>
 
-                <div class="aon-banner-outer sf-overlay-wrapper">
-                    <div class="aon-banner-pic">
-                        <div class="aon-curve-area"></div>
-                        <div class="aon-overlay-main" style="opacity:0.85; background-color:#022278;"></div>
-                        <img src="~/assets/images/banner/bnr-pic.jpg" width="1919" height="976" alt="">
-                    </div>
-                    <div class="aon-banner-text">
-                        <div class="container"> 
-                            <div class="aon-bnr-write">
-                                <h2 class="text-top-line">Hire <span class="text-secondry">Experts</span> & </h2>
-                                <h2 class="text-bot-line">Get Your Job Done</h2>
-                            </div>
+                        <h2 class="text-bot-line">@Model.Slider.Desc </h2>
                         </div>
                     </div>
                 </div>
+            </div>
+       
+         
+              
                 <div class="aon-find-bar aon-findBar-vertical">
                   <div class="container">
               
@@ -99,119 +105,46 @@
 
                     <div class="section-content">
                         <div class="owl-carousel categories-carousel-owl aon-owl-arrow">
-                      
-                            <div class="item">
-                                <div class="aon-cat-item">
-                                    <div class="aon-cat-pic media-bg-animate shine-hover">
-                                        <a class="shine-box" href="categories-detail.html"><img src="~/assets/images/popular-categories/1.jpg" alt=""></a>
-                                    </div>
-                            <h4 class="aon-cat-title">Sales Manager</h4>
-                                </div>
-                            </div>
-                   
-                            <div class="item">
-                                <div class="aon-cat-item">
-                                    <div class="aon-cat-pic media-bg-animate shine-hover">
-                                        <a class="shine-box" href="categories-detail.html"><img src="~/assets/images/popular-categories/5.jpg" alt=""></a>
-                                    </div>
-                            <h4 class="aon-cat-title">Front-End Developer</h4>
-                                </div>
-                            </div>
-                     
-                            <div class="item">
-                                <div class="aon-cat-item">
-                                    <div class="aon-cat-pic media-bg-animate shine-hover">
-                                        <a class="shine-box" href="categories-detail.html"><img src="~/assets/images/popular-categories/6.jpg" alt=""></a>
-                                    </div>
-                            <h4 class="aon-cat-title">Back-End Developer</h4>
-                                </div>
-                            </div>
-                  
-                            <div class="item">
-                                <div class="aon-cat-item">
-                                    <div class="aon-cat-pic media-bg-animate shine-hover">
-                                        <a class="figure" href="categories-detail.html"><img src="~/assets/images/popular-categories/3.jpg" alt=""></a>
-                                    </div>
-                                    <h4 class="aon-cat-title">Accountant</h4>
-                                </div>
-                            </div>
-                       
-                            <div class="item">
-                                <div class="aon-cat-item">
-                                    <div class="aon-cat-pic media-bg-animate shine-hover">
-                                        <a class="shine-box" href="categories-detail.html"><img src="~/assets/images/popular-categories/4.jpg" alt=""></a>
-                                    </div>
-                            <h4 class="aon-cat-title">Design</h4>
-                                </div>
-                            </div>
 
-                             <div class="item">
-                                <div class="aon-cat-item">
-                                    <div class="aon-cat-pic media-bg-animate shine-hover">
-                                        <a class="shine-box" href="categories-detail.html"><img src="~/assets/images/popular-categories/2.jpg" alt=""></a>
-                                    </div>
-                                    <h4 class="aon-cat-title">Teacher</h4>
-                                </div>
-                            </div>
+                  @await Component.InvokeAsync("Category");
+                      
+                    
                          
                         </div>
                     </div>
 
                 </div>
             </section>
-         
-            <div class="site-bg-primary aon-statics-area sf-curve-pos">
-                <div class="container">
 
-                    <div class="section-content">
-                        <div class="row d-flex flex-wrap align-items-center a-b-none">
-                            <div class="col-lg-6 col-md-12">
-                              
-                                <div class="section-head">
-                                    <span class="aon-sub-title">Statics</span>
-                                    <h2 class="sf-title">Trusted by thousands of people all over the world</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-                                </div>
-                             
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                          
-                                <div class="aon-statics-blocks">
-                                    <div class="row">
-                               
-                                        <div class="col-lg-6 m-b30 aon-static-position-1">
-                                            <div class="media-bg-animate media-statics aon-icon-effect">
-                                                <div class="aon-static-section aon-t-blue">
-                                                    <div class="aon-company-static-num counter aon-icon">5</div>
-                                                    <div class="aon-company-static-name">Providers</div>
-                                                </div>
-                                            </div>
-                                            <div class="media-bg-animate media-statics aon-icon-effect">
-                                                <div class="aon-static-section aon-t-yellow">
-                                                    <div class="aon-company-static-num counter aon-icon">6</div>
-                                                    <div class="aon-company-static-name">Jobs</div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="col-lg-6 m-b30 aon-static-position-2">
-                                            <div class="media-bg-animate media-statics aon-icon-effect">
-                                                <div class="aon-static-section aon-t-green">
-                                                    <div class="aon-company-static-num counter aon-icon">10</div>
-                                                    <div class="aon-company-static-name">Customer</div>
-                                                </div>
-                                            </div>
-                                         
-                                        </div>
-                                    </div>
-                                </div>
-                              
-                            </div>
+
+    <div class="site-bg-primary aon-statics-area sf-curve-pos">
+        <div class="container">
+
+            <div class="section-content">
+                <div class="row d-flex flex-wrap align-items-center a-b-none">
+                    <div class="col-lg-6 col-md-12">
+                        <!--Title Section Start-->
+                        <div class="section-head">
+                            <span class="aon-sub-title">Statics</span>
+                            <h2 class="sf-title">Trusted by thousands of people all over the world</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
                         </div>
+                        <!--Title Section End-->
                     </div>
-
+                    <div class="col-lg-6 col-md-12">
+                        <!--Statics-blocks Section Start-->
+                        <div class="aon-statics-blocks">
+                        @await Component.InvokeAsync("Static");
+                        <!--Statics-blocks Section End-->
+                    </div>
                 </div>
-           </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
           
             <div class="aon-news-section-wrap sf-curve-pos">
                 <div class="container">
@@ -232,149 +165,16 @@
                         <div class="row">
 
                       
-                            <div class="col-md-4">
-                                <div class="media-bg-animate">
-                                    <div class="aon-blog-section-1 shine-hover">
-                                        <div class="aon-post-media shine-box">
-                                            <a href="blog-detail.html"><img src="~/assets/images/popular-categories/1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="aon-post-meta">
-                                            <ul>
-                                                <li class="aon-post-category">Latest</li>
-                                                <li class="aon-post-author"><a href="blog-detail.html">By |<span>Admin</span></a> </li>
-                                            </ul>
-                                        </div>
-                                        <div class="aon-post-info">
-                                            <h4 class="aon-post-title"><a href="blog-detail.html">Helping Companies in their Green.</a></h4>
-                                            <div class="aon-post-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          
-                            <div class="col-md-4">
-                                <div class="media-bg-animate">
-                                    <div class="aon-blog-section-1 shine-hover">
-
-                                        <div class="aon-post-media shine-box">
-                                    <a href="blog-detail.html"><img src="~/assets/images/popular-categories/2.jpg" alt=""></a>
-                                        </div>
-
-                                        <div class="aon-post-meta">
-                                            <ul>
-                                                <li class="aon-post-category">Latest</li>
-                                                <li class="aon-post-author"><a href="blog-detail.html">By |<span>Admin</span></a> </li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="aon-post-info">
-                                            <h4 class="aon-post-title"><a href="blog-detail.html">There are two thing is very important.</a></h4>
-                                            <div class="aon-post-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p> 
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                       
-                            <div class="col-md-4">
-                                <div class="media-bg-animate">
-                                    <div class="aon-blog-section-1  shine-hover">
-                                        <div class="aon-post-media shine-box">
-                                            <a href="blog-detail.html"><img src="~/assets/images/popular-categories/3.jpg" alt=""></a>
-                                        </div>
-                                        <div class="aon-post-meta">
-                                            <ul>
-                                                <li class="aon-post-category">Latest</li>
-                                                <li class="aon-post-author"><a href="blog-detail.html">By |<span>Admin</span></a> </li>
-                                            </ul>
-                                        </div>
-                                        <div class="aon-post-info">
-                                            <h4 class="aon-post-title"><a href="blog-detail.html">Officia deserunt mollit anim id labrum.</a></h4>
-                                            <div class="aon-post-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-
-
-                    <div class="col-md-4">
-                        <div class="media-bg-animate">
-                            <div class="aon-blog-section-1  shine-hover">
-                                <div class="aon-post-media shine-box">
-                                    <a href="blog-detail.html"><img src="~/assets/images/popular-categories/4.jpg" alt=""></a>
-                                </div>
-                                <div class="aon-post-meta">
-                                    <ul>
-                                        <li class="aon-post-category">Latest</li>
-                                        <li class="aon-post-author"><a href="blog-detail.html">By |<span>Admin</span></a> </li>
-                                    </ul>
-                                </div>
-                                <div class="aon-post-info">
-                                    <h4 class="aon-post-title"><a href="blog-detail.html">Officia deserunt mollit anim id labrum.</a></h4>
-                                    <div class="aon-post-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                     <div class="col-md-4">
-                                <div class="media-bg-animate">
-                                    <div class="aon-blog-section-1  shine-hover">
-                                        <div class="aon-post-media shine-box">
-                                            <a href="blog-detail.html"><img src="~/assets/images/popular-categories/5.jpg" alt=""></a>
-                                        </div>
-                                        <div class="aon-post-meta">
-                                            <ul>
-                                                <li class="aon-post-category">Latest</li>
-                                                <li class="aon-post-author"><a href="blog-detail.html">By |<span>Admin</span></a> </li>
-                                            </ul>
-                                        </div>
-                                        <div class="aon-post-info">
-                                            <h4 class="aon-post-title"><a href="blog-detail.html">Officia deserunt mollit anim id labrum.</a></h4>
-                                            <div class="aon-post-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-
-                             <div class="col-md-4">
-                                <div class="media-bg-animate">
-                                    <div class="aon-blog-section-1  shine-hover">
-                                        <div class="aon-post-media shine-box">
-                                            <a href="blog-detail.html"><img src="~/assets/images/popular-categories/6.jpg" alt=""></a>
-                                        </div>
-                                        <div class="aon-post-meta">
-                                            <ul>
-                                                <li class="aon-post-category">Latest</li>
-                                                <li class="aon-post-author"><a href="blog-detail.html">By |<span>Admin</span></a> </li>
-                                            </ul>
-                                        </div>
-                                        <div class="aon-post-info">
-                                            <h4 class="aon-post-title"><a href="blog-detail.html">Officia deserunt mollit anim id labrum.</a></h4>
-                                            <div class="aon-post-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-
+                          @await Component.InvokeAsync("Article");
+                      
 
                         </div>
                     </div>
                 </div>
             </div>  
+
+
+
             <div class="aon-whycoose-area sf-curve-pos">
                 <div class="container-fluid">
                     <div class="sf-whycoose-section">
@@ -382,8 +182,7 @@
                            
                             <div class="col-md-7 margin-b-50 sf-w-choose-left-cell">
                                 <div class="sf-w-choose-info-left">
-                                  
-                                    <div class="section-head">
+                                     <div class="section-head">
                                         <div class="row">
                                             <div class="col-md-12  margin-b-50">
                                                 <span class="aon-sub-title">Choose</span>
@@ -392,41 +191,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="sf-w-choose margin-b-20">
-                                        <div class="sf-w-choose-icon">
-                                            <span>
-                                                <img src="~/assets/images/whychoose/1.png" alt="">
-                                            </span>
-                                        </div>
-                                        <div class="sf-w-choose-info">
-                                            <h4 class="sf-title">Meet new customers</h4>
-                                            <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="sf-w-choose margin-b-20">
-                                        <div class="sf-w-choose-icon">
-                                            <span>
-                                                <img src="~/assets/images/whychoose/2.png" alt="">
-                                            </span>
-                                        </div>
-                                        <div class="sf-w-choose-info">
-                                            <h4 class="sf-title">Grow your revenue</h4>
-                                            <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
-                                        </div>
-                                    </div>
+
+
+                            @await Component.InvokeAsync("Choose");
                                  
-                                    <div class="sf-w-choose">
-                                        <div class="sf-w-choose-icon">
-                                            <span>
-                                                <img src="~/assets/images/whychoose/3.png" alt="">
-                                            </span>
-                                        </div>
-                                        <div class="sf-w-choose-info">
-                                            <h4 class="sf-title">Build your online reputation</h4>
-                                            <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
-                                        </div>
-                                    </div>
+                                 
                                 </div>
                             </div>
                             <div class="col-md-5 sf-w-choose-bg-wrap sf-w-choose-right-cell">
@@ -436,6 +205,9 @@
                     </div>
                 </div>
             </div>
+
+
+  
 
 
     <!-- Testimonial Section -->
@@ -545,7 +317,7 @@
                                     <span class="fa fa-star tsaext-gray"></span>
                                 </div>
                                 <div class="sf-testimonial-text">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin</p>
+                                    <p>A Sales Manager is a professional who is responsible for the success of their company’s sales department. They set goals for their team and produce monthly forecasting reports to see how well they're doing in achieving those targets and budgets based on what's happening with revenue streams so that everything runs smoothly from month to month.</p>
                                 </div>
                                 <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
                             </div>
@@ -562,7 +334,7 @@
                                     <span class="fa fa-star text-gray"></span>
                                 </div>
                                 <div class="sf-testimonial-text">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin</p>
+                                    <p>A teacher is responsible for preparing lesson plans and educating students at all levels. Their duties include assigning homework, grading tests, and documenting progress. Teachers must be able to instruct in a variety of subjects and reach students with engaging lesson plans.</p>
                                 </div>
                                 <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
                             </div>
@@ -579,29 +351,67 @@
                                     <span class="fa fa-star text-gray"></span>
                                 </div>
                                 <div class="sf-testimonial-text">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin</p>
-                                </div>
+                                    <p>An Accountant helps businesses make critical financial decisions by collecting, tracking, and correcting the company's finances. They are responsible for financial audits, reconciling bank statements, and ensuring financial records are accurate throughout the year.</p>
                                 <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
                             </div>
                         </div>
-                        <!-- COLUMNS 1 -->
-                        <div class="slick-item">
-                            <div class="sf-testimonial-info text-center">
-                                <div class="sf-testimonial-title">It was a great experience</div>
-                                <div class="sf-ow-pro-rating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star text-gray"></span>
-                                </div>
-                                <div class="sf-testimonial-text">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin</p>
-                                </div>
-                                <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
-                            </div>
-                        </div>
+                        
                     </div>
+                        <!-- COLUMNS 1 -->
+                        <div class="slick-item">
+                            <div class="sf-testimonial-info text-center">
+                                <div class="sf-testimonial-title">It was a great experience</div>
+                                <div class="sf-ow-pro-rating">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star text-gray"></span>
+                                </div>
+                                <div class="sf-testimonial-text">
+                                        <p>A Front-End Web Developer is a tech industry professional who builds the front portion of websites that customers, guests, or clients use on a daily basis.</p>
+                                </div>
+                                <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+                            </div>
+                        </div>
+
+
+                            <div class="slick-item">
+                                <div class="sf-testimonial-info text-center">
+                                    <div class="sf-testimonial-title">It was a great experience</div>
+                                    <div class="sf-ow-pro-rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star text-gray"></span>
+                                    </div>
+                                    <div class="sf-testimonial-text">
+                                        <p>This Back-end developer job description template can help you attract candidates with development skills to meet your position’s requirements.</p>
+                                    </div>
+                                    <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+                                </div>
+                            </div>
+
+
+                            <div class="slick-item">
+                                <div class="sf-testimonial-info text-center">
+                                    <div class="sf-testimonial-title">It was a great experience</div>
+                                    <div class="sf-ow-pro-rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star text-gray"></span>
+                                    </div>
+                                    <div class="sf-testimonial-text">
+                                        <p>A Graphic Designer is an artist who creates visual text and imagery. They design creative content for online campaigns, print ads, websites, and even videos.</p>
+                                    </div>
+                                    <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+                                </div>
+                            </div>
+
+
                 </div>
             </div>
 

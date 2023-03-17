@@ -1,4 +1,5 @@
-﻿
+﻿@model AboutVM
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -25,14 +26,14 @@
             </div>
         </div>
     </div>
-    <!-- LOADING AREA  END ====== -->
-	<div class="page-wraper">        <!-- HEADER START -->
+    
+	<div class="page-wraper">       
         <header class="site-header header-style-2 mobile-sider-drawer-menu header-full-width">
           <div class="sticky-header main-bar-wraper  navbar-expand-lg">
             <div class="main-bar">  
 
             <div class="container clearfix"> 
-                <!--Logo section start-->
+               
                 <div class="logo-header">
                     <div class="logo-header-inner logo-header-one">
                       <a href="index-2.html">
@@ -40,9 +41,8 @@
                       </a>
                     </div>
                 </div>  
-                <!--Logo section End-->
 
-                <!-- NAV Toggle Button -->
+
                 <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar icon-bar-first"></span>
@@ -63,10 +63,9 @@
                           <a href="javascript:;">Pages</a>
                           <ul class="sub-menu">
                               <li><a href="about-us.html">About us</a></li>
-                              <li><a href="javascript:;">Categories</a>
-                                  <ul class="sub-menu">
-                                <li><a asp-controller="category" asp-action="index" >Categories Detail</a></li>
-                                  </ul>
+                                    <li>
+                                        <a asp-controller="category" asp-action="index">Categories</a>
+                                  
                               </li>
 
                           </ul>                                
@@ -92,7 +91,6 @@
 
                 </div>
 
-                <!-- Header Right Section-->
                 <div class="extra-nav header-2-nav">
                             <div class="extra-cell">
                                 <!--Login-->
@@ -115,113 +113,84 @@
     
         <!-- Content -->
         <div class="page-content">
-            
-            <!-- Banner Area -->
+         
             <div class="aon-page-benner-area">
-                <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/job-banner.jpg)">
-                <div class="sf-overlay-main" style="opacity:0.8; background-color:#022279;"></div>
-                <div class="sf-banner-heading-wrap">
-                  <div class="sf-banner-heading-area">
-                    <div class="sf-banner-heading-large">About Us</div>
-                    <div class="sf-banner-breadcrumbs-nav">
-                      <ul class="list-inline">
-                        <li><a href="index-2.html"> Home </a></li>
-                        <li>About Us</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>   
-
-
-        <!-- Banner Area End -->
-            <!-- Why Choose us -->
-            <section class="aon-why-choose2-area">
-                <div class="container">
-
-                    <div class="aon-why-choose2-box">
-                        <div class="row">
-                            <!-- COLUMNS LEFT -->
-                            <div class="col-lg-6 col-md-12">
-                                <div class="aon-why-choose-info">
-                                    <!--Title Section Start-->
-                                    <div class="section-head">
-                                        <span class="aon-sub-title">Choose</span>
-                                        <h2 class="aon-title">Why Choose us</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                    <!--Title Section Start End-->
-
-                                    <ul class="aon-why-choose-steps list-unstyled">
-                                        <!-- COLUMNS 1 -->
-                                        <li class="d-flex">
-                                            <div class="aon-w-choose-left aon-icon-effect">
-                                                <div class="aon-w-choose-icon"><i class="aon-icon"><img src="~/assets/images/whychoose/1.png" alt=""></i></div>
-                                            </div>
-                                            <div class="aon-w-choose-right">
-                                                <h4 class="aon-title">Meet new customers</h4>
-                                                <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
-                                            </div>
-                                        </li>
-                                        <!-- COLUMNS 2 -->
-                                        <li class="d-flex">
-                                            <div class="aon-w-choose-left aon-icon-effect">
-                                                <div class="aon-w-choose-icon"><i class="aon-icon"><img src="~/assets/images/whychoose/2.png" alt=""></i></div>
-                                            </div>
-                                            <div class="aon-w-choose-right">
-                                                <h4 class="aon-title">Grow your revenue</h4>
-                                                <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
-                                            </div>
-                                        </li>
-                                        <!-- COLUMNS 3 -->
-                                        <li class="d-flex">
-                                            <div class="aon-w-choose-left aon-icon-effect">
-                                                <div class="aon-w-choose-icon"><i class="aon-icon"><img src="~/assets/images/whychoose/3.png" alt=""></i></div>
-                                            </div>
-                                            <div class="aon-w-choose-right">
-                                                <h4 class="aon-title">Build your online reputation</h4>
-                                                <p>Suspendisse tincidunt rutrum ante. Vestibulum elementum ipsum sit amet turpis elementum lobortis.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                            <!-- COLUMNS RIGHT -->
-                            <div class="col-lg-6 col-md-12">
-                                <div class="aon-why-choose2-line">
-                                    <div class="aon-why-choose2-pic"></div>
-                                </div>
+                <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/@Model.Background.ImageUrl">
+                    <div class="sf-overlay-main" style="opacity:0.8; background-color:#022279;"></div>
+                    <div class="sf-banner-heading-wrap">
+                        <div class="sf-banner-heading-area">
+                            <div class="sf-banner-heading-large">About Us</div>
+                            <div class="sf-banner-breadcrumbs-nav">
+                                <ul class="list-inline">
+                                    <li><a href="index-2.html"> Home </a></li>
+                                    <li>About Us</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div> 
+            </div>
 
+       
+            <!-- Banner Area -->
+ 
+
+        <!-- Banner Area End -->
+            <!-- Why Choose us -->
+        <div style="margin-top:200px" class="aon-whycoose-area sf-curve-pos">
+            <div class="container-fluid">
+                <div class="sf-whycoose-section">
+                    <div class="row sf-w-choose-bg-outer d-flex flex-wrap a-b-none">
+
+                        <div class="col-md-7 margin-b-50 sf-w-choose-left-cell">
+                            <div class="sf-w-choose-info-left">
+                                <div class="section-head">
+                                    <div class="row">
+                                        <div class="col-md-12  margin-b-50">
+                                            <span class="aon-sub-title">Choose</span>
+                                            <h2 class="sf-title">Why Choose us</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                @await Component.InvokeAsync("Choose");
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-5 sf-w-choose-bg-wrap sf-w-choose-right-cell">
+                            <div class="sf-w-choose-bg" style="background-image: url(/assets/images/background/bg1.jpg);"></div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </div>
             <!-- Why Choose us END -->
             <!-- About Area -->
-            <div class="aon-about-area">
+        <div style="margin-top:100px" class="aon-about-area">
                 <div class="container">
-
+                 
                     <div class="section-content">
                         <div class="row d-flex flex-wrap align-items-center a-b-none">
                             <div class="col-lg-6 col-md-12">
                                 <div class="aon-about-pic">
-                                    <img src="~/assets/images/about-pic.jpg" alt="" />
+                                    <img src="~/assets/images/@Model.About.ImageUrl" alt="" />
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <!--Title Section Start-->
                                 <div class="section-head">
                                     <span class="aon-sub-title">About</span>
-                                    <h2 class="sf-title">Upgrade Your Skills With Service Finder</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidal abore et dolore magna aliqua. </p>
+                                <h2 class="sf-title">@Model.About.Title</h2>
+                                    <p>@Model.About.Desc </p>
                                 </div>
                                 <!--Title Section End-->
                             </div>
                         </div>
                     </div>
+                
 
                 </div>
             </div>
@@ -229,59 +198,33 @@
             <!-- How it Work -->
             <!-- How it Work END -->
             <!-- Statics -->
-            <div class="site-bg-primary aon-statics-area">
-                <div class="container">
 
-                    <div class="section-content">
-                        <div class="row d-flex flex-wrap align-items-center a-b-none">
-                            <div class="col-lg-6 col-md-12">
-                                <!--Title Section Start-->
-                                <div class="section-head">
-                                    <span class="aon-sub-title">Statics</span>
-                                    <h2 class="sf-title">Trusted by thousands of people all over the world</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-                                </div>
-                                <!--Title Section End-->
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <!--Statics-blocks Section Start-->
-                                <div class="aon-statics-blocks">
-                                    <div class="row">
-                                        <!--Block 1-->
-                                        <div class="col-lg-6 m-b30 aon-static-position-1">
-                                            <div class="media-bg-animate media-statics aon-icon-effect">
-                                                <div class="aon-static-section aon-t-blue">
-                                                    <div class="aon-company-static-num counter aon-icon">5</div>
-                                                    <div class="aon-company-static-name">Providers</div>
-                                                </div>
-                                            </div>
-                                            <div class="media-bg-animate media-statics aon-icon-effect">
-                                                <div class="aon-static-section aon-t-yellow">
-                                                    <div class="aon-company-static-num counter aon-icon">6</div>
-                                                    <div class="aon-company-static-name">Jobs</div>
-                                                </div>
-                                            </div>
-                                        </div>
+             <div class="site-bg-primary aon-statics-area sf-curve-pos">
+        <div class="container">
 
-                                        <!--Block 2-->
-                                        <div class="col-lg-6 m-b30 aon-static-position-2">
-                                            <div class="media-bg-animate media-statics aon-icon-effect">
-                                                <div class="aon-static-section aon-t-green">
-                                                    <div class="aon-company-static-num counter aon-icon">10</div>
-                                                    <div class="aon-company-static-name">Customer</div>
-                                                </div>
-                                            </div>
-                                       
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Statics-blocks Section End-->
-                            </div>
+            <div class="section-content">
+                <div class="row d-flex flex-wrap align-items-center a-b-none">
+                    <div class="col-lg-6 col-md-12">
+                        <!--Title Section Start-->
+                        <div class="section-head">
+                            <span class="aon-sub-title">Statics</span>
+                            <h2 class="sf-title">Trusted by thousands of people all over the world</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
                         </div>
+                        
                     </div>
-
+                    <div class="col-lg-6 col-md-12">
+                        
+                        <div class="aon-statics-blocks">
+                        @await Component.InvokeAsync("Static");
+                        <!--Statics-blocks Section End-->
+                    </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+    </div>
             <!-- Provider END -->
             <!-- Testimonial Section -->
             <div class="aon-testmonials-area sf-curve-pos">

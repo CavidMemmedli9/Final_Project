@@ -1,4 +1,5 @@
-﻿
+﻿@model ProfileVM
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -65,10 +66,8 @@
                                 <ul class="sub-menu">
                                     <li><a href="about-us.html">About us</a></li>
                                     <li>
-                                        <a href="javascript:;">Categories</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="categories-detail.html">Categories Detail</a></li>
-                                        </ul>
+                                        <a asp-controller="category" asp-action="index">Categories</a>
+                                      
                                     </li>
 
                                 </ul>
@@ -182,12 +181,12 @@
                 <div class="sf-provi-bio-right">
 
                     <h3 class="sf-provi-title">About Provider</h3>
-                    <div class="sf-provi-cat"><strong>Categories:</strong> Packers and Movers</div>
+                    <div class="sf-provi-cat"><strong>@Model.AboutProvider.Title</strong> </div>
                     <div class="sf-provi-bio-text">
 
-                        <p>We have a wide spectrum of expertise in web solutions within these industries, giving us the necessary skills and knowledge to help you increase your presence on the web.Through our expertise, technological knowledge, global presence and betspoke web solutions, we can help knowledge to help you increase your presence you transform your business, maximize performance and surpass the competition.</p>
+                        <p>@Model.AboutProvider.Desc</p>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus tortor nec tellus sollicitudin lacinia id per conubia nostra per inceptos.</p>
+                        
 
                         <div class="sf-provi-btn">
                             <a href="javascript:void(0);" class="site-button" data-redirect="yes" data-action="login" data-toggle="modal" data-target="#login-Modal">
@@ -202,98 +201,7 @@
                      </div>
 
 
-@*
-                    <div id="aon-provider-services" class="sf-provi-service-box m-b50 sf-provi-fullBox">
-                        <h3 class="sf-provi-title">Service</h3>
-                        <div class="sf-divider-line"></div>
-                        <ul class="sf-provi-service-list">
-                            <li class="sf-provi-service-box">
 
-                                <div class="sf-provi-service-top">
-                                    <div class="sf-provi-service-left">
-                                        <h4 class="sf-provi-service-ttle"><span class="sf-provi-toggle-btn">+</span> 3 bedroom or a house <span>Offer</span></h4>
-                                        <div class="sf-provi-service-price">$124.00</div>
-                                        <div class="sf-provi-service-hour"><i class="fa fa-clock-o"></i>Hour</div>
-                                    </div>
-                                    <div class="sf-provi-service-right">
-                                        <button class="site-button btn-schedules">Schedule</button>
-                                    </div>
-
-                                </div>
-                                <div class="sf-provi-service-bottom">
-                                    <div class="sf-provi-descriptio">Many serives have a wide spectrum of expertise in web solutions within these industries, giving us the necessary skills and knowledge.</div>
-
-                                </div>
-                            </li>
-                            <li class="sf-provi-service-box">
-
-                                <div class="sf-provi-service-top">
-                                    <div class="sf-provi-service-left">
-                                        <h4 class="sf-provi-service-ttle"><span class="sf-provi-toggle-btn">+</span> 3 bedroom or a house <span>Offer</span></h4>
-                                        <div class="sf-provi-service-price">$124.00</div>
-                                        <div class="sf-provi-service-hour"><i class="fa fa-clock-o"></i>Hour</div>
-                                    </div>
-                                    <div class="sf-provi-service-right">
-                                        <button class="site-button btn-schedules">Schedule</button>
-                                    </div>
-
-                                </div>
-                                <div class="sf-provi-service-bottom">
-                                    <div class="sf-provi-descriptio">Many serives have a wide spectrum of expertise in web solutions within these industries, giving us the necessary skills and knowledge.</div>
-
-                                </div>
-                            </li>
-                            <li class="sf-provi-service-box">
-
-                                <div class="sf-provi-service-top">
-                                    <div class="sf-provi-service-left">
-                                        <h4 class="sf-provi-service-ttle"><span class="sf-provi-toggle-btn">+</span> 3 bedroom or a house <span>Offer</span></h4>
-                                        <div class="sf-provi-service-price">$ 12.00/Hour</div>
-                                    </div>
-                                    <div class="sf-provi-service-right">
-                                        <div class="sf-provi-service-count">
-                                            <input id="demo1" type="text" value="55" name="demo1">
-                                        </div>
-                                        <button class="site-button btn-schedules">Schedule</button>
-                                    </div>
-
-                                </div>
-                                <div class="sf-provi-service-bottom">
-                                    <div class="sf-provi-descriptio">Many serives have a wide spectrum of expertise in web solutions within these industries, giving us the necessary skills and knowledge.</div>
-                                </div>
-                            </li>
-                            <li class="sf-provi-service-box">
-
-                                <div class="sf-provi-service-top">
-                                    <div class="sf-provi-service-left">
-                                        <h4 class="sf-provi-service-ttle"><span class="sf-provi-toggle-btn">+</span> 3 bedroom or a house <span>Offer</span></h4>
-                                        <div class="sf-provi-service-price">$ 10.00/Hour</div>
-                                    </div>
-                                    <div class="sf-provi-service-right">
-                                        <div class="sf-provi-service-count">
-                                            <input id="demo2" type="text" value="55" name="demo1">
-                                        </div>
-                                        <button class="site-button btn-schedules">Schedule</button>
-                                    </div>
-
-                                </div>
-                                <div class="sf-provi-service-bottom">
-                                    <div class="sf-provi-descriptio">Many serives have a wide spectrum of expertise in web solutions within these industries, giving us the necessary skills and knowledge.</div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="servi-leRi-btn d-flex flex-wrap justify-content-between">
-                            <div class="servi-le-btn">
-                                <button class="btn btn-custom"><i class="feather-chevron-up"></i></button>
-                                <button class="btn btn-custom"><i class="feather-chevron-down"></i></button>
-                            </div>
-                            <div class="servi-Ri-btn">
-                                <button class="btn btn-custom aon-sm-btn-dark">Continue</button>
-                            </div>
-                        </div>
-                    </div>*@
-                    <!--Service List End-->
-                    <!--Request a Quote-->
                     <div id="aon-provider-Req-quote" class="sf-provi-qoute-box cleafix m-b50 sf-provi-fullBox">
                         <h3 class="sf-provi-title">Request a Quote</h3>
                         <div class="sf-divider-line"></div>
@@ -593,86 +501,26 @@
                     <div id="aon-provider-articles" class="sf-provi-articles-box margin-b-50 sf-provi-fullBox">
                         <h3 class="sf-provi-title">Articles</h3>
                         <div class="sf-divider-line"></div>
+                        
                         <ul class="sf-provi-articles-list sf-provi-articles-full d-flex flex-wrap">
+                        @foreach (var item in Model.News_Articles)
+                    {
                             <li>
                                 <div class="sf-provi-art-list d-flex flex-wrap">
                                     <div class="sf-provi-art-left d-flex flex-wrap">
-                                        <div class="sf-provi-art-pic"><img src="~/assets/images/pro-pic/pic1.jpg" alt=""></div>
+                                        <div class="sf-provi-art-pic"><img src="~/assets/images/pro-pic/@item.ImageUrl" alt=""></div>
                                         <div class="sf-provi-art-date"><i class="fa fa-calendar-o"></i> Jan 18, 2022</div>
                                     </div>
                                     <div class="sf-provi-art-right d-flex flex-wrap">
-                                        <h4 class="sf-provi-art-title">Make a medical negligence claim today</h4>
-                                        <div class="sf-provi-art-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</div>
-                                        <a href="blog-detail.html" class="sf-provi-art-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="sf-provi-art-list d-flex flex-wrap">
-                                    <div class="sf-provi-art-left d-flex flex-wrap">
-                                    <div class="sf-provi-art-pic"><img src="~/assets/images/pro-pic/pic2.jpg" alt=""></div>
-                                        <div class="sf-provi-art-date"><i class="fa fa-calendar-o"></i> Jan 18, 2022</div>
-                                    </div>
-                                    <div class="sf-provi-art-right d-flex flex-wrap">
-                                        <h4 class="sf-provi-art-title">Helping Companies in their Green Transition</h4>
-                                        <div class="sf-provi-art-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</div>
-                                        <a href="blog-detail.html" class="sf-provi-art-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="sf-provi-art-list d-flex flex-wrap">
-                                    <div class="sf-provi-art-left d-flex flex-wrap">
-                                    <div class="sf-provi-art-pic"><img src="~/assets/images/pro-pic/pic3.jpg" alt=""></div>
-                                        <div class="sf-provi-art-date"><i class="fa fa-calendar-o"></i> Jan 18, 2022</div>
-                                    </div>
-                                    <div class="sf-provi-art-right d-flex flex-wrap">
-                                        <h4 class="sf-provi-art-title">There are two thing is very important</h4>
-                                        <div class="sf-provi-art-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</div>
-                                        <a href="blog-detail.html" class="sf-provi-art-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="sf-provi-art-list d-flex flex-wrap">
-                                    <div class="sf-provi-art-left d-flex flex-wrap">
-                                    <div class="sf-provi-art-pic"><img src="~/assets/images/pro-pic/pic4.jpg" alt=""></div>
-                                        <div class="sf-provi-art-date"><i class="fa fa-calendar-o"></i> Jan 18, 2022</div>
-                                    </div>
-                                    <div class="sf-provi-art-right d-flex flex-wrap">
-                                        <h4 class="sf-provi-art-title">Deserunt mollit anim id est labrum.</h4>
-                                        <div class="sf-provi-art-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</div>
-                                        <a href="blog-detail.html" class="sf-provi-art-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </li>
-                                   <li>
-                                <div class="sf-provi-art-list d-flex flex-wrap">
-                                    <div class="sf-provi-art-left d-flex flex-wrap">
-                                    <div class="sf-provi-art-pic"><img src="~/assets/images/pro-pic/pic5.jpg" alt=""></div>
-                                        <div class="sf-provi-art-date"><i class="fa fa-calendar-o"></i> Jan 18, 2022</div>
-                                    </div>
-                                    <div class="sf-provi-art-right d-flex flex-wrap">
-                                        <h4 class="sf-provi-art-title">Deserunt mollit anim id est labrum.</h4>
-                                        <div class="sf-provi-art-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</div>
-                                        <a href="blog-detail.html" class="sf-provi-art-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </li>
-                                   <li>
-                                <div class="sf-provi-art-list d-flex flex-wrap">
-                                    <div class="sf-provi-art-left d-flex flex-wrap">
-                                    <div class="sf-provi-art-pic"><img src="~/assets/images/pro-pic/pic6.jpg" alt=""></div>
-                                        <div class="sf-provi-art-date"><i class="fa fa-calendar-o"></i> Jan 18, 2022</div>
-                                    </div>
-                                    <div class="sf-provi-art-right d-flex flex-wrap">
-                                        <h4 class="sf-provi-art-title">Deserunt mollit anim id est labrum.</h4>
-                                        <div class="sf-provi-art-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</div>
+                                        <h4 class="sf-provi-art-title">@item.Title</h4>
+                                        <div class="sf-provi-art-text">@item.Desc</div>
                                         <a href="blog-detail.html" class="sf-provi-art-btn">Read More</a>
                                     </div>
                                 </div>
                             </li>
 
+                    }
+                        
                         </ul>
                     </div>
 
@@ -684,199 +532,42 @@
                         <div class="sf-divider-line"></div>
 
                         <div class="owl-carousel aon-ow-provi-related aon-owl-arrow">
+                            @foreach (var item in Model.Related_Provider)
+                        {
+                                 <div class="item">
+                                <div class="aon-ow-provider-wrap">
+                                    <div class="aon-ow-provider">
 
+                                        <div class="aon-ow-top">
+                                            <div class="aon-pro-check"><span><i class="fa fa-check"></i></span></div>
+                                            <div class="aon-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+                                            <div class="aon-ow-info">
+                                                <h4 class="aon-title">@item.Title</h4>
+                                                <span>Queens, United States</span>
+                                            </div>
+                                        </div>
+                                        <div class="aon-ow-mid">
+                                            <div class="aon-ow-media">
+                                                <img src="~/assets/images/popular-categories/@item.ImageUrl" alt="">
+                                            </div>
+                                            <p>@item.Desc</p>
+                                            <div class="aon-ow-pro-rating">
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star text-gray"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="aon-ow-bottom">
+                                        <a href="#">Request A Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
                             <!-- COLUMNS 1 -->
-                            <div class="item">
-                                <div class="aon-ow-provider-wrap">
-                                    <div class="aon-ow-provider">
-
-                                        <div class="aon-ow-top">
-                                            <div class="aon-pro-check"><span><i class="fa fa-check"></i></span></div>
-                                            <div class="aon-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="aon-ow-info">
-                                                <h4 class="aon-title">Edward Luise</h4>
-                                                <span>Queens, United States</span>
-                                            </div>
-                                        </div>
-                                        <div class="aon-ow-mid">
-                                            <div class="aon-ow-media">
-                                                <img src="~/assets/images/popular-categories/1.jpg" alt="">
-                                            </div>
-                                            <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
-                                            <div class="aon-ow-pro-rating">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star text-gray"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="aon-ow-bottom">
-                                        <a href="#">Request A Quote</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 2 -->
-                            <div class="item">
-                                <div class="aon-ow-provider-wrap">
-                                    <div class="aon-ow-provider">
-
-                                        <div class="aon-ow-top">
-                                            <div class="aon-pro-check"><span><i class="fa fa-check"></i></span></div>
-                                            <div class="aon-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="aon-ow-info">
-                                                <h4 class="aon-title">Edward Luise</h4>
-                                                <span>Queens, United States</span>
-                                            </div>
-                                        </div>
-                                        <div class="aon-ow-mid">
-                                            <div class="aon-ow-media">
-                                            <img src="~/assets/images/popular-categories/2.jpg" alt="">
-                                            </div>
-                                            <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
-                                            <div class="aon-ow-pro-rating">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star text-gray"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="aon-ow-bottom">
-                                        <a href="#">Request A Quote</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 3 -->
-                            <div class="item">
-                                <div class="aon-ow-provider-wrap">
-                                    <div class="aon-ow-provider">
-
-                                        <div class="aon-ow-top">
-                                            <div class="aon-pro-check"><span><i class="fa fa-check"></i></span></div>
-                                            <div class="aon-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="aon-ow-info">
-                                                <h4 class="aon-title">Edward Luise</h4>
-                                                <span>Queens, United States</span>
-                                            </div>
-                                        </div>
-                                        <div class="aon-ow-mid">
-                                            <div class="aon-ow-media">
-                                            <img src="~/assets/images/popular-categories/3.jpg" alt="">
-                                            </div>
-                                            <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
-                                            <div class="aon-ow-pro-rating">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star text-gray"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="aon-ow-bottom">
-                                        <a href="#">Request A Quote</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 4 -->
-                            <div class="item">
-                                <div class="aon-ow-provider-wrap">
-                                    <div class="aon-ow-provider">
-
-                                        <div class="aon-ow-top">
-                                            <div class="aon-pro-check"><span><i class="fa fa-check"></i></span></div>
-                                            <div class="aon-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="aon-ow-info">
-                                                <h4 class="aon-title">Edward Luise</h4>
-                                                <span>Queens, United States</span>
-                                            </div>
-                                        </div>
-                                        <div class="aon-ow-mid">
-                                            <div class="aon-ow-media">
-                                            <img src="~/assets/images/popular-categories/4.jpg" alt="">
-                                            </div>
-                                            <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
-                                            <div class="aon-ow-pro-rating">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star text-gray"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="aon-ow-bottom">
-                                     <a href="#">Request A Quote</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 5 -->
-                            <div class="item">
-                                <div class="aon-ow-provider-wrap">
-                                    <div class="aon-ow-provider">
-
-                                        <div class="aon-ow-top">
-                                            <div class="aon-pro-check"><span><i class="fa fa-check"></i></span></div>
-                                            <div class="aon-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="aon-ow-info">
-                                                <h4 class="aon-title">Edward Luise</h4>
-                                                <span>Queens, United States</span>
-                                            </div>
-                                        </div>
-                                        <div class="aon-ow-mid">
-                                            <div class="aon-ow-media">
-                                            <img src="~/assets/images/popular-categories/5.jpg" alt="">
-                                            </div>
-                                            <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
-                                            <div class="aon-ow-pro-rating">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star text-gray"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="aon-ow-bottom">
-                                        <a href="#">Request A Quote</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 6 -->
-                            <div class="item">
-                                <div class="aon-ow-provider-wrap">
-                                    <div class="aon-ow-provider">
-
-                                        <div class="aon-ow-top">
-                                            <div class="aon-pro-check"><span><i class="fa fa-check"></i></span></div>
-                                            <div class="aon-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="aon-ow-info">
-                                                <h4 class="aon-title">Edward Luise</h4>
-                                                <span>Queens, United States</span>
-                                            </div>
-                                        </div>
-                                        <div class="aon-ow-mid">
-                                            <div class="aon-ow-media">
-                                            <img src="~/assets/images/popular-categories/6.jpg" alt="">
-                                            </div>
-                                            <p>Through our expertise, technological knowledge, global presence and bespoke.</p>
-                                            <div class="aon-ow-pro-rating">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star text-gray"></span>
-                                            </div>
-                                           </div>
-                                        </div>
-                                         <div class="aon-ow-bottom">
-                                        <a href="#">Request A Quote</a>
-                                    </div>
-                                </div>
-                            </div>
+                       
                         </div>
                      </div>
                    </div>
