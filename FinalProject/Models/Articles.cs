@@ -9,6 +9,7 @@
         public string Title { get; set; }
 
         public string Desc { get; set; }
-
+        public int? BlogId { get; set; }
+        public Blog Blog { get; set; }
     }
 }

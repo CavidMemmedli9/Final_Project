@@ -7,6 +7,7 @@ namespace FinalProject.ViewModels
         public Slider Slider { get; set; }
         public List<Category> Category { get; set; }
 
+        public City City { get; set; }
 
         public List<Statics> Statics { get; set; }
 

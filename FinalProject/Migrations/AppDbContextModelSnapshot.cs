@@ -80,6 +80,9 @@ namespace FinalProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int?>("BlogId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Desc")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -93,6 +96,8 @@ namespace FinalProject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
 
                     b.ToTable("Articles");
                 });
@@ -112,6 +117,31 @@ namespace FinalProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Background");
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Desc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Blog");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Category", b =>
@@ -433,6 +463,30 @@ namespace FinalProject.Migrations
                     b.ToTable("Related_Provider");
                 });
 
+            modelBuilder.Entity("FinalProject.Models.Settings", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Number")
+                        .HasColumnType("decimal(20,0)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
+                });
+
             modelBuilder.Entity("FinalProject.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
@@ -505,6 +559,15 @@ namespace FinalProject.Migrations
                     b.ToTable("Vacancy");
                 });
 
+            modelBuilder.Entity("FinalProject.Models.Articles", b =>
+                {
+                    b.HasOne("FinalProject.Models.Blog", "Blog")
+                        .WithMany("Articles")
+                        .HasForeignKey("BlogId");
+
+                    b.Navigation("Blog");
+                });
+
             modelBuilder.Entity("FinalProject.Models.Job", b =>
                 {
                     b.HasOne("FinalProject.Models.Category", "Category")
@@ -533,6 +596,11 @@ namespace FinalProject.Migrations
                         .IsRequired();
 
                     b.Navigation("Vacancy");
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Blog", b =>
+                {
+                    b.Navigation("Articles");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Category", b =>

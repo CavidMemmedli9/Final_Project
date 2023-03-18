@@ -10193,11 +10193,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\FinalProject.csproj",
+      "projectUniqueName": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\FinalProject.csproj",
+      "projectPath": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\FinalProject.csproj",
       "packagesPath": "C:\\Users\\javid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\javid\\OneDrive\\Desktop\\FinalProject\\FinalProject\\obj\\",
+      "outputPath": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\javid\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,443 @@
+﻿@model Articles
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="windows8">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+<div class="page-wraper">
+    <!-- HEADER START -->
+    <header class="site-header header-style-2 mobile-sider-drawer-menu header-full-width">
+        <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+            <div class="main-bar">
+
+                <div class="container clearfix">
+                    <!--Logo section start-->
+                    <div class="logo-header">
+                        <div class="logo-header-inner logo-header-one">
+                            <a href="index-2.html">
+                                <img src="~/assets/images/logo-dark.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!--Logo section End-->
+                    <!-- NAV Toggle Button -->
+                    <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar icon-bar-first"></span>
+                        <span class="icon-bar icon-bar-two"></span>
+                        <span class="icon-bar icon-bar-three"></span>
+                    </button>
+
+                    <!-- MAIN Vav -->
+                    <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
+
+                        <ul class=" nav navbar-nav">
+                            <li class="has-child current-menu-item">
+                                <a href="javascript:;">Home</a>
+
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Pages</a>
+                                <ul class="sub-menu">
+                                    <li><a href="about-us.html">About us</a></li>
+                                    <li>
+                                        <a asp-controller="category" asp-action="index">Categories</a>
+
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Profile</a>
+
+                            </li>
+
+                            <li class="has-child">
+                                <a href="javascript:;">Jobs</a>
+                                <ul class="sub-menu">
+                                    <li><a href="job-detail.html">Job detail</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a asp-controller="blog" asp-action="index">Blog</a>
+
+                            </li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Header Right Section-->
+                    <div class="extra-nav header-2-nav">
+                        <div class="extra-cell">
+                            <!--Login-->
+                            <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                                <i class="fa fa-user"></i> Login
+                            </button>
+                            <!--Sign up-->
+                            <a href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                <i class="fa fa-plus"></i> Add Listing
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- Content -->
+    <div class="page-content">
+
+        <!-- Banner Area -->
+        <div class="aon-page-benner-area">
+            <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/job-banner.jpg)">
+                <div class="sf-overlay-main" style="opacity:0.8; background-color:#022279;"></div>
+                <div class="sf-banner-heading-wrap">
+                    <div class="sf-banner-heading-area">
+                        <div class="sf-banner-heading-large">Blog Detail</div>
+                        <div class="sf-banner-breadcrumbs-nav">
+                            <ul class="list-inline">
+                                <li><a asp-controller="home" asp-action="index"> Home </a></li>
+                                <li>Blog Detail</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Area End -->
+        <!-- Left & right section -->
+        <div class="aon-page-jobs-wrap">
+            <div class="container">
+                <div class="row">
+
+
+
+                    <!-- Left part start -->
+                    <div class="col-lg-8 col-md-12">
+
+                        <div class="sf-post-detail">
+
+                            <div class="post blog-post blog-detail sf-blog-style-1">
+                                <div class="post-bx">
+                                    <!-- Content section for blogs start -->
+                                    <div class="post-thum">
+                                        <img title="title" alt="" src="~/assets/images/popular-categories/@Model.ImageUrl">
+                                    </div>
+                                    <div class="post-info">
+                                        <div class="post-meta sf-icon-post-meta">
+                                            <ul>
+                                                <li class="post-author">
+                                                    <i class="feather-user"></i>By
+                                                    <a href="#" title="" rel="">David Chua</a>
+                                                </li>
+                                                <li class="post-comment">
+                                                    <a href="#" title="" rel=""><i class="feather-message-square"></i>Comments</a>
+                                                </li>
+                                                <li class="post-views">
+                                                    <a href="#" title="" rel=""><i class="feather-eye"></i>85 Views</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+                                        <div class="post-text">
+                                            <h4 class="post-title">
+                                                Helping Companies in  Their Green Transition Consectetur Racing
+                                                Cliter Sedus do Eiusmod Tempor Your
+                                            </h4>
+
+                                            <p>@Model.Title </p>
+
+
+                                            <h4 class="post-title-sm">Setting the mood with incense</h4>
+
+                                            <p>@Model.Desc</p>
+
+                                            <blockquote>
+                                                <h4>
+                                                    It is a long established fact that a reader will be the readable
+                                                    content of a page when looking at its layout.
+                                                </h4>
+                                                <span class="quoter">Tom Cruise</span>
+                                            </blockquote>
+
+                                            <div class="sf-con-social-wrap">
+                                            </div>
+
+                                            <p>Qui officia deserunt mollit anim id est labrum. Duis aute iruret dolor in prehenderit in voludptate velit esse cillum toret eu giat enerit in volptate velit esse cillum maecenas tempus, tellus eget condimentum rhoncus, sem quam semper ldibero, sit amet adipiscing em mollit anim semper bero. </p>
+
+
+
+                                            <div class="sf-pd-sm-media">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 m-b30">
+                                                        <div class="sf-pd-img">
+                                                            <img src="~/assets/images/sf-blog-detail/thumb1.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 m-b30">
+                                                        <div class="sf-pd-img">
+                                                            <img src="~/assets/images/sf-blog-detail/thumb2.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 m-b30">
+                                                        <div class="sf-pd-img">
+                                                            <img src="~/assets/images/sf-blog-detail/thumb3.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- Content section for blogs end -->
+                                </div>
+                            </div>
+                            <!-- Comment section for blogs start -->
+                            <div class="clear sf-blog-comment-wrap" id="comment-list">
+                                <div class="comments-area" id="comments">
+                                    <h2 class="comments-title m-t0"><span>02</span> Comments</h2>
+                                    <div>
+                                        <!-- COMMENT LIST START -->
+                                        <ol class="comment-list">
+                                            <li class="comment">
+                                                <!-- COMMENT BLOCK -->
+                                                <div class="comment-body">
+                                                    <div class="comment-author vcard">
+                                                        <img class="avatar photo" src="~/assets/images/sf-post-coment/1.jpg" alt="">
+                                                        <cite class="fn">Janice Brown</cite>
+                                                        <span class="says">says:</span>
+                                                    </div>
+                                                    <div class="comment-meta">
+                                                        <a href="javascript:void(0);">MAR 18,2022 AT 2:14pm</a>
+                                                    </div>
+                                                    <p>Qui officia deserunt mollit anim id est labrum. Duis aute iruret dolor in prehenderit in voludptate velit esse cillum toret eu giat enerit in volptate.</p>
+                                                    <div class="reply">
+                                                        <a href="javscript:;" class="comment-reply-link">Reply</a>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+
+                                            <li class="comment">
+                                                <!-- COMMENT BLOCK -->
+                                                <div class="comment-body">
+                                                    <div class="comment-author vcard">
+                                                        <img class="avatar photo" src="~/assets/images/sf-post-coment/2.jpg" alt="">
+                                                        <cite class="fn">Janice Brown</cite>
+                                                        <span class="says">says:</span>
+                                                    </div>
+                                                    <div class="comment-meta">
+                                                        <a href="javascript:void(0);">MAR 18,2022 AT 2:14pm</a>
+                                                    </div>
+                                                    <p>Qui officia deserunt mollit anim id est labrum. Duis aute iruret dolor in prehenderit in voludptate velit esse cillum toret eu giat enerit in volptate.</p>
+                                                    <div class="reply">
+                                                        <a href="javscript:;" class="comment-reply-link">Reply</a>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                        </ol>
+                                        <!-- COMMENT LIST END -->
+                                        <!-- LEAVE A REPLY START -->
+                                        <div class="comment-respond m-t30" id="respond">
+                                            <form class="comment-form" id="commentform" method="post">
+
+                                                <p class="comment-form-author">
+                                                    <label for="author">Name <span class="required">*</span></label>
+                                                    <input class="form-control" type="text" value="" name="user-comment" placeholder="Name" id="author">
+                                                </p>
+
+                                                <p class="comment-form-email">
+                                                    <label>Email <span class="required">*</span></label>
+                                                    <input class="form-control" type="text" value="" name="email" placeholder="Email">
+                                                </p>
+
+                                                <p class="comment-form-url">
+                                                    <label for="url">Website</label>
+                                                    <input class="form-control" type="text" value="" name="url" placeholder="Website" id="url">
+                                                </p>
+
+                                                <p class="comment-form-comment">
+                                                    <label for="comment">Comment</label>
+                                                    <textarea class="form-control" rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
+                                                </p>
+
+                                                <p class="form-submit">
+                                                    <button class="sf-btn-large" type="button">Post Comment</button>
+                                                </p>
+
+                                            </form>
+
+                                        </div>
+                                        <!-- LEAVE A REPLY END -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Comment section for blogs start -->
+
+                        </div>
+
+
+                    </div>
+                    <!-- Left part END -->
+                    <!-- Side bar start -->
+                    <div class="col-lg-4 col-md-12">
+
+                        <aside class="side-bar ">
+
+                            <!-- SEARCH -->
+                            <div class="widget rounded-sidebar-widget">
+                                <div class="widget_search_bx">
+                                    <div class="text-left m-b30">
+                                        <h3 class="widget-title">Search</h3>
+                                    </div>
+                                    <form role="search" method="post">
+                                        <div class="input-group">
+                                            <input name="news-letter" type="text" class="form-control" placeholder="Write your text">
+                                            <span class="input-group-btn">
+                                                <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Social -->
+                            <div class="widget rounded-sidebar-widget">
+                                <div class="text-left m-b30">
+                                    <h3 class="widget-title">Follow Us</h3>
+                                </div>
+                                <div class="widget_social_inks">
+                                    <ul class="social-icons social-square social-darkest social-md">
+                                        <li><a href="javascript:void(0);" class="fb-1"><img src="~/assets/images/social-icon/fb-1.png" alt=""></a></li>
+                                        <li><a href="javascript:void(0);" class="tw-1"><img src="~/assets/images/social-icon/tw-1.png" alt=""></a></li>
+                                        <li><a href="javascript:void(0);" class="pint-1"><img src="~/assets/images/social-icon/pint-1.png" alt=""></a></li>
+                                        <li><a href="javascript:void(0);" class="in-1"><img src="~/assets/images/social-icon/in-1.png" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- CATEGORY -->
+                            <div class="widget widget_services rounded-sidebar-widget">
+                                <div class="text-left m-b30">
+                                    <h3 class="widget-title">Categories</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="javascript:void(0);">Teacher</a><span class="badge">(0)</span></li>
+                                    <li><a href="javascript:void(0);">Front-End Developer</a><span class="badge">(0)</span></li>
+                                    <li><a href="javascript:void(0);">Back-End Developer</a><span class="badge">(0)</span></li>
+                                    <li><a href="javascript:void(0);">Accountant</a><span class="badge">(0)</span></li>
+                                    <li><a href="javascript:void(0);">Design</a><span class="badge">(0)</span></li>
+                                    <li><a href="javascript:void(0);">Sales Manager</a><span class="badge">(0)</span></li>
+
+                                </ul>
+                            </div>
+
+                            <!-- RECENT POSTS -->
+                            <div class="widget recent-posts-entry rounded-sidebar-widget">
+                                <div class="text-left m-b30">
+                                    <h3 class="widget-title">Recent Posts</h3>
+                                </div>
+
+                                <div class="widget-post-bx">
+                                    <div class="widget-post clearfix">
+                                        <div class="wt-post-media">
+                                            <img src="~/assets/images/blog/recent-post/1.jpg" alt="">
+                                        </div>
+                                        <div class="wt-post-info">
+                                            <div class="wt-post-header">
+                                                <h5 class="post-title"> <a href="#">Helping Companies in Green Transition area.</a></h5>
+                                            </div>
+                                            <div class="wt-post-meta">
+                                                <ul>
+                                                    <li class="post-date">Sep 18, 2022</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="widget-post clearfix">
+                                        <div class="wt-post-media">
+                                            <img src="~/assets/images/blog/recent-post/2.jpg" alt="">
+                                        </div>
+                                        <div class="wt-post-info">
+                                            <div class="wt-post-header">
+                                                <h5 class="post-title"><a href="#">There are two thing is very important in Consectetur</a></h5>
+                                            </div>
+                                            <div class="wt-post-meta">
+                                                <ul>
+                                                    <li class="post-date">Sep 20, 2022</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="widget-post clearfix">
+                                        <div class="wt-post-media">
+                                            <img src="~/assets/images/blog/recent-post/3.jpg" alt="">
+                                        </div>
+                                        <div class="wt-post-info">
+                                            <div class="wt-post-header">
+                                                <h5 class="post-title"> <a href="#">Officia deserunt mollit anim id est labrum. Duis aute iruret </a> </h5>
+                                            </div>
+                                            <div class="wt-post-meta">
+                                                <ul>
+                                                    <li class="post-date">Sep 22, 2022</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- TAGS -->
+                            <div class="widget  widget_tag_cloud rounded-sidebar-widget">
+                            </div>
+
+
+
+                        </aside>
+
+                    </div>
+                    <!-- Side bar END -->
+
+                </div>
+            </div>
+        </div>
+        <!-- Left & right section  END -->
+
+    </div>
+
+

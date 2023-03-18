@@ -37,6 +37,7 @@ namespace FinalProject.DAL
 
         public DbSet<JobInfo> JobInfo { get; set; }
 
+        public DbSet<Settings> Settings { get; set; }
 
     }
 }

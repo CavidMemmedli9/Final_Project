@@ -7,7 +7,7 @@
             <div class="aon-blog-section-1 shine-hover">
 
                 <div class="aon-post-media shine-box">
-                    <a href="blog-detail.html"><img src="~/assets/images/popular-categories/@item.ImageUrl" alt=""></a>
+                    <a asp-controller="blog" asp-action="detail" asp-route-id="@item.Id"><img src="~/assets/images/popular-categories/@item.ImageUrl" alt=""></a>
                 </div>
 
                 <div class="aon-post-meta">

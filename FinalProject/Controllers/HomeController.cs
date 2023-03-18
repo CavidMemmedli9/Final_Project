@@ -4,6 +4,8 @@ using FinalProject.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System;
+using System.Net.Mail;
+using System.Net;
 
 namespace FinalProject.Controllers
 {
@@ -23,8 +25,11 @@ namespace FinalProject.Controllers
             homeVM.Articles= _context.Articles.ToList();
             homeVM.Choose = _context.Choose.ToList();
             homeVM.Statics = _context.Statics.ToList();
+            homeVM.Category = _context.Category.ToList();
+
             return View(homeVM);
         }
-        
+
+
     }
 }

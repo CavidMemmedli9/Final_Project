@@ -18,7 +18,6 @@ namespace FinalProject.Controllers
         {
             JobVM jobVM = new JobVM();
             jobVM.Vacancy = _context.Vacancy.ToList();
-
             jobVM.Background = _context.Background.FirstOrDefault();
             return View(jobVM);
         }
