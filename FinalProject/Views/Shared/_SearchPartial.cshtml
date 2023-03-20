@@ -1,0 +1,10 @@
+﻿@model List<Articles>
+
+@foreach (var item in Model)
+{
+    <ul style="background-color:white;">
+        <li style="padding:8px" class="d-grid px-3  ">
+        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">@item.Title</a>
+    </li>
+    </ul>
+}

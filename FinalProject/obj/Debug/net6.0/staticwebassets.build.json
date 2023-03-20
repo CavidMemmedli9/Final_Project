@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6XEkEoi9EAiQqEzjMFcSZ5MIQOesgmvkVPxMtXc6J9c=",
+  "Hash": "QGSMLpHoBU0thVxqFQg5QTfxMpW44LG3OqFMtacH5Ro=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -2786,6 +2786,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\3-Cavid1234.jpg",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/3-Cavid1234.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\3-Cavid1234.jpg"
     },
     {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\4.jpg",

@@ -122,14 +122,17 @@
 
                                 <li class="has-child"><a asp-controller="job" asp-action="index">Jobs</a>
                                     <ul class="sub-menu">
-                                    <li><a asp-controller="jobDetail" asp-action="index">Job detail</a></li>
+                                    <li><a asp-controller="job" asp-action="jobDetail">Job detail</a></li>
                                 </ul>                                
                                 </li>
 
                             <li class="has-child">
                                 <a asp-controller="blog" asp-action="index">Blog</a>
-                                                                 
-                                </li>
+                                <ul class="sub-menu">
+                                    <li><a asp-controller="blog" asp-action="detail">Blog detail</a></li>
+                                </ul>
+
+                            </li>
 
                                 <li><a asp-controller="contact" asp-action="index">Contact</a></li>  
 

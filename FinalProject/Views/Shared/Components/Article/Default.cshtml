@@ -6,9 +6,12 @@
         <div class="media-bg-animate">
             <div class="aon-blog-section-1 shine-hover">
 
+                <a asp-controller="blog" asp-action="detail" asp-route-id="@item.Id">
                 <div class="aon-post-media shine-box">
-                    <a asp-controller="blog" asp-action="detail" asp-route-id="@item.Id"><img src="~/assets/images/popular-categories/@item.ImageUrl" alt=""></a>
+                    <img src="~/assets/images/popular-categories/@item.ImageUrl" alt="">
                 </div>
+                    </a>
+
 
                 <div class="aon-post-meta">
                     <ul>

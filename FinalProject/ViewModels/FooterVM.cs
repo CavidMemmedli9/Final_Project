@@ -8,7 +8,6 @@ namespace FinalProject.ViewModels
 
         public City City { get; set; }
 
-        public Settings Settings { get; set; }
 
     }
 }

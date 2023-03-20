@@ -1,5 +1,7 @@
 
 
+
+
 (function ($) {
 
 	
@@ -28,6 +30,19 @@
 		});
 
 	}
+
+	$(document).on("keyup", "#searchTextBox", function () {
+		
+		$("#searchform li").slice().remove();
+		let value = $("#searchTextBox").val().trim();
+		$.ajax({
+			url: "https://localhost:7230/blog/search?item=" + value,
+			method: "get",
+			success: function (res) {
+				$("#searchform").append(res);
+			}
+		})
+	})
 
 
 
