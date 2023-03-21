@@ -16,12 +16,12 @@
                 <div class="aon-post-meta">
                     <ul>
                         <li class="aon-post-category">Latest</li>
-                        <li class="aon-post-author"><a href="blog-detail.html">By |<span>Admin</span></a> </li>
+                        <li class="aon-post-author"><a asp-controller="blog" asp-action="detail" asp-route-id="@item.Id">By |<span>Admin</span></a> </li>
                     </ul>
                 </div>
 
                 <div class="aon-post-info">
-                    <h4 class="aon-post-title"><a href="blog-detail.html">@item.Title</a></h4>
+                    <h4 class="aon-post-title"><a asp-controller="blog" asp-action="detail" asp-route-id="@item.Id">@item.Title</a></h4>
                     <div class="aon-post-text">
                         <p>@item.Desc </p>
                     </div>

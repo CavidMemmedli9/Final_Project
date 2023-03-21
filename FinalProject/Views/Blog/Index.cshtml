@@ -1,9 +1,122 @@
 ﻿@model ArticlesVM
 <!-- Content -->
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="windows8">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-wraper">
+<header class="site-header header-style-2 mobile-sider-drawer-menu header-full-width">
+    <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+        <div class="main-bar">
+
+            <div class="container clearfix">
+                <!--Logo section start-->
+                <div class="logo-header">
+                    <div class="logo-header-inner logo-header-one">
+                        <a href="index-2.html">
+                            <img src="~/assets/images/logo-dark.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!--Logo section End-->
+                <!-- NAV Toggle Button -->
+                <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar icon-bar-first"></span>
+                    <span class="icon-bar icon-bar-two"></span>
+                    <span class="icon-bar icon-bar-three"></span>
+                </button>
+
+                <!-- MAIN Vav -->
+                <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
+
+                    <ul class=" nav navbar-nav">
+                        <li class="has-child current-menu-item">
+                            <a asp-controller="home" asp-action="index">Home</a>
+                          
+                        </li>
+
+                        <li class="has-child">
+                            <a href="javascript:;">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-us.html">About us</a></li>
+                                <li>
+                                    <a href="javascript:;">Categories</a>
+                                   
+                                </li>
+
+                                
+                            </ul>
+                        </li>
+
+                        <li class="has-child">
+                            <a href="javascript:;">Profile</a>
+                           
+                        </li>
+
+                        <li class="has-child">
+                            <a href="javascript:;">Jobs</a>
+                            <ul class="sub-menu">
+                                <li><a href="job-detail.html">Job detail</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-child">
+                            <a href="javascript:;">Blog</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog-detail.html">Blog detail</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Header Right Section-->
+                <div class="extra-nav header-2-nav">
+                    <div class="extra-cell">
+                        <!--Login-->
+                        <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                            <i class="fa fa-user"></i> Login
+                        </button>
+                        <!--Sign up-->
+                        <a href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                            <i class="fa fa-plus"></i> Add Listing
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
 <div class="page-content">
 
     <!-- Banner Area -->
-    <div class="aon-page-benner-area">
+    <div  class="aon-page-benner-area">
         <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/job-banner.jpg)">
             <div class="sf-overlay-main" style="opacity:0.8; background-color:#022279;"></div>
             <div class="sf-banner-heading-wrap">
@@ -66,27 +179,7 @@
                             </div>
                         </div>
                     }
-                        <div class="row">
-
-                            <div class="site-pagination s-p-center">
-                                <ul class="pagination">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" tabindex="-1"><i class="fa fa-chevron-left"></i></a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item active">
-                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-                                    <li class="page-item"><a class="page-link" href="#">11</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#"><i class="fa fa-chevron-right"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
+                   
 
                     </div>
              
@@ -228,5 +321,6 @@
     </div>
     <!-- Left & right section  END -->
    
+</div>
 </div>
 <!-- Content END-->

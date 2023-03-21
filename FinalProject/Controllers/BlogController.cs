@@ -34,9 +34,9 @@ namespace FinalProject.Controllers
             return PartialView("_SearchPartial", blog);
         }
 
-        public IActionResult Detail(int Id)
+        public IActionResult Detail(int id)
         {
-            var blog = _context.Articles.Include(t => t.Blog).FirstOrDefault(p => p.BlogId == Id);
+            var blog = _context.Articles.Include(t => t.Blog).FirstOrDefault(p => p.Id == id);
             return View(blog);
         }
     }
