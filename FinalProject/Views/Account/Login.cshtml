@@ -1,0 +1,47 @@
+﻿@model LoginVM
+
+
+<div id="Upcoming" class="tab-pane active">
+    <div class="sf-tabs-content">
+        <form asp-controller="account" asp-action="login" method="post" class="aon-login-form">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="aon-inputicon-box">
+                            <input asp-for="Email" class="form-control sf-form-control" name="Email" type="email" placeholder="Email">
+                            <span asp-validation-for="Email"></span>
+                            <i class="aon-input-icon fa fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="aon-inputicon-box">
+                            <input asp-for="Password" class="form-control sf-form-control" name="Password" type="password" placeholder="Password">
+                            <span asp-validation-for="Password"></span>
+                            <i class="aon-input-icon fa fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group d-flex aon-login-option justify-content-between">
+                        <div class="aon-login-opleft">
+                            <div class="checkbox sf-radio-checkbox">
+                                <input id="td2_2" name="abc" value="five" type="checkbox">
+                                <label for="td2_2">Keep me logged</label>
+                            </div>
+                        </div>
+                        <div class="aon-login-opright">
+                            <a href="#">Forget Password</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="site-button w-100">Submit <i class="feather-arrow-right"></i> </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

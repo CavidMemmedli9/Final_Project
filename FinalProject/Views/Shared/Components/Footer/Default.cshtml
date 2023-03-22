@@ -101,6 +101,9 @@
 
     </div>
 <!-- Login Sign Up Modal -->
+
+
+
 <div class="modal fade" id="login-signup-model">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -122,12 +125,14 @@
                         <!--Login Form-->
                         <div id="Upcoming" class="tab-pane active">
                             <div class="sf-tabs-content">
-                                <form class="aon-login-form">
+                                <form asp-controller="account" asp-action="login" method="post" class="aon-login-form">
+                                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input class="form-control sf-form-control" name="company_name" type="text" placeholder="User Name">
+                                                    <input asp-for="Email" class="form-control sf-form-control" name="Email" type="email" placeholder="Email">
+                                                    <span asp-validation-for="Email"></span>
                                                     <i class="aon-input-icon fa fa-user"></i>
                                                 </div>
                                             </div>
@@ -135,7 +140,8 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input class="form-control sf-form-control" name="company_name" type="password" placeholder="Password">
+                                                    <input asp-for="Password" class="form-control sf-form-control" name="Password" type="password" placeholder="Password">
+                                                    <span asp-validation-for="Password"></span>
                                                     <i class="aon-input-icon fa fa-lock"></i>
                                                 </div>
                                             </div>
@@ -165,38 +171,41 @@
                         <!--Sign up Form-->
                         <div id="Past" class="tab-pane">
                             <div class="sf-tabs-content">
-                                <form class="aon-login-form">
+                                <form method="post" asp-controller="account" asp-action="register" class="aon-login-form">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input class="form-control sf-form-control" name="First_Name" type="text" placeholder="First Name">
+                                                    <input asp-for="FullName" class="form-control sf-form-control" name="FullName" type="text" placeholder="Full Name">
+                                                    <span asp-validation-for="FullName"></span>
                                                     <i class="aon-input-icon fa fa-user"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input class="form-control sf-form-control" name="company_name" type="password" placeholder="Last Name">
+                                                    <input asp-for="UserName" class="form-control sf-form-control" name="UserName" type="text" placeholder="User Name">
+                                                    <span asp-validation-for="UserName"></span>
                                                     <i class="aon-input-icon fa fa-user"></i>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-12">
+                                   @*     <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
                                                     <input class="form-control sf-form-control" name="Phone" type="password" placeholder="Phone">
                                                     <i class="aon-input-icon fa fa-phone"></i>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>*@
 
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input class="form-control sf-form-control" name="email" type="password" placeholder="Email">
+                                                    <input asp-for="Email" class="form-control sf-form-control" name="email" type="email" placeholder="Email">
+                                                    <span asp-validation-for="Email"></span>
                                                     <i class="aon-input-icon fa fa-envelope-o"></i>
                                                 </div>
                                             </div>
@@ -205,7 +214,8 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input class="form-control sf-form-control" name="password" type="password" placeholder="Password">
+                                                    <input asp-for="Password" class="form-control sf-form-control" name="password" type="password" placeholder="Password">
+                                                    <span asp-validation-for="Password"></span>
                                                     <i class="aon-input-icon fa fa-lock"></i>
                                                 </div>
                                             </div>
@@ -214,7 +224,8 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input class="form-control sf-form-control" name="password" type="password" placeholder="Confirm Password">
+                                                    <input asp-for="PasswordConfirm" class="form-control sf-form-control" name="PasswordConfirm" type="password" placeholder="Confirm Password">
+                                                    <span asp-validation-for="PasswordConfirm"></span>
                                                     <i class="aon-input-icon fa fa-lock"></i>
                                                 </div>
                                             </div>

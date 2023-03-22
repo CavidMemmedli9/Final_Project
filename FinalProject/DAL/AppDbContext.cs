@@ -1,11 +1,12 @@
 ﻿using FinalProject.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinalProject.DAL
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
-        public AppDbContext(DbContextOptions options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
@@ -36,8 +37,8 @@ namespace FinalProject.DAL
         public DbSet<Vacancy> Vacancy { get; set; }
 
         public DbSet<JobInfo> JobInfo { get; set; }
-
-
         public DbSet<Blog> Blog { get; set; }
+
+        public DbSet<AppUser> AppUser { get; set; }
     }
 }
