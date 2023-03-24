@@ -1,6 +1,7 @@
 ﻿using FinalProject.DAL;
 using FinalProject.Models;
 using FinalProject.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,12 +10,13 @@ namespace FinalProject.Controllers
     public class BlogController : Controller
     {
         private readonly AppDbContext _context;
-
-        public BlogController(AppDbContext context)
+        private readonly UserManager<AppUser> _userManager;
+        public BlogController(AppDbContext context, UserManager<AppUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
-     
+
         public async Task<IActionResult> Index()
         {
             ArticlesVM model = new();
@@ -34,10 +36,41 @@ namespace FinalProject.Controllers
             return PartialView("_SearchPartial", blog);
         }
 
-        public IActionResult Detail(int id)
+        public IActionResult Detail(int? id)
         {
-            var blog = _context.Articles.Include(t => t.Blog).FirstOrDefault(p => p.Id == id);
+            var blog = _context.Articles.Include(t => t.Blog).
+                ThenInclude(c=>c.Comments).
+                ThenInclude(c=>c.AppUser).
+                FirstOrDefault(t => t.Id == id);
+           
             return View(blog);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddComment(string text, int blogId)
+        {
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            Comment comment = new Comment()
+            {
+                AppUserId = user.Id,
+                BlogId = blogId,
+                Text = text
+            };
+            comment.CreatedTime= DateTime.Now;
+            _context.Comment.Add(comment);
+            _context.SaveChanges();
+            return RedirectToAction("Detail", new { id = blogId });
+        }
+        public IActionResult Delete(int? id)
+        {
+            if (id == null) return NotFound();
+
+            Comment comment = _context.Comment.Find(id);
+            _context.Comment.Remove(comment);
+            comment.IsDeleted = true;
+            _context.SaveChanges();
+
+            return RedirectToAction("Detail", new { id = comment.BlogId });
         }
     }
 }

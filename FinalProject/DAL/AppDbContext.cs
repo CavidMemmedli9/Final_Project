@@ -40,5 +40,7 @@ namespace FinalProject.DAL
         public DbSet<Blog> Blog { get; set; }
 
         public DbSet<AppUser> AppUser { get; set; }
+
+        public DbSet<Comment> Comment { get; set; }
     }
 }

@@ -230,30 +230,37 @@
                             <!-- Comment section for blogs start -->
                             <div class="clear sf-blog-comment-wrap" id="comment-list">
                                 <div class="comments-area" id="comments">
-                                    <h2 class="comments-title m-t0"><span>02</span> Comments</h2>
+                                    <h2 class="comments-title m-t0">@Model.Blog.Comments.Count<span>Comments</span></h2>
                                     <div>
                                         <!-- COMMENT LIST START -->
                                         <ol class="comment-list">
-                                            <li class="comment">
-                                                <!-- COMMENT BLOCK -->
-                                                <div class="comment-body">
-                                                    <div class="comment-author vcard">
-                                                        <img class="avatar photo" src="~/assets/images/sf-post-coment/1.jpg" alt="">
-                                                        <cite class="fn">Janice Brown</cite>
-                                                        <span class="says">says:</span>
+                                            @foreach (var item in Model.Blog.Comments)
+                                            {
+                                                <li class="comment">
+                                                    <!-- COMMENT BLOCK -->
+                                                    <div class="comment-body">
+                                                        <div class="comment-author vcard">
+                                                            <img class="avatar photo" src="~/assets/images/sf-post-coment/1.jpg" alt="">
+                                                            <cite class="fn">@item.AppUser.FullName</cite>
+                                                            <span class="says">says:</span>
+                                                        </div>
+                                                        <div class="comment-meta">
+                                                            <span>@item.CreatedTime</span>
+                                                        </div>
+                                                        <p>@item.Text</p>
+                                                        <div class="reply">
+                                                            @if (User.Identity.Name==item.AppUser.UserName)
+                                                            {
+                                                               <span><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></span>
+                                                            }
+                                                        </div>
                                                     </div>
-                                                    <div class="comment-meta">
-                                                        <a href="javascript:void(0);">MAR 18,2022 AT 2:14pm</a>
-                                                    </div>
-                                                    <p>Qui officia deserunt mollit anim id est labrum. Duis aute iruret dolor in prehenderit in voludptate velit esse cillum toret eu giat enerit in volptate.</p>
-                                                    <div class="reply">
-                                                        <a href="javscript:;" class="comment-reply-link">Reply</a>
-                                                    </div>
-                                                </div>
 
-                                            </li>
+                                                </li>
+                                            }
+                                           
 
-                                            <li class="comment">
+                                     @*       <li class="comment">
                                                 <!-- COMMENT BLOCK -->
                                                 <div class="comment-body">
                                                     <div class="comment-author vcard">
@@ -270,35 +277,23 @@
                                                     </div>
                                                 </div>
 
-                                            </li>
+                                            </li>*@
                                         </ol>
                                         <!-- COMMENT LIST END -->
                                         <!-- LEAVE A REPLY START -->
                                         <div class="comment-respond m-t30" id="respond">
-                                            <form class="comment-form" id="commentform" method="post">
+                                            <form asp-action="AddComment" class="comment-form" id="commentform" method="post">
 
-                                                <p class="comment-form-author">
-                                                    <label for="author">Name <span class="required">*</span></label>
-                                                    <input class="form-control" type="text" value="" name="user-comment" placeholder="Name" id="author">
-                                                </p>
-
-                                                <p class="comment-form-email">
-                                                    <label>Email <span class="required">*</span></label>
-                                                    <input class="form-control" type="text" value="" name="email" placeholder="Email">
-                                                </p>
-
-                                                <p class="comment-form-url">
-                                                    <label for="url">Website</label>
-                                                    <input class="form-control" type="text" value="" name="url" placeholder="Website" id="url">
-                                                </p>
+               
 
                                                 <p class="comment-form-comment">
                                                     <label for="comment">Comment</label>
-                                                    <textarea class="form-control" rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
+                                                    <textarea class="form-control" rows="8" name="text" placeholder="Write a Comment" id="comment"></textarea>
+                                              <input type="hidden" name="blogId" value="@Model.Blog.Id" />
                                                 </p>
 
                                                 <p class="form-submit">
-                                                    <button class="sf-btn-large" type="button">Post Comment</button>
+                                                    <input class="sf-btn-large" type="submit" value="Post Comment" />
                                                 </p>
 
                                             </form>

@@ -196,6 +196,12 @@ namespace FinalProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Desc")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -208,7 +214,13 @@ namespace FinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("Blog");
                 });
@@ -299,6 +311,40 @@ namespace FinalProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cleaning_Services");
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("BlogId");
+
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Contact", b =>
@@ -746,6 +792,32 @@ namespace FinalProject.Migrations
                     b.Navigation("Blog");
                 });
 
+            modelBuilder.Entity("FinalProject.Models.Blog", b =>
+                {
+                    b.HasOne("FinalProject.Models.AppUser", null)
+                        .WithMany("Blog")
+                        .HasForeignKey("AppUserId");
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Comment", b =>
+                {
+                    b.HasOne("FinalProject.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FinalProject.Models.Blog", "Blog")
+                        .WithMany("Comments")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Blog");
+                });
+
             modelBuilder.Entity("FinalProject.Models.Job", b =>
                 {
                     b.HasOne("FinalProject.Models.Category", "Category")
@@ -827,9 +899,16 @@ namespace FinalProject.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("FinalProject.Models.AppUser", b =>
+                {
+                    b.Navigation("Blog");
+                });
+
             modelBuilder.Entity("FinalProject.Models.Blog", b =>
                 {
                     b.Navigation("Articles");
+
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Category", b =>

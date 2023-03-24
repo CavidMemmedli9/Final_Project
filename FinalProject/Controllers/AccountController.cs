@@ -55,9 +55,9 @@ namespace FinalProject.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginVM login, string ReturnUrl)
+        public async Task<IActionResult> Login(LoginVM login)
         {
-            if (ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return View();
 
             AppUser user = await _userManager.FindByEmailAsync(login.Email);
             if (user == null)
@@ -67,7 +67,7 @@ namespace FinalProject.Controllers
             }
 
             var result = await _signInManager.PasswordSignInAsync(user, login.Password, login.RememberMe, true);
-
+            
             if (result.IsLockedOut)
             {
                 ModelState.AddModelError("", "hesab bloklanib");
@@ -81,10 +81,10 @@ namespace FinalProject.Controllers
             }
 
             await _signInManager.SignInAsync(user, login.RememberMe);
-            if (ReturnUrl != null)
-            {
-                return Redirect(ReturnUrl);
-            }
+           
+            //{
+            //    return Redirect(ReturnUrl);
+            //}
 
             return RedirectToAction("login");
         }
