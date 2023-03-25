@@ -127,11 +127,10 @@
                 <div class="sf-overlay-main" style="opacity:0;"></div>
                 <div class="sf-banner-job-heading-wrap">
                     <div class="sf-banner-job-heading-area">
-                        <div class="sf-banner-job-logo-pic"><img src="~/assets/images/job4.jpg" alt=""></div>
-                        <div class="sf-banner-job-heading-large">Group Marketing Manager</div>
+                        <div class="sf-banner-job-logo-pic"><img src="~/assets/images/providers/@Model.ImageUrl" alt=""></div>
+                        <div class="sf-banner-job-heading-large">@Model.Title</div>
                         <ul class="sf-banner-job-dutation">
-                            <li><i class="fa fa-clock-o"></i> Posted date: <span class="jobs-timing">2 years ago</span></li>
-                            <li><i class="fa fa-hourglass-o"></i> Expries in: <span class="jobs-date-label">January 26, 2022</span></li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -148,14 +147,14 @@
                             <span class="job-meta-icon"><img src="~/assets/images/job-cin/location.png" alt=""></span>
                             <div class="sf-job-meta-info">
                                 <h5 class="job-meta-title">Location:</h5>
-                                <span class="job-meta-text"><a class="google_map_link" href="http://maps.google.com/" target="_blank">Brooklyn</a></span>
+                                <span class="job-meta-text"><a class="google_map_link" href="http://maps.google.com/" target="_blank">@Model.Location</a></span>
                             </div>
                         </li>
                         <li>
                             <span class="job-meta-icon"><img src="~/assets/images/job-cin/money.png" alt=""></span>
                             <div class="sf-job-meta-info">
                                 <h5 class="job-meta-title">Price:</h5>
-                                <span class="job-meta-text text-red">$500 - $1,000 / month</span>
+                                <span class="job-meta-text text-red">@Model.Price</span>
                             </div>
                         </li>
                         <li class="job-type hourly">
@@ -169,7 +168,7 @@
                             <span class="job-meta-icon"><img src="~/assets/images/job-cin/tag.png" alt=""></span>
                             <div class="sf-job-meta-info">
                                 <h5 class="job-meta-title">Categories:</h5>
-                                <span class="job-meta-text">Cleaning,Electician,Web Design</span>
+                                <span class="job-meta-text">@Model.Category</span>
                             </div>
                         </li>
                         <li>
@@ -280,13 +279,13 @@
                             <div class="sf-jobdetail-blocks">
                                 <div class="sf-related-jobs">
                                     <div class="sf-related-job-pic">
-                                        <img src="~/assets/images/job4.jpg" alt="">
+                                        <img src="~/assets/images/providers/@Model.ImageUrl" alt="">
                                     </div>
                                     <div class="sf-related-job-location">
-                                        <i class="feather-map-pin"></i> Hà Nội
+                                       
                                     </div>
                                     <div class="sf-related-job-name">
-                                        InwaveThemes  <span class="feather-check"></span>
+                                        @Model.Title  <span class="feather-check"></span>
                                     </div>
                                     <div class="sf-related-job-rating">
                                         <span class="fa fa-star"></span>

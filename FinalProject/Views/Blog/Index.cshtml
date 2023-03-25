@@ -152,7 +152,7 @@
                                     <!-- Content section for blogs start -->
                                     <div class="post-thum">
                                         <img title="title" alt="" src="~/assets/images/popular-categories/@item.ImageUrl">
-                                        <div class="post-categories"><a href="#">Logistics</a></div>
+                                       
                                     </div>
                                     <div class="post-info">
 
@@ -214,10 +214,10 @@
                             </div>
                             <div class="widget_social_inks">
                                 <ul class="social-icons social-square social-darkest social-md">
-                                    <li><a href="javascript:void(0);" class="fb-1"><img src="images/social-icon/fb-1.png" alt=""></a></li>
-                                    <li><a href="javascript:void(0);" class="tw-1"><img src="images/social-icon/tw-1.png" alt=""></a></li>
-                                    <li><a href="javascript:void(0);" class="pint-1"><img src="images/social-icon/pint-1.png" alt=""></a></li>
-                                    <li><a href="javascript:void(0);" class="in-1"><img src="images/social-icon/in-1.png" alt=""></a></li>
+                                    <li><a href="javascript:void(0);" class="fb-1"><img src="/assets/images/social-icon/fb-1.png" alt=""></a></li>
+                                    <li><a href="javascript:void(0);" class="tw-1"><img src="/assets/images/social-icon/tw-1.png" alt=""></a></li>
+                                    <li><a href="javascript:void(0);" class="pint-1"><img src="/assets/images/social-icon/pint-1.png" alt=""></a></li>
+                                    <li><a href="javascript:void(0);" class="in-1"><img src="/assets/images/social-icon/in-1.png" alt=""></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -228,10 +228,11 @@
                                 <h3 class="widget-title">Categories</h3>
                             </div>
                             <ul>
-                                <li><a href="javascript:void(0);">Branding</a><span class="badge">(28)</span></li>
-                                <li><a href="javascript:void(0);">Corporat</a><span class="badge">(05)</span></li>
-                                <li><a href="javascript:void(0);">Design</a><span class="badge">(24)</span></li>
-                                <li><a href="javascript:void(0);">Gallery</a><span class="badge">(15)</span></li>
+                                @foreach (var item in Model.Categories)
+                                    {
+
+                                        <li><a href="javascript:void(0);">@item.Name</a><span class="badge"></span></li>
+                                    }
                             </ul>
                         </div>
 
@@ -244,7 +245,7 @@
                             <div class="widget-post-bx">
                                 <div class="widget-post clearfix">
                                     <div class="wt-post-media">
-                                        <img src="images/blog/recent-post/1.jpg" alt="">
+                                        <img src="/assets/images/blog/recent-post/1.jpg" alt="">
                                     </div>
                                     <div class="wt-post-info">
                                         <div class="wt-post-header">
@@ -259,7 +260,7 @@
                                 </div>
                                 <div class="widget-post clearfix">
                                     <div class="wt-post-media">
-                                        <img src="images/blog/recent-post/2.jpg" alt="">
+                                        <img src="/assets/images/blog/recent-post/2.jpg" alt="">
                                     </div>
                                     <div class="wt-post-info">
                                         <div class="wt-post-header">
@@ -274,7 +275,7 @@
                                 </div>
                                 <div class="widget-post clearfix">
                                     <div class="wt-post-media">
-                                        <img src="images/blog/recent-post/3.jpg" alt="">
+                                        <img src="/assets/images/blog/recent-post/3.jpg" alt="">
                                     </div>
                                     <div class="wt-post-info">
                                         <div class="wt-post-header">
@@ -293,21 +294,7 @@
 
 
                         <!-- TAGS -->
-                        <div class="widget  widget_tag_cloud rounded-sidebar-widget">
-                            <div class="text-left m-b30">
-                                <h3 class="widget-title">Tags</h3>
-
-                            </div>
-
-                            <div class="tagcloud">
-                                <a href="javascript:void(0);">Shopping</a>
-                                <a href="javascript:void(0);">Cleaning </a>
-                                <a href="javascript:void(0);">Traveling</a>
-                                <a href="javascript:void(0);">Transport </a>
-                                <a href="javascript:void(0);">Foods</a>
-                                <a href="javascript:void(0);">Salon</a>
-                            </div>
-                        </div>
+                    
 
 
 

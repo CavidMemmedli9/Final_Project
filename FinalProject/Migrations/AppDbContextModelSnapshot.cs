@@ -44,7 +44,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("About");
+                    b.ToTable("About", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.AboutProvider", b =>
@@ -69,7 +69,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AboutProvider");
+                    b.ToTable("AboutProvider", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.AppUser", b =>
@@ -168,7 +168,7 @@ namespace FinalProject.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("Articles");
+                    b.ToTable("Articles", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Background", b =>
@@ -185,7 +185,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Background");
+                    b.ToTable("Background", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Blog", b =>
@@ -222,7 +222,7 @@ namespace FinalProject.Migrations
 
                     b.HasIndex("AppUserId");
 
-                    b.ToTable("Blog");
+                    b.ToTable("Blog", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Category", b =>
@@ -243,7 +243,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Category", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Choose", b =>
@@ -268,7 +268,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Choose");
+                    b.ToTable("Choose", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.City", b =>
@@ -285,7 +285,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("City");
+                    b.ToTable("City", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Cleaning_Services", b =>
@@ -310,7 +310,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cleaning_Services");
+                    b.ToTable("Cleaning_Services", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Comment", b =>
@@ -344,7 +344,7 @@ namespace FinalProject.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comment", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Contact", b =>
@@ -376,7 +376,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contact");
+                    b.ToTable("Contact", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Job", b =>
@@ -425,7 +425,7 @@ namespace FinalProject.Migrations
 
                     b.HasIndex("ProviderId");
 
-                    b.ToTable("Job");
+                    b.ToTable("Job", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.JobInfo", b =>
@@ -455,7 +455,7 @@ namespace FinalProject.Migrations
 
                     b.HasIndex("VacancyId");
 
-                    b.ToTable("JobInfo");
+                    b.ToTable("JobInfo", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.News_Articles", b =>
@@ -480,7 +480,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("News_Articles");
+                    b.ToTable("News_Articles", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Person", b =>
@@ -505,7 +505,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Person");
+                    b.ToTable("Person", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Provider", b =>
@@ -522,7 +522,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Provider");
+                    b.ToTable("Provider", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Quote", b =>
@@ -550,7 +550,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Quote");
+                    b.ToTable("Quote", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Related_Provider", b =>
@@ -575,7 +575,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Related_Provider");
+                    b.ToTable("Related_Provider", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Slider", b =>
@@ -600,7 +600,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Slider");
+                    b.ToTable("Slider", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Statics", b =>
@@ -622,7 +622,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Statics");
+                    b.ToTable("Statics", (string)null);
                 });
 
             modelBuilder.Entity("FinalProject.Models.Vacancy", b =>
@@ -647,7 +647,7 @@ namespace FinalProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Vacancy");
+                    b.ToTable("Vacancy", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
