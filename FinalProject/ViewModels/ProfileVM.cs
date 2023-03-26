@@ -1,4 +1,5 @@
 ﻿using FinalProject.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace FinalProject.ViewModels
 {
@@ -8,7 +9,8 @@ namespace FinalProject.ViewModels
 
         public List<About> About { get; set; }
 
-        public Quote Quote { get; set; }
+
+        public List<Quote> Quote { get; set; }
 
         public List<Articles> Articles { get; set; }
 
@@ -20,6 +22,12 @@ namespace FinalProject.ViewModels
         public List<News_Articles> News_Articles { get; set; }
 
         public AboutProvider AboutProvider { get; set; }
+        public string Name { get; set; }
+
+        public string EmailAddress { get; set; }
+        public int Phone { get; set; }
+
+        public string Message { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FinalProject.DAL;
+using FinalProject.Models;
 using FinalProject.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,14 @@ namespace FinalProject.Controllers
 
             profileVM.Related_Provider = _context.Related_Provider.ToList();
             return View(profileVM);
+        }
+
+        [HttpPost]
+        public IActionResult Quote( Quote quote)
+        {
+            _context.Quote.Add(quote);
+            _context.SaveChanges();
+            return RedirectToAction("Index","Home");
         }
     }
 }

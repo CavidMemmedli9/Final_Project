@@ -45,6 +45,7 @@ namespace FinalProject.Controllers
            
             return View(blog);
         }
+
         [HttpPost]
         public async Task<IActionResult> AddComment(string text, int blogId)
         {

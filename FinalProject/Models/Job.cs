@@ -21,6 +21,8 @@ namespace FinalProject.Models
 
         public Provider Provider { get; set; }
         public int ProviderId { get; set; }
+        public bool IsDeleted { get; set; }
+        public List<Photos> Photos { get; set; }
 
     }
 }
