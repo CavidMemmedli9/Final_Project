@@ -25,10 +25,13 @@
                     <div class="sf-site-link sf-widget-link">
                         <h4 class="sf-f-title">Site Links</h4>
                         <ul>
-                            <li><a href="blog-grid.html">Blog</a></li>
-                            <li><a href="contact-us.html">Contact Us</a></li>
-                            <li><a href="job-grid.html">Jobs</a></li>
-                            <li><a href="all-categories.html">Categories</a></li>
+                            <li><a asp-controller="home" asp-action="index">Home</a></li>
+                            <li><a asp-controller="about" asp-action="index">About Us</a></li>
+                            <li><a asp-controller="category" asp-action="index">Categories</a></li>
+                            <li><a asp-controller="profile" asp-action="index">Profile</a></li>
+                            <li><a asp-controller="job" asp-action="index">Job</a></li>
+                            <li><a asp-controller="blog" asp-action="index">Blog</a></li>
+                            <li><a asp-controller="contact" asp-action="index">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -60,12 +63,19 @@
                 <div class="col-lg-3 col-md-6 col-sm-6  m-b30">
                     <div class="sf-site-link sf-widget-contact">
                         <h4 class="sf-f-title">Contact Info</h4>
-                      @*  <ul>
-                            
-                            <li>@Model.Settings.Name</li>
-                            <li>@Model.Settings.Number</li>
-                            <li>@Model.Settings.Email</li>
-                        </ul>*@
+                        <ul>
+                            @foreach (var item in Model.Settings)
+                            {
+
+                                <li>@item.Place</li>
+                                
+                                <li>@item.Number</li>
+
+                                <li>@item.EmailAddress</li>
+
+
+                            }
+                        </ul>
                     </div>
                 </div>
 

@@ -24,5 +24,7 @@ namespace FinalProject.ViewModels
         [Compare("Password", ErrorMessage = "Passwords don't match ")]
         [Display(Name = "Repeat Password")]
         public string PasswordConfirm { get; set; }
+
+        public List<Settings> Settings { get; set; }
     }
 }
