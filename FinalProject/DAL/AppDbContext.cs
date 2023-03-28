@@ -44,6 +44,7 @@ namespace FinalProject.DAL
         public DbSet<Comment> Comment { get; set; }
 
         public DbSet<Photos> Photos { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
 
 
         public DbSet<Settings> Settings { get; set; }

@@ -218,11 +218,11 @@
                             <!-- Comment section for blogs start -->
                             <div class="clear sf-blog-comment-wrap" id="comment-list">
                                 <div class="comments-area" id="comments">
-                                    <h2 class="comments-title m-t0">@Model.Blog.Comments.Count<span>Comments</span></h2>
+                                    <h2 class="comments-title m-t0">@Model.Comments.Count<span>Comments</span></h2>
                                     <div>
                                         <!-- COMMENT LIST START -->
                                         <ol class="comment-list">
-                                            @foreach (var item in Model.Blog.Comments)
+                                            @foreach (var item in Model.Comments)
                                             {
                                                 <li class="comment">
                                                     <!-- COMMENT BLOCK -->
@@ -277,7 +277,7 @@
                                                 <p class="comment-form-comment">
                                                     <label for="comment">Comment</label>
                                                     <textarea class="form-control" rows="8" name="text" placeholder="Write a Comment" id="comment"></textarea>
-                                              <input type="hidden" name="blogId" value="@Model.Blog.Id" />
+                                              <input type="hidden" name="blogId" value="@Model.Id" />
                                                 </p>
 
                                                 <p class="form-submit">

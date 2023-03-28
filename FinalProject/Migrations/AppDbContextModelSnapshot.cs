@@ -325,7 +325,10 @@ namespace FinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("BlogId")
+                    b.Property<int>("ArticlesId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("BlogId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedTime")
@@ -341,6 +344,8 @@ namespace FinalProject.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("ArticlesId");
 
                     b.HasIndex("BlogId");
 
@@ -439,9 +444,11 @@ namespace FinalProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CityId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
@@ -475,6 +482,10 @@ namespace FinalProject.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("CityId");
 
                     b.HasIndex("VacancyId");
 
@@ -697,6 +708,23 @@ namespace FinalProject.Migrations
                     b.ToTable("Statics");
                 });
 
+            modelBuilder.Entity("FinalProject.Models.Subscribe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subscribes");
+                });
+
             modelBuilder.Entity("FinalProject.Models.Vacancy", b =>
                 {
                     b.Property<int>("Id")
@@ -879,15 +907,19 @@ namespace FinalProject.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("FinalProject.Models.Blog", "Blog")
-                        .WithMany("Comments")
-                        .HasForeignKey("BlogId")
+                    b.HasOne("FinalProject.Models.Articles", "Articles")
+                        .WithMany()
+                        .HasForeignKey("ArticlesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("FinalProject.Models.Blog", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("BlogId");
+
                     b.Navigation("AppUser");
 
-                    b.Navigation("Blog");
+                    b.Navigation("Articles");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Job", b =>
@@ -911,11 +943,23 @@ namespace FinalProject.Migrations
 
             modelBuilder.Entity("FinalProject.Models.JobInfo", b =>
                 {
+                    b.HasOne("FinalProject.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId");
+
+                    b.HasOne("FinalProject.Models.City", "City")
+                        .WithMany()
+                        .HasForeignKey("CityId");
+
                     b.HasOne("FinalProject.Models.Vacancy", "Vacancy")
                         .WithMany("JobInfo")
                         .HasForeignKey("VacancyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("City");
 
                     b.Navigation("Vacancy");
                 });

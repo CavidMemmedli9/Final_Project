@@ -11,5 +11,6 @@
         public string Desc { get; set; }
         public int? BlogId { get; set; }
         public Blog Blog { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

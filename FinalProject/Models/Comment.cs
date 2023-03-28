@@ -6,8 +6,8 @@
 
         public string Text { get; set; }
         public bool IsDeleted { get; set; }
-        public int BlogId { get; set; }
-        public Blog Blog { get; set; }
+        public int ArticlesId { get; set; }
+        public Articles Articles { get; set; }
         public DateTime CreatedTime { get; set; }
         public string AppUserId { get; set; }
         public AppUser AppUser { get; set; }

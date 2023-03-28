@@ -13,6 +13,17 @@ namespace FinalProject.Controllers
         {
             _context = context;
         }
+        [HttpPost]
+        public async Task<IActionResult> Subscribe(string email)
+        {
+            Subscribe data = new()
+            {
+                Email = email
+            };
+            await _context.Subscribes.AddAsync(data);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index),"Home");
+        }
 
         public IActionResult Index()
         {

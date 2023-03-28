@@ -39,7 +39,7 @@ namespace FinalProject.Controllers
         public IActionResult Detail(int? id)
         {
             var blog = _context.Articles.Include(t => t.Blog).
-                ThenInclude(c=>c.Comments).
+                Include(c=>c.Comments).
                 ThenInclude(c=>c.AppUser).
                 FirstOrDefault(t => t.Id == id);
            
@@ -54,13 +54,13 @@ namespace FinalProject.Controllers
             Comment comment = new Comment()
             {
                 AppUserId = user.Id,
-                BlogId = blogId,
+                ArticlesId = blogId,
                 Text = text
             };
             comment.CreatedTime= DateTime.Now;
             _context.Comment.Add(comment);
             _context.SaveChanges();
-            return RedirectToAction("Detail", new { id = blogId });
+            return RedirectToAction(nameof(Detail), new {id=blogId});
         }
         public IActionResult Delete(int? id)
         {
@@ -71,7 +71,7 @@ namespace FinalProject.Controllers
             comment.IsDeleted = true;
             _context.SaveChanges();
 
-            return RedirectToAction("Detail", new { id = comment.BlogId });
+            return RedirectToAction("Detail", new { id = comment.ArticlesId });
         }
     }
 }

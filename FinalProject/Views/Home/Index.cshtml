@@ -31,7 +31,7 @@
                   <div class="container">
               
                     <div class="search-form ">
-                      <form class="clearfix search-providers" method="get">
+                      <form asp-action="Index" asp-controller="Job" class="clearfix search-providers" method="get">
                         <input type="hidden" name="s" value="">
 
                           <div class="aon-searchbar-table">
@@ -41,27 +41,15 @@
                           
 
                               <li>
-                                <label>Category</label> 
-                                <select id="categorysrh" name="catid" class="form-control sf-form-control aon-categories-select sf-select-box" title="Select Category">
-                                   
-                                            <option value="17" data-content="
-                                      <span class='childcat'>Sales Manager</span>">Sales Manager
+                                <label>Category</label>
+                                        <select id="categoryid" name="categoryid" class="form-control sf-form-control aon-categories-select sf-select-box" title="Select Category">
+                                   @foreach (var item in Model.Category)
+                                            {
+                                     <option value="@item.Id" data-content="
+                                      <span class='childcat'>@item.Name</span>">@item.Name
                                     </option>
-                                    <option value="30" data-content="
-                                      <span class='childcat'>Front-End Developer</span>">Front-End Developer
-                                    </option>
-                                    <option value="19" data-content="
-                                      <span class='childcat'>Back-End Developer</span>">Back-End Developer
-                                    </option>
-                                    <option value="19" data-content="
-                                      <span class='childcat'>Accountant</span>">Accountant
-                                    </option>
-                                    <option value="19" data-content="
-                                      <span class='childcat'>Design</span>">Design
-                                    </option>
-                                    <option value="19" data-content="
-                                      <span class='childcat'>Teacher</span>">Teacher
-                                    </option>
+                                            }
+                      
 
                                  </select>
                                 <span class="sf-search-icon"><img src="~/assets/images/search-bar/maintenance.png" alt=""/></span>
@@ -69,16 +57,18 @@
                            
                               <li>
                                 <label>City</label>
-                                <select class="sf-select-box form-control sf-form-control bs-select-hidden" data-live-search="true" name="city" id="city" title="City" data-header="Select a City">
-                                
-                                  <option value="">Baku</option>
+                                        <select class="sf-select-box form-control sf-form-control bs-select-hidden" data-live-search="true" name="cityid" id="cityid" title="City" data-header="Select a City">
+                                @foreach (var item in Model.City)
+                                            {
+                                                <option value="@item.Id">@item.Name</option>
+                                            }
                                 </select>
                                 <span class="sf-search-icon"><img src="~/assets/images/search-bar/city.png" alt=""/></span>
                               </li>
                             </ul>
                           </div>
                           <div class="aon-searchbar-right">
-                            <button type="button" class="site-button"><i class="fa fa-search"></i> Find Provider</button>
+                            <button type="submit" class="site-button"><i class="fa fa-search"></i> Find Provider</button>
                           </div>
 
                         </div>
@@ -188,12 +178,15 @@
                                                 <span class="aon-sub-title">Choose</span>
                                                 <h2 class="sf-title">Why Choose us</h2>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
                                             </div>
+
+                                    @await Component.InvokeAsync("Choose");
                                         </div>
+
                                     </div>
 
 
-                            @await Component.InvokeAsync("Choose");
                                  
                                  
                                 </div>
@@ -221,7 +214,7 @@
                         <h2 class="sf-title">What People Say</h2>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do usmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                       
                     </div>
                 </div>
             </div>

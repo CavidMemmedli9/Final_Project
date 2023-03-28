@@ -1,5 +1,6 @@
 ﻿using FinalProject.Models;
 using FinalProject.ViewModels;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -57,36 +58,33 @@ namespace FinalProject.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM login)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return Content("Pleas enter required fields");
 
             AppUser user = await _userManager.FindByEmailAsync(login.Email);
             if (user == null)
             {
-                ModelState.AddModelError("", "email ve yaxud parol sehvdir");
-                return View(login);
+                return Content("This account not found");
             }
 
             var result = await _signInManager.PasswordSignInAsync(user, login.Password, login.RememberMe, true);
             
             if (result.IsLockedOut)
             {
-                ModelState.AddModelError("", "hesab bloklanib");
-                return View(login);
+                return Content("This account is blocked");
             }
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError("", "email ve yaxud parol sehvdir");
-                return View(login);
+                return Content("Email or password incorrect");
             }
 
             await _signInManager.SignInAsync(user, login.RememberMe);
-           
+
             //{
             //    return Redirect(ReturnUrl);
             //}
 
-            return RedirectToAction("login");
+            return Content("1");
         }
     }
 }

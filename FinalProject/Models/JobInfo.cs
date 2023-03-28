@@ -8,10 +8,12 @@
         public string KeyResponse { get; set; }
 
         public string Skill { get; set; }
-
         public string Location { get; set; }
+        public int? CityId { get; set; }
+        public City City { get; set; }
 
-        public string Category { get; set; }
+        public int? CategoryId { get; set; }
+        public Category Category { get; set; }
         public string ImageUrl { get; set; }
 
         public string Title { get; set; }

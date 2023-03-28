@@ -204,18 +204,18 @@
 
                         <ul class="job_listings job_listings-two">
                             <!-- COLUMNS 1 -->
-                            @foreach (var item in Model.Vacancy)
+                            @foreach (var item in Model.JobInfo)
                             {
                                 <li class="job_listing type-job_listing job-type-hourly">
                                     <a class="job-clickable-box" asp-controller="job" asp-action="jobdetail" asp-route-id="@item.Id"></a>
-                                     <div class="job-comapny-logo"><img class="company_logo" src="~/assets/images/popular-categories/@item.ImageUrl" alt="">
+                                     <div class="job-comapny-logo"><img class="company_logo" src="@item.ImageUrl" alt="">
                                         </div>
                                  
                                     <div class="job-comapny-info">
                                         
                                             <div class="position">
                                             <h3>@item.Title</h3>
-                                            <div class="company"> <a asp-controller="job" asp-action="jobdetail">  <strong>@item.Desc</strong>  </a> </div>
+                                            <div class="company"> <a asp-controller="job" asp-action="jobdetail">  <strong>@item.JobDesc</strong>  </a> </div>
                                             </div> 
 
                                         <ul class="meta">
@@ -223,8 +223,8 @@
                                             </li>
                                         </ul>
 
-                                        <div class="job-location"><i class="fa fa-map-marker"></i> Baku </div>
-                                        <div class="job-amount"><i class="fa fa-money"></i> <span>1000 Azn</span> </div>
+                                        <div class="job-location"><i class="fa fa-map-marker"></i> @item.City.Name </div>
+                                        <div class="job-amount"><i class="fa fa-money"></i> <span>@item.Price AZN</span> </div>
 
                                         <div class="job-label">  <img src="~/assets/images/label.html" alt="">   </div>
 

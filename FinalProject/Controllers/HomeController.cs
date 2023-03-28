@@ -26,7 +26,7 @@ namespace FinalProject.Controllers
             homeVM.Choose = _context.Choose.ToList();
             homeVM.Statics = _context.Statics.ToList();
             homeVM.Category = _context.Category.ToList();
-
+            homeVM.City = _context.City.ToList();
             return View(homeVM);
         }
 

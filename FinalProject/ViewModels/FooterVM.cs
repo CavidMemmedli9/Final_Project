@@ -26,5 +26,7 @@ namespace FinalProject.ViewModels
         public string PasswordConfirm { get; set; }
 
         public List<Settings> Settings { get; set; }
+        public string ReturnUrl { get; set; }
+        public bool IsActive { get; set; }
     }
 }
