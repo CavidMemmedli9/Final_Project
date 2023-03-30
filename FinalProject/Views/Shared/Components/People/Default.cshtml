@@ -1,0 +1,55 @@
+﻿@model List<People>
+
+
+<div class="section-content">
+    <!--testimonial top-->
+    <div class="slider-vertical-wrap">
+        <!-- THUMBNAILS -->
+        <div class="slick-testimonials-thumbnails">
+            <!-- COLUMNS 1 -->
+            @foreach (var item in Model)
+            {
+                <div class="slick-item">
+                    <div class="sf-testimonial-user">
+                        <div class="sf-testimonial-media"><img src="@item.ImageUrl" alt=""></div>
+                        <div class="sf-testimonial-user-detail">
+                            <div class="sf-testi-user-name">@item.Name </div>
+                            <div class="sf-testi-user-position">@item.Title</div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+           
+
+
+        </div>
+        <!-- MAIN SLIDES -->
+        <div class="slick-testimonials-carousel">
+            <!-- COLUMNS 1 -->
+            @foreach (var item in Model)
+            {
+                <div class="slick-item">
+                    <div class="sf-testimonial-info text-center">
+                        <div class="sf-testimonial-title">It was a great experience</div>
+                        <div class="sf-ow-pro-rating">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star tsaext-gray"></span>
+                        </div>
+                        <div class="sf-testimonial-text">
+                            <p>@item.Desc</p>
+                        </div>
+                        <div class="sf-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+                    </div>
+                </div>
+            }
+           
+
+
+        </div>
+    </div>
+
+</div>

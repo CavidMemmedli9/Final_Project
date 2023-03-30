@@ -47,6 +47,7 @@ namespace FinalProject.DAL
         public DbSet<Subscribe> Subscribes { get; set; }
 
 
+        public DbSet<People> People { get; set; }
         public DbSet<Settings> Settings { get; set; }
     }
 }

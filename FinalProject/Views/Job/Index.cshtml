@@ -80,19 +80,19 @@
                             </li>
 
                             <li class="has-child">
-                                <a href="javascript:;">Jobs</a>
+                                <a asp-controller="job" asp-action="index">Jobs</a>
                                 <ul class="sub-menu">
-                                    <li><a asp-controller="jobDetail" asp-action="index">Job detail</a></li>
+                                    <li><a asp-controller="job" asp-action="jobdetail">Job detail</a></li>
                                 </ul>
                             </li>
 
                             <li class="has-child">
-                                <a href="javascript:;">Blog</a>
+                                <a asp-controller="blog" asp-action="index">Blog</a>
                                 <ul class="sub-menu">
-                                    <li><a asp-controller="blog" asp-action="index">Blog detail</a></li>
+                                    <li><a asp-controller="blog" asp-action="detail">Blog detail</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a asp-controller="contact" asp-action="index">Contact</a></li>
                         </ul>
 
                     </div>
@@ -161,12 +161,15 @@
                                 <h4 class="sf-title">Location</h4>
                                 <div class="form-group sf-location-ring-wrap">
                                     <input name="minprice" type="text" placeholder="Enter Locaton" class="form-control">
-                                    <a href="#" class="sf-location-ring"></a>
+                                   
+
+                                        <a href="#" class="sf-location-ring"></a>
+                                    
                                 </div>
 
                                 <div class="sf-range-slider">
-                                    <div class="sf-range-slider-control">Radius: <span>45Km</span></div>
-                                    <input id="ex1" name="maxprice" data-slider-id='ex1Slider' type="text" data-slider-min="700" data-slider-max="1400" data-slider-step="1" data-slider-value="14" />
+                                    <div class="sf-range-slider-control"> <span>Price</span></div>
+                                    <input id="ex1" name="maxprice" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="1400" data-slider-step="1" data-slider-value="14" />
                                 </div>
 
                             </div>
@@ -177,12 +180,12 @@
 
                                 <div class="category-select">
                                     <select class="form-control sf-select-box" title="All category">
-                                        <option> Select a Category </option>
-                                        <option>Automotive</option>
-                                        <option>Cab Service</option>
-                                        <option>Car Dealers</option>
-                                        <option>Car care and Servicing</option>
-                                        <option>Beauty and Personal Care</option>
+                                        @foreach (var item in Model.Category)
+                                        {
+
+                                            <option>@item.Name </option>
+                                        }
+
                                     </select>
                                 </div>
 

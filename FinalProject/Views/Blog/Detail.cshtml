@@ -60,14 +60,14 @@
 
                         <ul class=" nav navbar-nav">
                             <li class="has-child current-menu-item">
-                                <a href="javascript:;">Home</a>
+                                <a asp-controller="home" asp-action="index">Home</a>
 
                             </li>
 
                             <li class="has-child">
                                 <a href="javascript:;">Pages</a>
                                 <ul class="sub-menu">
-                                    <li><a href="about-us.html">About us</a></li>
+                                    <li><a asp-controller="about" asp-action="index">About us</a></li>
                                     <li>
                                         <a asp-controller="category" asp-action="index">Categories</a>
 
@@ -78,14 +78,14 @@
                             </li>
 
                             <li class="has-child">
-                                <a href="javascript:;">Profile</a>
+                                <a asp-controller="profile" asp-action="index">Profile</a>
 
                             </li>
 
                             <li class="has-child">
-                                <a href="javascript:;">Jobs</a>
+                                <a asp-controller="job" asp-action="index">Jobs</a>
                                 <ul class="sub-menu">
-                                    <li><a href="job-detail.html">Job detail</a></li>
+                                    <li><a asp-controller="job" asp-action="jobdetail">Job detail</a></li>
                                 </ul>
                             </li>
 
@@ -93,7 +93,7 @@
                                 <a asp-controller="blog" asp-action="index">Blog</a>
 
                             </li>
-                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a asp-controller="contact" asp-action="index">Contact</a></li>
                         </ul>
 
                     </div>

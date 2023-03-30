@@ -134,15 +134,15 @@
 
 
                             <li class="has-child">
-                                <a href="javascript:;">Profile</a>
+                                <a asp-controller="profile" asp-action="index">Profile</a>
                             </li>
 
                             <li class="has-child">
-                                <a href="javascript:;">Jobs</a>
+                                <a asp-controller="job" asp-action="index">Jobs</a>
 
                                 <ul class="sub-menu">
 
-                                    <li><a href="job-detail.html">Job detail</a></li>
+                                    <li><a asp-controller="job" asp-action="jobdetail">Job detail</a></li>
 
                                 </ul>
 
@@ -152,15 +152,9 @@
 
                             <li class="has-child">
                                 <a asp-controller="blog" asp-action="index">Blog</a>
-
-                             
-
                             </li>
 
-                            <li><a href="contact-us.html">Contact</a></li>
-
-
-
+                            <li><a asp-controller="contact" asp-action="index">Contact</a></li>
                         </ul>
 
 

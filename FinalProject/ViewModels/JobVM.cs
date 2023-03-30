@@ -9,6 +9,7 @@ namespace FinalProject.ViewModels
         public List<JobInfo> JobInfo { get; set; }
         public List<Vacancy> Vacancy { get; set; }
 
-
+        public List<City> City { get; set; }
+        public List<Category> Category { get; set; }
     }
 }
