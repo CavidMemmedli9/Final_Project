@@ -127,7 +127,7 @@
                 <div class="sf-overlay-main" style="opacity:0;"></div>
                 <div class="sf-banner-job-heading-wrap">
                     <div class="sf-banner-job-heading-area">
-                        <div class="sf-banner-job-logo-pic"><img src="~/assets/images/providers/@Model.ImageUrl" alt=""></div>
+                        <div class="sf-banner-job-logo-pic"><img src="@Model.Work" alt=""></div>
                         <div class="sf-banner-job-heading-large">@Model.Title</div>
                         <ul class="sf-banner-job-dutation">
                            
@@ -194,17 +194,16 @@
                     <!-- Left part start -->
                     <div class="col-lg-8 col-md-12">
                         <!--Job Description Start-->
-                        <p>We are Looking for a skilled Ul/UX designer for our  as  product which includes a responsive web application, an Android app and an rOS app. Our ideal candidate should have the ability to turn client’s visions into intuitive designs.</p><br>
 
 
 
                         <h3>Job Description</h3>
 
-                       <p> @Model.JobDesc </p>
+                       <p> @Model.JobDesc </p>@*
 
                         <h3>Key Responsibilities</h3>
 
-                        <p> @Model.KeyResponse   </p>
+                        <p> @Model.KeyResponse   </p>*@
 
                         <br>
 
@@ -279,7 +278,8 @@
                             <div class="sf-jobdetail-blocks">
                                 <div class="sf-related-jobs">
                                     <div class="sf-related-job-pic">
-                                        <img src="~/assets/images/providers/@Model.ImageUrl" alt="">
+                                        
+                                        <img src="@Model.ImageUrl" alt="">
                                     </div>
                                     <div class="sf-related-job-location">
                                        

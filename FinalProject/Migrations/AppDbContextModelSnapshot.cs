@@ -420,9 +420,8 @@ namespace FinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.Property<int>("ProviderId")
                         .HasColumnType("int");
@@ -466,9 +465,8 @@ namespace FinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.Property<string>("Skill")
                         .IsRequired()
@@ -480,6 +478,10 @@ namespace FinalProject.Migrations
 
                     b.Property<int>("VacancyId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Work")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -908,7 +910,7 @@ namespace FinalProject.Migrations
                         .IsRequired();
 
                     b.HasOne("FinalProject.Models.Articles", "Articles")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("ArticlesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1027,6 +1029,11 @@ namespace FinalProject.Migrations
             modelBuilder.Entity("FinalProject.Models.AppUser", b =>
                 {
                     b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Articles", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Blog", b =>

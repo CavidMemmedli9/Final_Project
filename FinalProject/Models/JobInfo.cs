@@ -17,7 +17,8 @@
         public string ImageUrl { get; set; }
 
         public string Title { get; set; }
-        public string Price { get; set; }
+        public int Price { get; set; }
+        public string Work { get; set; }
 
         public Vacancy Vacancy { get; set; }
         public int VacancyId { get; set; }

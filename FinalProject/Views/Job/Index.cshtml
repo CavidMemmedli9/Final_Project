@@ -160,13 +160,13 @@
                             <div class="sf-job-sidebar-blocks">
                                 <h4 class="sf-title">Location</h4>
                                 <div class="form-group sf-location-ring-wrap">
-                                    <input type="text" placeholder="Enter Locaton" class="form-control">
+                                    <input name="minprice" type="text" placeholder="Enter Locaton" class="form-control">
                                     <a href="#" class="sf-location-ring"></a>
                                 </div>
 
                                 <div class="sf-range-slider">
                                     <div class="sf-range-slider-control">Radius: <span>45Km</span></div>
-                                    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+                                    <input id="ex1" name="maxprice" data-slider-id='ex1Slider' type="text" data-slider-min="700" data-slider-max="1400" data-slider-step="1" data-slider-value="14" />
                                 </div>
 
                             </div>
@@ -215,7 +215,7 @@
                                         
                                             <div class="position">
                                             <h3>@item.Title</h3>
-                                            <div class="company"> <a asp-controller="job" asp-action="jobdetail">  <strong>@item.JobDesc</strong>  </a> </div>
+                                            <div class="company"> <a asp-controller="job" asp-action="jobdetail">  <strong>@item.KeyResponse</strong>  </a> </div>
                                             </div> 
 
                                         <ul class="meta">
@@ -224,7 +224,7 @@
                                         </ul>
 
                                         <div class="job-location"><i class="fa fa-map-marker"></i> @item.City.Name </div>
-                                        <div class="job-amount"><i class="fa fa-money"></i> <span>@item.Price AZN</span> </div>
+                                        <div class="job-amount"><i class="fa fa-money"></i> <span>@item.Price </span> </div>
 
                                         <div class="job-label">  <img src="~/assets/images/label.html" alt="">   </div>
 

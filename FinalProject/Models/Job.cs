@@ -10,7 +10,7 @@ namespace FinalProject.Models
 
         public string Desc { get; set; }
         public string Location { get; set; }
-        public string Price { get; set; }
+        public int Price { get; set; }
 
         public int Hours { get; set; }
         

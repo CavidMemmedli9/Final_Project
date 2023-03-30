@@ -14,7 +14,7 @@ namespace FinalProject.Controllers
             _context = context;
         }
 
-        public IActionResult Index(int? cityid,int? categoryid)
+        public IActionResult Index(int? cityid,int? categoryid,int? minprice,int? maxprice)
         {
             var query = _context.JobInfo.Include(j=>j.Category).Include(x=>x.City).AsQueryable();
             JobVM jobVM = new JobVM();
@@ -22,15 +22,20 @@ namespace FinalProject.Controllers
             {
                 query = query.Where(j => j.CityId == cityid && j.CategoryId == categoryid);
             }
+            if (minprice != null && maxprice != null)
+            {
+                query = query.Where(q => q.Price <= maxprice && q.Price >= minprice);
+            }
 
             jobVM.JobInfo = query.ToList();
             jobVM.Background = _context.Background.FirstOrDefault();
+            jobVM.Vacancy = _context.Vacancy.ToList();
             return View(jobVM);
         }
 
         public IActionResult JobDetail(int Id)
         {
-            var data = _context.JobInfo.Include(t => t.Vacancy).FirstOrDefault(p => p.VacancyId == Id);
+            var data = _context.JobInfo.FirstOrDefault(p => p.Id == Id);
             if (data == null)
             {
                 return RedirectToAction("Index", "job");
