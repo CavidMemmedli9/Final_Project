@@ -1,4 +1,6 @@
-﻿@model CategoryVM
+﻿
+
+@model CategoryVM
 
 @{
     ViewData["Title"] = "Index";
@@ -68,16 +70,16 @@
                                     <li><a asp-controller="about" asp-action="index">About us</a></li>
                                     <li>
                                         <a asp-controller="category" asp-action="index">Categories</a>
-                                        
+
                                     </li>
 
-                                 
+
                                 </ul>
                             </li>
 
                             <li class="has-child">
-                                <a asp-controller="profile" asp-action="index"  >Profile</a>
-                                
+                                <a asp-controller="profile" asp-action="index">Profile</a>
+
                             </li>
 
                             <li class="has-child">
@@ -127,21 +129,22 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="sf-caty-pic">
-                      
                         </div>
                     </div>
                     <!--Category Detail Right-->
-                  <div class="col-md-6">
-                            <div class="sf-caty-info">
-                                <div class="m-b10"><strong>Project categories</strong> / House cleaning services</div>
-                                <h3>@Model.Cleaning_Services.Title</h3>
-                                <div class="sf-caty-text">
+                    <div class="col-md-6">
+                        <div class="sf-caty-info">
+                            <div class="m-b10"><strong>Project categories</strong> / House cleaning services</div>
+                            <h3>@Model.Cleaning_Services.Title</h3>
+                            <div class="sf-caty-text">
                                 <p>@Model.Cleaning_Services.Desc</p>
-                                    <p>On average, house cleaners on Zaarly cost $30 - $50 per hour per house cleaner. The price will depend on factors like size of the home, supplies needed, and special cleaning circumstances. A 2000 square foot home will typically cost $250. One-time deep cleanings will 
-                                        cost more and signing up for regular cleaning usually will be more cost-effective. </p>
-                                </div>
+                                <p>
+                                    On average, house cleaners on Zaarly cost $30 - $50 per hour per house cleaner. The price will depend on factors like size of the home, supplies needed, and special cleaning circumstances. A 2000 square foot home will typically cost $250. One-time deep cleanings will
+                                    cost more and signing up for regular cleaning usually will be more cost-effective.
+                                </p>
                             </div>
                         </div>
+                    </div>
                 </div>
                 <!--Category Detail Section End-->
             </div>
@@ -161,10 +164,11 @@
                 </div>
                 <!--Title Section End-->
 
+
                 <div class="section-content">
+
                     <div class="owl-carousel owl-caty-carousel sf-owl-arrow">
 
-                        <!-- COLUMNS 1 -->
                         <div class="item sf-caty-item-col">
                             <div class="sf-catyitem-box">
                                 <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/1.jpg)">
@@ -215,9 +219,11 @@
                                 <h5 class="sf-catyitem-title"><a href="categories-detail.html">Accountant</a></h5>
                             </div>
                         </div>
-                      
+                        
                     </div>
+
                 </div>
+                  
 
             </div>
         </div>
@@ -228,13 +234,11 @@
                 <div class="section-content">
                     <!--Showing results topbar Start-->
                     <div class="sf-search-result-top flex-wrap d-flex justify-content-between">
-                      
                     </div>
                     <!--Showing results topbar End-->
                     <div class="row">
                         <!--BLock 1-->
-
-                       @foreach (var item in Model.Person)
+                        @foreach (var item in Model.Person)
                         {
                             <div class="col-md-6">
                                 <div class="sf-vender-list-wrap">
@@ -266,9 +270,9 @@
                                 </div>
                             </div>
                         }
-                    
-                       
-                        
+
+
+
                     </div>
                 </div>
             </div>

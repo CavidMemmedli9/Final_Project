@@ -1,0 +1,56 @@
+﻿@model List<City>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">City Table</h4>
+                    <p class="card-description">
+                        <a asp-controller="city" asp-action="Create"> <btn style="background-color:lawngreen;cursor:pointer;padding:10px"> Create </btn>  </a>
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    <th>Name</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                       
+
+                                        <td>
+                                            <p>@item.Name</p>
+                                        </td>
+
+
+                                        <td>
+                                            <a asp-action="delete" asp-route-id="@item.Id"> <btn style="background-color:red;cursor:pointer;position:absolute;margin-top:20px;margin-left:-20px;padding:6px"> Delete </btn></a>
+                                            <a asp-action="update" asp-route-id="@item.Id"> <btn style="background-color:chartreuse;cursor:pointer;position:absolute;margin-top:-10px;margin-left:-20px;padding:3px"> Update </btn></a>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

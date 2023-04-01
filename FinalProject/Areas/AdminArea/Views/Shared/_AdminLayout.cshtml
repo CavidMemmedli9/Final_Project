@@ -294,13 +294,13 @@
                         <a href="mc-dashboard.html"><i class="fa fa-dashboard"></i><span class="admin-nav-text">Dashboard</span></a>
                     </li>
                     <li>
-                        <a asp-controller="blog" asp-action="index"><i class="fa fa-user-circle-o"></i><span class="admin-nav-text">Blog</span></a>
+                        <a asp-area ="adminarea" asp-controller="article" asp-action="index"><i class="fa fa-user-circle-o"></i><span class="admin-nav-text">Blog</span></a>
                     </li>
                     <li>
-                        <a href="mc-my-services.html"><i class="fa fa-cogs"></i><span class="admin-nav-text">My Services</span></a>
+                        <a asp-area="adminarea" asp-controller="category" asp-action="index"><i class="fa fa-cogs"></i><span class="admin-nav-text">Category</span></a>
                     </li>
                     <li>
-                        <a href="mc-my-booking.html"><i class="fa fa-calendar"></i><span class="admin-nav-text">My Booking</span></a>
+                        <a asp-area="adminarea" asp-controller="city" asp-action="index"><i class="fa fa-calendar"></i><span class="admin-nav-text">City</span></a>
                     </li>
                     <li>
                         <a href="mc-messanger.html"><i class="fa fa-envelope-o"></i><span class="admin-nav-text">Messanger</span></a>

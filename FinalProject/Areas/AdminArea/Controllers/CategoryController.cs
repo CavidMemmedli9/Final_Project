@@ -36,23 +36,27 @@ namespace FinalProject.Areas.AdminArea.Controllers
         [AutoValidateAntiforgeryToken]
         public IActionResult Create(Category category)
         {
-            if (!ModelState.IsValid) return View();
-
-            var isExist = _appDbContext.Category
-                .Any(c => c.Name.ToLower() == category.Name.ToLower());
-
-            if (isExist)
+            if (ModelState["Photo"].ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
             {
-                ModelState.AddModelError("Name", "this name already exist");
                 return View();
+            }
+            if (!category.Photo.CheckImage())
+            {
+                ModelState.AddModelError("Photo", "sekil sec");
+            }
+            if (category.Photo.CheckImageSize(1000))
+            {
+                ModelState.AddModelError("Photo", "olcu boyukdur");
             }
 
 
-            _appDbContext.Category.Add(category);
 
+            Category newcategory = new Category();
+            newcategory.ImageUrl = category.Photo.SaveImage(_env, "assets/images/popular-categories");
+            newcategory.Name = category.Name;
+            _appDbContext.Category.Add(newcategory);
             _appDbContext.SaveChanges();
-
-            return RedirectToAction("Index");
+            return View();
         }
 
 
@@ -92,7 +96,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
 
             if (category.Photo != null)
             {
-                string path = Path.Combine(_env.WebRootPath, "img/course", existCategory.ImageUrl);
+                string path = Path.Combine(_env.WebRootPath, "assets/images/popular-categories", existCategory.ImageUrl);
                 if (System.IO.File.Exists(path))
                 {
                     System.IO.File.Delete(path);
@@ -107,11 +111,10 @@ namespace FinalProject.Areas.AdminArea.Controllers
                     ModelState.AddModelError("Photo", "olcu boyukdur");
 
                 }
-                filename = category.Photo.SaveImage(_env, "img/course");
+                filename = category.Photo.SaveImage(_env, "assets/images/popular-categories");
 
             }
             existCategory.ImageUrl = filename ?? existCategory.ImageUrl;
-
             existCategory.Name = category.Name;
             _appDbContext.SaveChanges();
             return RedirectToAction("Index");

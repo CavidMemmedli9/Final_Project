@@ -1,4 +1,6 @@
-﻿namespace FinalProject.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FinalProject.Models
 {
     public class Category
     {
@@ -6,6 +8,9 @@
         public string Name { get; set; }
 
         public string ImageUrl { get; set; }
+
+        [NotMapped]
+        public IFormFile Photo { get; set; }
         public List<Job> Job { get; set; }
     }
 }
