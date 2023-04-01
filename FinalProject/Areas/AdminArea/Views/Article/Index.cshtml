@@ -1,4 +1,4 @@
-﻿@model List<Blog>
+﻿@model List<Articles>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Blog Table</h4>
                     <p class="card-description">
-                        <a asp-controller="blog" asp-action="Create"> <btn style="background-color:lawngreen;cursor:pointer;padding:10px"> Create </btn>  </a>
+                        <a asp-controller="article" asp-action="Create"> <btn style="background-color:lawngreen;cursor:pointer;padding:10px"> Create </btn>  </a>
                     </p>
                     <div class="table-responsive">
                         <table class="table">

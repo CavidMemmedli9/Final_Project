@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FinalProject.Models
+namespace FinalProject.ViewModels
 {
-    public class Articles
+    public class UpdateArticlesVM
     {
-        public int Id { get; set; }
 
         public string ImageUrl { get; set; }
 
@@ -14,8 +13,5 @@ namespace FinalProject.Models
 
         [NotMapped]
         public IFormFile Photo { get; set; }
-        public int? BlogId { get; set; }
-        public Blog Blog { get; set; }
-        public List<Comment> Comments { get; set; }
     }
 }

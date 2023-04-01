@@ -16,8 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\javid\OneDrive\Desktop\Final_Project\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/javid/OneDrive/Desktop/Final_Project/FinalProject/Areas/AdminArea/Views/Blog/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEJsb2dcSW5kZXguY3NodG1s
+[C:/Users/javid/OneDrive/Desktop/Final_Project/FinalProject/Areas/AdminArea/Views/Article/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFydGljbGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/javid/OneDrive/Desktop/Final_Project/FinalProject/Areas/AdminArea/Views/Article/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFydGljbGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/javid/OneDrive/Desktop/Final_Project/FinalProject/Areas/AdminArea/Views/Article/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFydGljbGVcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/javid/OneDrive/Desktop/Final_Project/FinalProject/Areas/AdminArea/Views/Dashboard/Index.cshtml]
