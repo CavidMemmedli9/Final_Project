@@ -1,4 +1,6 @@
-﻿namespace FinalProject.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FinalProject.Models
 {
     public class JobInfo
     {
@@ -9,6 +11,9 @@
 
         public string Skill { get; set; }
         public string Location { get; set; }
+
+        [NotMapped]
+        public IFormFile Photo { get; set; }
         public int? CityId { get; set; }
         public City City { get; set; }
 
