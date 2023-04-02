@@ -68,19 +68,21 @@ namespace FinalProject.Areas.AdminArea.Controllers
             newJobInfo.Location = job.Location;
             newJobInfo.Title = job.Title;
             newJobInfo.Price = job.Price;
+            newJobInfo.Work = job.Photo.SaveImage(_env, "assets/images/providers");
             newJobInfo.CategoryId = job.CategoryId;
             newJobInfo.CityId = job.CityId;
             _appDbContext.JobInfo.Add(newJobInfo);
             _appDbContext.SaveChanges();
             return View();
+
         }
 
 
         public IActionResult Delete(int? id)
         {
             if (id == null) return NotFound();
-            Category category = _appDbContext.Category.Find(id);
-            if (category == null) return NotFound();
+            JobInfo job = _appDbContext.JobInfo.Find(id);
+            if (job == null) return NotFound();
 
             //string path = Path.Combine(_env.WebRootPath + "/img" + category.ImageUrl);
             //if (System.IO.File.Exists(path))
@@ -88,50 +90,67 @@ namespace FinalProject.Areas.AdminArea.Controllers
             //    System.IO.File.Delete(path);
             //}
 
-            _appDbContext.Category.Remove(category);
+            _appDbContext.JobInfo.Remove(job);
             _appDbContext.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Update(int? id)
         {
+            ViewBag.Categories = new SelectList(_appDbContext.Category.ToList(), "Id", "Name");
+            ViewBag.City = new SelectList(_appDbContext.City.ToList(), "Id", "Name");
+
             if (id == null) return NotFound();
-            Category category = _appDbContext.Category.Find(id);
-            if (category == null) return NotFound();
-            return View(new UpdateCategoryVM { Name = category.Name });
+            JobInfo job = _appDbContext.JobInfo.Find(id);
+            if (job == null) return NotFound();
+            return View(new UpdateJobVM { JobDesc = job.JobDesc, KeyResponse = job.KeyResponse, Skill = job.Skill, Location = job.Location, CityId = job.CityId, CategoryId = job.CategoryId, ImageUrl = job.ImageUrl, Title = job.Title, Price = job.Price, Work = job.Work, });
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
 
-        public IActionResult Update(int? id, UpdateCategoryVM category)
+        public IActionResult Update(int? id, UpdateJobVM job)
         {
+            ViewBag.Categories = new SelectList(_appDbContext.Category.ToList(), "Id", "Name");
+            ViewBag.City = new SelectList(_appDbContext.City.ToList(), "Id", "Name");
+
+
             if (id == null) return NotFound();
-            Category existCategory = _appDbContext.Category.Find(id);
-            if (existCategory == null) return NotFound();
+            JobInfo existJob = _appDbContext.JobInfo.Find(id);
+            if (existJob == null) return NotFound();
             string filename = null;
 
-            if (category.Photo != null)
+            if (job.Photo != null)
             {
-                string path = Path.Combine(_env.WebRootPath, "assets/images/popular-categories", existCategory.ImageUrl);
+                string path = Path.Combine(_env.WebRootPath, "assets/images/popular-categories", existJob.ImageUrl);
                 if (System.IO.File.Exists(path))
                 {
                     System.IO.File.Delete(path);
                 }
 
-                if (!category.Photo.CheckImage())
+                if (!job.Photo.CheckImage())
                 {
                     ModelState.AddModelError("Photo", "sekil sec");
                 }
-                if (category.Photo.CheckImageSize(1000))
+                if (job.Photo.CheckImageSize(1000))
                 {
                     ModelState.AddModelError("Photo", "olcu boyukdur");
 
                 }
-                filename = category.Photo.SaveImage(_env, "assets/images/popular-categories");
+                filename = job.Photo.SaveImage(_env, "assets/images/popular-categories");
 
             }
-            existCategory.ImageUrl = filename ?? existCategory.ImageUrl;
-            existCategory.Name = category.Name;
+            existJob.ImageUrl = filename ?? existJob.ImageUrl;
+            existJob.JobDesc = job.JobDesc;
+            existJob.KeyResponse = job.KeyResponse;
+            existJob.Skill = job.Skill;
+            existJob.Price = job.Price;
+            existJob.Location = job.Location;
+            existJob.CategoryId = job.CategoryId;
+            existJob.CityId = job.CityId;
+            existJob.Title = job.Title;
+
+
+
             _appDbContext.SaveChanges();
             return RedirectToAction("Index");
 

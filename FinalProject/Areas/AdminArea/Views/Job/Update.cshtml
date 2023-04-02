@@ -1,10 +1,38 @@
-﻿
-@model JobInfo
-
+﻿@using FinalProject.ViewModels;
+@model UpdateJobVM
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
     Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
 }
+
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-description">
+                    <a asp-action="index"> <btn style="background-color:midnightblue;color:white;cursor:pointer;padding:10px"> Back </ btn > </a>
+                </p>
+
+
+
+                <img width="100" height="100" src="~/assets/images/popular-categories/@Model.ImageUrl" />
+
+
+                <p>@Model.Title</p>
+                <p>@Model.KeyResponse</p>
+                <p>@Model.Price</p>
+                <p>@Model.Location</p>
+                <p>@Model.CategoryId</p>
+                 <p>@Model.CityId</p>
+                <p>@Model.JobDesc</p>
+                 <p>@Model.Skill</p>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-md-6 grid-margin stretch-card">
@@ -12,16 +40,16 @@
             <div class="card-body">
 
                 <p class="card-description">
-                    Create Job Form
+                    Create Blog Form
                 </p>
                 <form method="post" class="forms-sample" enctype="multipart/form-data">
 
-
                     <div class="form-group">
-                        <label asp-for="Photo">Photo</label>
-                        <input accept="image/*" asp-for="Photo" class="form-control" placeholder="photo">
+                        <label asp-for="Photo">Name</label>
+                        <input accept="image/*" asp-for="Photo" class="form-control" placeholder="Name">
                         <span asp-validation-for="Photo" style="color:red"> </span>
                     </div>
+
 
                     <div class="form-group">
                         <label asp-for="Title">Title</label>
@@ -41,51 +69,42 @@
                         <span asp-validation-for="Price" style="color:red"> </span>
                     </div>
 
-                      <div class="form-group">
+                        <div class="form-group">
                         <label asp-for="Location">Location</label>
                         <input asp-for="Location" class="form-control" placeholder="Location">
                         <span asp-validation-for="Location" style="color:red"> </span>
                     </div>
 
-
-
-                      <div class="form-group">
-                        <label asp-for="JobDesc">JobDesc</label>
-                        <input asp-for="JobDesc" class="form-control" placeholder="JobDesc">
-                        <span asp-validation-for="JobDesc" style="color:red"> </span>
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="Photo">Photo</label>
-                        <input accept="image/*" asp-for="Photo" class="form-control" placeholder="photo">
-                        <span asp-validation-for="Photo" style="color:red"> </span>
-                    </div>
-
-
-
-                    <div class="form-group">
-                        <label asp-for="Skill">Skill</label>
-                        <input asp-for="Skill" class="form-control" placeholder="Skill">
-                        <span asp-validation-for="Skill" style="color:red"> </span>
-                    </div>
-
-
-                    <div class="form-group">
+                  <div class="form-group">
                         <label asp-for="CategoryId">Category</label>
                         <select asp-for="CategoryId" class="form-control" asp-items="@ViewBag.Categories"> </select>
                     </div>
-
 
                     <div class="form-group">
                         <label asp-for="CityId">City</label>
                         <select asp-for="CityId" class="form-control" asp-items="@ViewBag.City"> </select>
                     </div>
 
+                    <div class="form-group">
+                        <label asp-for="JobDesc">JobDesc</label>
+                        <input asp-for="JobDesc" class="form-control" placeholder="JobDesc">
+                        <span asp-validation-for="JobDesc" style="color:red"> </span>
+                    </div>
 
-                    <button type="submit" class="btn btn-primary mr-2"> Submit </button>
-                    <a asp-action="index"> <btn style="background-color:midnightblue;cursor:pointer;padding:10px"> Back </btn> </a>
+                        <div class="form-group">
+                        <label asp-for="Skill">Skill</label>
+                        <input asp-for="Skill" class="form-control" placeholder="Skill">
+                        <span asp-validation-for="Skill" style="color:red"> </span>
+                    </div>
+
+
+
+
+
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+

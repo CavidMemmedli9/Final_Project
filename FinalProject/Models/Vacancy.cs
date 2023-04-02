@@ -10,6 +10,7 @@
 
         public string Desc { get; set; }
 
+
         public List<JobInfo> JobInfo { get; set; }
     }
 }

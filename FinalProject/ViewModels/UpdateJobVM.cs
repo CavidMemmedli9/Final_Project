@@ -1,10 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using FinalProject.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FinalProject.Models
+namespace FinalProject.ViewModels
 {
-    public class JobInfo
+    public class UpdateJobVM
     {
-        public int Id { get; set; }
         public string JobDesc { get; set; }
 
         public string KeyResponse { get; set; }
@@ -25,8 +25,5 @@ namespace FinalProject.Models
         public int Price { get; set; }
         public string Work { get; set; }
 
-
-        public Vacancy Vacancy { get; set; }
-        public int? VacancyId { get; set; }
     }
 }
