@@ -18,9 +18,13 @@ namespace FinalProject.Controllers
         {
             var query = _context.JobInfo.Include(j=>j.Category).Include(x=>x.City).AsQueryable();
             JobVM jobVM = new JobVM();
-            if (cityid !=null && categoryid != null)
+            if (categoryid != null)
             {
-                query = query.Where(j => j.CityId == cityid && j.CategoryId == categoryid);
+                query = query.Where(j=>j.CategoryId == categoryid);
+            }
+            if (cityid != null)
+            {
+                query = query.Where(j => j.CityId == cityid);
             }
             if (minprice != null && maxprice != null)
             {

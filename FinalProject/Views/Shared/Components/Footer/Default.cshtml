@@ -40,8 +40,12 @@
                     <div class="sf-site-link sf-widget-cities">
                         <h4 class="sf-f-title">Popular Cities</h4>
                         <ul>
+                            @foreach (var item in Model.City)
+                            {
+                                <li><a href="all-categories.html">@item.Name</a></li>
+                            }
 
-                            <li><a href="all-categories.html">@Model.City.Name</a></li>
+                           
 
                         </ul>
                     </div>
@@ -54,7 +58,7 @@
                             @foreach (var item in Model.Category)
                             {
 
-                                <li><a href="categories-detail.html">@item.Name</a></li>
+                                <li><a asp-route-id="@item.Id">@item.Name</a></li>
                             }
                         </ul>
                     </div>

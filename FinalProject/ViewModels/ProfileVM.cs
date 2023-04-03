@@ -9,6 +9,7 @@ namespace FinalProject.ViewModels
 
         public List<About> About { get; set; }
 
+        public List<Category> Category { get; set; }
 
         public List<Quote> Quote { get; set; }
 

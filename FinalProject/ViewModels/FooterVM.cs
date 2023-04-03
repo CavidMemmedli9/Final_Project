@@ -8,7 +8,7 @@ namespace FinalProject.ViewModels
     {
         public List<Category> Category { get; set; }
 
-        public City City { get; set; }
+        public List<City> City { get; set; }
 
         [Required]
         public string FullName { get; set; }

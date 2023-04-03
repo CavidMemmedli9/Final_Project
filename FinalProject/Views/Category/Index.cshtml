@@ -168,58 +168,32 @@
                 <div class="section-content">
 
                     <div class="owl-carousel owl-caty-carousel sf-owl-arrow">
+                       @for (int i = 0; i < Model.Category.Count; i+=2)
+                        {
+                            <div class="item sf-caty-item-col ">
+                                <div class="sf-catyitem-box">
+                                    <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/@Model.Category[i].ImageUrl)">
+                                        <span class="sf-caty-num"></span>
+                                        <a href="#" class="sf-caty-link"></a>
+                                    </div>
+                                    <h5 class="sf-catyitem-title"><a href="categories-detail.html">@Model.Category[i].Name</a></h5>
+                                </div>
+                                @if (i + 1 < Model.Category.Count)
+                                {
+                                <div class="sf-catyitem-box">
+                                        <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/@Model.Category[i+1].ImageUrl)">
+                                        <span class="sf-caty-num"></span>
+                                        <a href="#" class="sf-caty-link"></a>
+                                    </div>
+                                    <h5 class="sf-catyitem-title"><a href="categories-detail.html">@Model.Category[i+1].Name</a></h5>
+                                </div>    
+                                }
 
-                        <div class="item sf-caty-item-col">
-                            <div class="sf-catyitem-box">
-                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/1.jpg)">
-                                    <span class="sf-caty-num"></span>
-                                    <a href="#" class="sf-caty-link"></a>
-                                </div>
-                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Sales Manager</a></h5>
                             </div>
-                            <div class="sf-catyitem-box">
-                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/2.jpg)">
-                                    <span class="sf-caty-num"></span>
-                                    <a href="#" class="sf-caty-link"></a>
-                                </div>
-                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Teacher</a></h5>
-                            </div>
-                        </div>
-                        <!-- COLUMNS 2 -->
-                        <div class="item sf-caty-item-col">
-                            <div class="sf-catyitem-box">
-                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/5.jpg)">
-                                    <span class="sf-caty-num"></span>
-                                    <a href="#" class="sf-caty-link"></a>
-                                </div>
-                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Front-End Developer</a></h5>
-                            </div>
-                            <div class="sf-catyitem-box">
-                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/6.jpg)">
-                                    <span class="sf-caty-num"></span>
-                                    <a href="#" class="sf-caty-link"></a>
-                                </div>
-                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Back-End Developer</a></h5>
-                            </div>
-                        </div>
-                        <!-- COLUMNS 3 -->
-                        <div class="item sf-caty-item-col">
-                            <div class="sf-catyitem-box">
-                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/4.jpg)">
-                                    <span class="sf-caty-num"></span>
-                                    <a href="#" class="sf-caty-link"></a>
-                                </div>
-                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Design</a></h5>
-                            </div>
-                            <div class="sf-catyitem-box">
-                                <div class="sf-catyitem-pic" style="background-image: url(/assets/images/popular-categories/3.jpg)">
-                                    <span class="sf-caty-num"></span>
-                                    <a href="#" class="sf-caty-link"></a>
-                                </div>
-                                <h5 class="sf-catyitem-title"><a href="categories-detail.html">Accountant</a></h5>
-                            </div>
-                        </div>
+                        }
+
                         
+                     
                     </div>
 
                 </div>

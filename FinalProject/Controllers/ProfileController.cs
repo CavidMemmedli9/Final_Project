@@ -19,7 +19,7 @@ namespace FinalProject.Controllers
             profileVM.Slider = _context.Slider.FirstOrDefault();
             profileVM.AboutProvider = _context.AboutProvider.FirstOrDefault();
             profileVM.News_Articles = _context.News_Articles.ToList();
-
+            profileVM.Category = _context.Category.ToList();
             profileVM.Related_Provider = _context.Related_Provider.ToList();
             return View(profileVM);
         }

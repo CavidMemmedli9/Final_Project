@@ -18,7 +18,7 @@ namespace FinalProject.ViewComponents
         {
             FooterVM footerVM = new FooterVM();
             footerVM.Category = _appDbContext.Category.ToList();
-            footerVM.City = _appDbContext.City.FirstOrDefault();
+            footerVM.City = _appDbContext.City.ToList();
             footerVM.Settings = _appDbContext.Settings.ToList();
             return View(await Task.FromResult(footerVM));
         }

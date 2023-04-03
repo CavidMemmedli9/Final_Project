@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e7Q03CtcHEq2wouitFu20jsXgY+dogmBvJySPOdl1ak=",
+  "Hash": "dwAP9XY7Ao1tIKVCQTvKHWNZ5ff29jAhAx8KCNTwdc8=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -2839,6 +2839,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\3.jpg"
     },
     {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\33e9a3b6-b45f-4352-92d8-5b9d17448e20what_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/33e9a3b6-b45f-4352-92d8-5b9d17448e20what_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\33e9a3b6-b45f-4352-92d8-5b9d17448e20what_is_a_blog_used_for-f_mobile.png"
+    },
+    {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\35cc1956-46db-49e1-8bc6-8846d6e20273Screenshot_20221013-233535_Instagram.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -2975,6 +2992,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\62b849c3-b6e0-4aab-b660-4c23f76df897ABB_Logo.png"
     },
     {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\649c4137-959a-4aea-92d2-3816fe59c3ecwhat_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/649c4137-959a-4aea-92d2-3816fe59c3ecwhat_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\649c4137-959a-4aea-92d2-3816fe59c3ecwhat_is_a_blog_used_for-f_mobile.png"
+    },
+    {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\66e001db-37bc-4b7f-b8fa-96ed95c8f0f3what_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/66e001db-37bc-4b7f-b8fa-96ed95c8f0f3what_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\66e001db-37bc-4b7f-b8fa-96ed95c8f0f3what_is_a_blog_used_for-f_mobile.png"
+    },
+    {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\7.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -3092,6 +3143,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\b2cd3bdc-0f04-43db-a55e-07309d878418ABB_Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\b844bd90-95ba-4c8a-955b-ce577e4c2671ABB_Logo.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/b844bd90-95ba-4c8a-955b-ce577e4c2671ABB_Logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\b844bd90-95ba-4c8a-955b-ce577e4c2671ABB_Logo.png"
     },
     {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\bb5c2226-63b5-4bc1-b246-f2402dec4686Screenshot_20221013-233535_Instagram.jpg",

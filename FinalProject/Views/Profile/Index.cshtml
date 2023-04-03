@@ -459,7 +459,7 @@
                         <div class="sf-divider-line"></div>
 
                         <div class="owl-carousel aon-ow-provi-related aon-owl-arrow">
-                            @foreach (var item in Model.Related_Provider)
+                            @foreach (var item in Model.Category)
                         {
                                  <div class="item">
                                 <div class="aon-ow-provider-wrap">
@@ -469,7 +469,7 @@
                                             <div class="aon-pro-check"><span><i class="fa fa-check"></i></span></div>
                                             <div class="aon-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
                                             <div class="aon-ow-info">
-                                                <h4 class="aon-title">@item.Title</h4>
+                                                <h4 class="aon-title">@item.Name</h4>
                                                 <span>Queens, United States</span>
                                             </div>
                                         </div>
@@ -477,7 +477,7 @@
                                             <div class="aon-ow-media">
                                                 <img src="~/assets/images/popular-categories/@item.ImageUrl" alt="">
                                             </div>
-                                            <p>@item.Desc</p>
+                                           @* <p>@item.Desc</p>*@
                                             <div class="aon-ow-pro-rating">
                                                 <span class="fa fa-star"></span>
                                                 <span class="fa fa-star"></span>
