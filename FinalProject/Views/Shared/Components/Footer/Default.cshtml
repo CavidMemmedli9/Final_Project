@@ -58,7 +58,7 @@
                             @foreach (var item in Model.Category)
                             {
 
-                                <li><a asp-route-id="@item.Id">@item.Name</a></li>
+                                <li><a href="/Job?s=&categoryid=@item.Id">@item.Name</a></li>
                             }
                         </ul>
                     </div>
@@ -194,7 +194,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="FullName" class="form-control sf-form-control" name="FullName" type="text" placeholder="Full Name">
+                                                    <input asp-for="FullName" class="form-control sf-form-control" id="FullName" name="FullName" type="text" placeholder="Full Name">
                                                     <span asp-validation-for="FullName"></span>
                                                     <i class="aon-input-icon fa fa-user"></i>
                                                 </div>
@@ -203,26 +203,19 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="UserName" class="form-control sf-form-control" name="UserName" type="text" placeholder="User Name">
+                                                    <input asp-for="UserName" id="UserName" class="form-control sf-form-control" name="UserName" type="text" placeholder="User Name">
                                                     <span asp-validation-for="UserName"></span>
                                                     <i class="aon-input-icon fa fa-user"></i>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        @*     <div class="col-md-12">
-                                        <div class="form-group">
-                                        <div class="aon-inputicon-box">
-                                        <input class="form-control sf-form-control" name="Phone" type="password" placeholder="Phone">
-                                        <i class="aon-input-icon fa fa-phone"></i>
-                                        </div>
-                                        </div>
-                                        </div>*@
+                                    
 
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="Email" class="form-control sf-form-control" name="email" type="email" placeholder="Email">
+                                                    <input asp-for="Email" id="Email" class="form-control sf-form-control" name="email" type="email" placeholder="Email">
                                                     <span asp-validation-for="Email"></span>
                                                     <i class="aon-input-icon fa fa-envelope-o"></i>
                                                 </div>
@@ -232,7 +225,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="Password" class="form-control sf-form-control" name="password" type="password" placeholder="Password">
+                                                    <input asp-for="Password" id="Password" class="form-control sf-form-control" name="password" type="password" placeholder="Password">
                                                     <span asp-validation-for="Password"></span>
                                                     <i class="aon-input-icon fa fa-lock"></i>
                                                 </div>
@@ -242,7 +235,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="PasswordConfirm" class="form-control sf-form-control" name="PasswordConfirm" type="password" placeholder="Confirm Password">
+                                                    <input asp-for="PasswordConfirm" id="PasswordConfirm" class="form-control sf-form-control" name="PasswordConfirm" type="password" placeholder="Confirm Password">
                                                     <span asp-validation-for="PasswordConfirm"></span>
                                                     <i class="aon-input-icon fa fa-lock"></i>
                                                 </div>
@@ -258,7 +251,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <button type="submit" class="site-button w-100">Submit <i class="feather-arrow-right"></i> </button>
+                                            <button type="submit" id="registerBtn" class="site-button w-100">Submit <i class="feather-arrow-right"></i> </button>
                                         </div>
 
                                     </div>
@@ -323,6 +316,11 @@
                 console.log(response);
             });
     })
+
+
+    
+
+
 </script>
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
