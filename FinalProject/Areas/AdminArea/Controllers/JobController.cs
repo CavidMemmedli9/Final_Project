@@ -63,9 +63,8 @@ namespace FinalProject.Areas.AdminArea.Controllers
             JobInfo newJobInfo = new JobInfo();
             newJobInfo.ImageUrl = job.Photo.SaveImage(_env, "assets/images/popular-categories");
             newJobInfo.JobDesc = job.JobDesc;
-            newJobInfo.KeyResponse = job.KeyResponse;
+            newJobInfo.Company = job.Company;
             newJobInfo.Skill = job.Skill;
-            newJobInfo.Location = job.Location;
             newJobInfo.Title = job.Title;
             newJobInfo.Price = job.Price;
             newJobInfo.Work = job.Photo.SaveImage(_env, "assets/images/providers");
@@ -103,7 +102,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
             if (id == null) return NotFound();
             JobInfo job = _appDbContext.JobInfo.Find(id);
             if (job == null) return NotFound();
-            return View(new UpdateJobVM { JobDesc = job.JobDesc, KeyResponse = job.KeyResponse, Skill = job.Skill, Location = job.Location, CityId = job.CityId, CategoryId = job.CategoryId, ImageUrl = job.ImageUrl, Title = job.Title, Price = job.Price, Work = job.Work, });
+            return View(new UpdateJobVM { JobDesc = job.JobDesc, Company = job.Company, Skill = job.Skill,  CityId = job.CityId, CategoryId = job.CategoryId, ImageUrl = job.ImageUrl, Title = job.Title, Price = job.Price, Work = job.Work, });
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
@@ -141,10 +140,10 @@ namespace FinalProject.Areas.AdminArea.Controllers
             }
             existJob.ImageUrl = filename ?? existJob.ImageUrl;
             existJob.JobDesc = job.JobDesc;
-            existJob.KeyResponse = job.KeyResponse;
+            //existJob.KeyResponse = job.KeyResponse;
             existJob.Skill = job.Skill;
             existJob.Price = job.Price;
-            existJob.Location = job.Location;
+            //existJob.Location = job.Location;
             existJob.CategoryId = job.CategoryId;
             existJob.CityId = job.CityId;
             existJob.Title = job.Title;

@@ -7,10 +7,9 @@ namespace FinalProject.Models
         public int Id { get; set; }
         public string JobDesc { get; set; }
 
-        public string KeyResponse { get; set; }
+        public string Company { get; set; }
 
         public string Skill { get; set; }
-        public string Location { get; set; }
 
         [NotMapped]
         public IFormFile Photo { get; set; }

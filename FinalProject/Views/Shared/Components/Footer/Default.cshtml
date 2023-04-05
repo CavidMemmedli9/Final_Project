@@ -147,7 +147,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input id="Email" class="form-control sf-form-control" name="Email" type="email" placeholder="Email">
+                                                    <input asp-for="Email" id="Email" class="form-control sf-form-control" name="Email" type="email" placeholder="Email">
                                                     <span asp-validation-for="Email"></span>
                                                     <i class="aon-input-icon fa fa-user"></i>
                                                 </div>
@@ -156,7 +156,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input id="Password" class="form-control sf-form-control" name="Password" type="password" placeholder="Password">
+                                                    <input asp-for="Password" id="Password" class="form-control sf-form-control" name="Password" type="password" placeholder="Password">
 
                                                     <span asp-validation-for="Password"></span>
                                                     <i class="aon-input-icon fa fa-lock"></i>
@@ -190,6 +190,7 @@
                         <div id="Past" class="tab-pane">
                             <div class="sf-tabs-content">
                                 <form method="post" asp-controller="account" asp-action="register" class="aon-login-form">
+                                    <div id="errormessageRegister" class="text-danger"></div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
@@ -251,7 +252,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <button type="submit" id="registerBtn" class="site-button w-100">Submit <i class="feather-arrow-right"></i> </button>
+                                            <button  type="submit" id="RegisterBtn" class="site-button w-100">Submit <i class="feather-arrow-right"></i> </button>
                                         </div>
 
                                     </div>
@@ -289,6 +290,7 @@
 <script src="~/assets/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
 <script src="~/assets/js/lc_lightbox.lite.js"></script><!-- IMAGE POPUP -->
 <script src="~/assets/js/bootstrap-slider.min.js"></script><!-- Form js -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $("#loginformBtn").on("click", function () {
@@ -316,6 +318,42 @@
                 console.log(response);
             });
     })
+
+
+    $("#RegisterBtn").on("click", function () {
+        var fullName = $("#FullName").val();
+        var userName = $("#UserName").val();
+        var email = $("#Email").val();
+        var password = $("#Password").val();
+        var passwordConfirm = $("#PasswordConfirm").val();
+        var bodyFormData = new FormData();
+
+        bodyFormData.append('FullName', fullName);
+        bodyFormData.append('UserName', userName);
+        bodyFormData.append('Email', email);
+        bodyFormData.append('Password', password);
+        bodyFormData.append('PasswordConfirm', passwordConfirm);
+
+
+        bodyFormData.append('RememberMe', false);
+
+        axios({
+            method: "post",
+            url: "/Account/Register/",
+            data: bodyFormData,
+            headers: { "Content-Type": "multipart/form-data" },
+        }).then(function (response) {
+            if (response.data == "1") {
+                $(location).attr('href', '/Home');
+            }
+            $("#errormessageRegister").text(response.data)
+
+            console.log(response);
+        }).catch(function (response) {
+            console.log(response);
+        });
+    })
+
 
 
     

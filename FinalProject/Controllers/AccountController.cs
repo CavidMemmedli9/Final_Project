@@ -28,27 +28,30 @@ namespace FinalProject.Controllers
 
         public async Task<IActionResult> Register(RegisterVM register)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return Content("Pleas enter required fields");
+
+            //if (!ModelState.IsValid) return View();
             AppUser user = new AppUser()
             {
                 UserName = register.UserName,
                 Email = register.Email,
-                FullName = register.FullName
+                FullName = register.FullName,
+               
             };
             IdentityResult result = await _userManager.CreateAsync(user, register.Password);
 
             if (!result.Succeeded)
             {
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
-                return View(register);
+                //foreach (var error in result.Errors)
+                //{
+                //    ModelState.AddModelError("", error.Description);
+                //}
+                return Content("do not found");
             }
 
             //await _userManager.AddToRoleAsync(user, RolesEnum.Member.ToString());
 
-            return RedirectToAction("index", "home");
+            return  Content("1"); ;
         }
 
         public IActionResult Login()
@@ -115,6 +118,7 @@ namespace FinalProject.Controllers
 
             string url = Url.Action(nameof(ResetPassword), "Account"
                 , new { email = appUser.Email, token }, Request.Scheme, Request.Host.ToString());
+
             MailMessage mailMessage = new MailMessage();
             mailMessage.From = new MailAddress("javidsm@code.edu.az", "subject");
             mailMessage.To.Add(new MailAddress(appUser.Email));

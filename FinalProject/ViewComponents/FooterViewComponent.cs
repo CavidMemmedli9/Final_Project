@@ -17,6 +17,8 @@ namespace FinalProject.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             FooterVM footerVM = new FooterVM();
+           
+
             footerVM.Category = _appDbContext.Category.ToList();
             footerVM.City = _appDbContext.City.ToList();
             footerVM.Settings = _appDbContext.Settings.ToList();

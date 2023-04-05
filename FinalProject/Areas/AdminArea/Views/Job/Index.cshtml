@@ -23,7 +23,7 @@
                                     <th>Title</th>
                                     <th>Company</th>
                                     <th>Price</th>
-                                    <th>Location</th>
+                                   @* <th>Location</th>*@
                                     <th>CategoryName</th>
                                     <th>CityName</th>
                                     <th>JobDesc</th>
@@ -45,16 +45,16 @@
                                         </td>
 
                                           <td>
-                                            @item.KeyResponse
+                                            @item.Company
                                         </td>
 
                                         <td>
                                             @item.Price
                                         </td>
 
-                                        <td>
+                                        @*<td>
                                             @item.Location
-                                        </td>
+                                        </td>*@
 
                                         <td>
                                             @item.Category.Name

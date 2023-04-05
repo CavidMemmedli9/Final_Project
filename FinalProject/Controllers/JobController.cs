@@ -33,14 +33,14 @@ namespace FinalProject.Controllers
 
             jobVM.JobInfo = query.ToList();
             jobVM.Background = _context.Background.FirstOrDefault();
-            //jobVM.Vacancy = _context.Vacancy.ToList();
+           
 
             jobVM.City = _context.City.ToList();
             jobVM.Category = _context.Category.ToList();
             return View(jobVM);
         }
 
-        public IActionResult JobDetail(int Id)
+        public IActionResult JobDetail(int Id,int? cityid)
         {
             var data = _context.JobInfo.FirstOrDefault(p => p.Id == Id);
             if (data == null)

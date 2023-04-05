@@ -32,7 +32,7 @@
 	}
 
 	$(document).on("keyup", "#searchTextBox", function () {
-		
+
 		$("#searchform li").slice().remove();
 		let value = $("#searchTextBox").val().trim();
 		$.ajax({
@@ -42,8 +42,13 @@
 				$("#searchform").append(res);
 			}
 		})
-	})
+	});
 
+
+	$(document).on("click", "#ApplyNow", function () {
+		$("#ApplyNow").css("display", "none")
+			$("#Gmail").css("display", "block")
+	});
 
 
 	function video_responsive(){	

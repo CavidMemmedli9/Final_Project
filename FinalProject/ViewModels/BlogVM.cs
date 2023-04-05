@@ -10,8 +10,9 @@ namespace FinalProject.ViewModels
 
         public List<Comment> Comment { get; set; }
 
+        public AppUser AppUser { get; set; }
 
-        public Blog Blog { get; set; }
+        public List<Blog> Blog { get; set; }
         public List<Articles> Articles { get; set; }
     }
 }

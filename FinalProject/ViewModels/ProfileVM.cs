@@ -18,6 +18,7 @@ namespace FinalProject.ViewModels
         public List<Provider> Provider { get; set; }
 
 
+        public List<Settings> Settings { get; set; }
         public List<Related_Provider> Related_Provider { get; set; }
 
         public List<News_Articles> News_Articles { get; set; }
