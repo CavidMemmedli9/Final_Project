@@ -127,7 +127,7 @@
                 <div class="sf-overlay-main" style="opacity:0;"></div>
                 <div class="sf-banner-job-heading-wrap">
                     <div class="sf-banner-job-heading-area">
-                        <div class="sf-banner-job-logo-pic"><img src="@Model.Work" alt=""></div>
+                        <div class="sf-banner-job-logo-pic"><img src="~/assets/images/popular-categories/@Model.ImageUrl" alt=""></div>
                         <div class="sf-banner-job-heading-large">@Model.Title</div>
                         <ul class="sf-banner-job-dutation">
                            
@@ -223,8 +223,8 @@
                         <aside class="sf-jobdetail-sidebar">
 
                             <div class="sf-jobdetail-blocks">
-                                <span id="ApplyNow">   <a class="sf-btn-large2"  style="cursor:pointer">Apply Now <i class="fa fa-send"></i>   </a></span>
-                                <div style="font-size:1.5rem;position:absolute;margin-left:120px;margin-top:-50px;display:none" id="Gmail"><a href="mailto:javidsm@code.edu.az">javidsm@code.edu.az</a></div>
+                                <span id="ApplyNow">   <a class="sf-btn-large2"  style="cursor:pointer">Show EmailAddress <i class="fa fa-send"></i>   </a></span>
+                                <div style="font-size:1.5rem;position:absolute;margin-left:120px;margin-top:-50px;display:none" id="Gmail"><a href="mailto:@Model.EmailAddress">@Model.EmailAddress</a></div>
                             </div>
                             <!--Share this post-->
                             @*    <div class="sf-jobdetail-blocks">
@@ -240,14 +240,14 @@
                                 <div class="sf-related-jobs">
                                     <div class="sf-related-job-pic">
                                         
-                                        <img src="@Model.ImageUrl" alt="">
+                                        <img src="@Model.Work" alt="">
                                     </div>
                                     <div class="sf-related-job-location">
                                        
                                     </div>
-                                    <div class="sf-related-job-name">
+                                   @* <div class="sf-related-job-name">
                                         @Model.Title  <span class="feather-check"></span>
-                                    </div>
+                                    </div>*@
                                     <div class="sf-related-job-rating">
                                         <span class="fa fa-star"></span>
                                         <span class="fa fa-star"></span>

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FinalProject.Models
 {
@@ -10,6 +11,8 @@ namespace FinalProject.Models
         public string Company { get; set; }
 
         public string Skill { get; set; }
+        [EmailAddress]
+        public string EmailAddress { get; set; }
 
         [NotMapped]
         public IFormFile Photo { get; set; }
@@ -23,6 +26,7 @@ namespace FinalProject.Models
         public string Title { get; set; }
         public int Price { get; set; }
         public string Work { get; set; }
+
 
 
         public Vacancy Vacancy { get; set; }

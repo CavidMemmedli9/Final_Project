@@ -19,7 +19,7 @@ namespace FinalProject.ViewModels
         public int? CategoryId { get; set; }
         public Category Category { get; set; }
         public string ImageUrl { get; set; }
-
+        public string EmailAddress { get; set; }
         public string Title { get; set; }
         public int Price { get; set; }
         public string Work { get; set; }

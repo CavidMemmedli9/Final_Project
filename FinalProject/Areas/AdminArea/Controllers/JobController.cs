@@ -67,6 +67,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
             newJobInfo.Skill = job.Skill;
             newJobInfo.Title = job.Title;
             newJobInfo.Price = job.Price;
+            newJobInfo.EmailAddress = job.EmailAddress;
             newJobInfo.Work = job.Photo.SaveImage(_env, "assets/images/providers");
             newJobInfo.CategoryId = job.CategoryId;
             newJobInfo.CityId = job.CityId;
@@ -102,7 +103,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
             if (id == null) return NotFound();
             JobInfo job = _appDbContext.JobInfo.Find(id);
             if (job == null) return NotFound();
-            return View(new UpdateJobVM { JobDesc = job.JobDesc, Company = job.Company, Skill = job.Skill,  CityId = job.CityId, CategoryId = job.CategoryId, ImageUrl = job.ImageUrl, Title = job.Title, Price = job.Price, Work = job.Work, });
+            return View(new UpdateJobVM { JobDesc = job.JobDesc, Company = job.Company, Skill = job.Skill,  CityId = job.CityId, CategoryId = job.CategoryId, ImageUrl = job.ImageUrl, Title = job.Title, Price = job.Price, Work = job.Work, EmailAddress = job.EmailAddress, });
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
@@ -140,10 +141,10 @@ namespace FinalProject.Areas.AdminArea.Controllers
             }
             existJob.ImageUrl = filename ?? existJob.ImageUrl;
             existJob.JobDesc = job.JobDesc;
-            //existJob.KeyResponse = job.KeyResponse;
+            existJob.Company = job.Company;
             existJob.Skill = job.Skill;
             existJob.Price = job.Price;
-            //existJob.Location = job.Location;
+            existJob.EmailAddress = job.EmailAddress;
             existJob.CategoryId = job.CategoryId;
             existJob.CityId = job.CityId;
             existJob.Title = job.Title;
