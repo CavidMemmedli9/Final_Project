@@ -1,6 +1,7 @@
 ﻿using FinalProject.DAL;
 using FinalProject.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace FinalProject.Helpers.Extension
@@ -27,6 +28,8 @@ namespace FinalProject.Helpers.Extension
             }
             return fileName;
         }
+
+
         public static void AddSomeServices(this IServiceCollection services)
         {
             services.AddIdentity<AppUser, IdentityRole>(options =>

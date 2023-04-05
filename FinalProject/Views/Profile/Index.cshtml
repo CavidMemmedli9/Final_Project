@@ -158,10 +158,15 @@
 
                         <div class="sf-provi-pic"><img src="~/assets/images/pro-pic.jpg" alt=""></div>
                         <div class="sf-provi-gallery">
-                            @foreach (var item in Model.Category)
+                            @foreach (var item in  Model.Category.Take(1))
                             {
 
                                 <a class="elem pic-long" href="~/assets/images/popular-categories/@item.ImageUrl">Photos</a>
+                            }
+                            @foreach (var item in Model.Category.Skip(1))
+                            {
+
+                                <a class="elem pic-long" href="~/assets/images/popular-categories/@item.ImageUrl"></a>
                             }
                           
                         </div>
