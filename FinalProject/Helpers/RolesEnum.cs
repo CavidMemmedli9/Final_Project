@@ -1,7 +1,9 @@
 ﻿namespace FinalProject.Helpers
 {
-    public class RolesEnum
+    public enum RolesEnum
     {
-
+        Admin,
+        Member,
+        Moderator
     }
 }

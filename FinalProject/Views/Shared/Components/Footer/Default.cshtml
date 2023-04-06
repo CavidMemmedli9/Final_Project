@@ -189,13 +189,14 @@
                         <!--Sign up Form-->
                         <div id="Past" class="tab-pane">
                             <div class="sf-tabs-content">
-                                <form method="post" asp-controller="account" asp-action="register" class="aon-login-form">
+                                <form id="RegisterId"  method="post"   class="aon-login-form">
+                                    <div id="errormessagesRegister" class="text-danger"></div>
                                     <div id="errormessageRegister" class="text-danger"></div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="FullName" class="form-control sf-form-control" id="FullName" name="FullName" type="text" placeholder="Full Name">
+                                                    <input  class="form-control sf-form-control" id="FullName1" name="FullName" type="text" placeholder="Full Name">
                                                     <span asp-validation-for="FullName"></span>
                                                     <i class="aon-input-icon fa fa-user"></i>
                                                 </div>
@@ -204,7 +205,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="UserName" id="UserName" class="form-control sf-form-control" name="UserName" type="text" placeholder="User Name">
+                                                    <input  id="UserName1" class="form-control sf-form-control" name="UserName" type="text" placeholder="User Name">
                                                     <span asp-validation-for="UserName"></span>
                                                     <i class="aon-input-icon fa fa-user"></i>
                                                 </div>
@@ -216,7 +217,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="Email" id="Email" class="form-control sf-form-control" name="email" type="email" placeholder="Email">
+                                                    <input  id="Email1" class="form-control sf-form-control" name="email" type="email" placeholder="Email">
                                                     <span asp-validation-for="Email"></span>
                                                     <i class="aon-input-icon fa fa-envelope-o"></i>
                                                 </div>
@@ -226,7 +227,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="Password" id="Password" class="form-control sf-form-control" name="password" type="password" placeholder="Password">
+                                                    <input  id="Password1" class="form-control sf-form-control" name="password" type="password" placeholder="Password">
                                                     <span asp-validation-for="Password"></span>
                                                     <i class="aon-input-icon fa fa-lock"></i>
                                                 </div>
@@ -236,7 +237,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <div class="aon-inputicon-box">
-                                                    <input asp-for="PasswordConfirm" id="PasswordConfirm" class="form-control sf-form-control" name="PasswordConfirm" type="password" placeholder="Confirm Password">
+                                                    <input  id="PasswordConfirm1" class="form-control sf-form-control" name="PasswordConfirm" type="password" placeholder="Confirm Password">
                                                     <span asp-validation-for="PasswordConfirm"></span>
                                                     <i class="aon-input-icon fa fa-lock"></i>
                                                 </div>
@@ -252,7 +253,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <button  type="submit" id="RegisterBtn" class="site-button w-100">Submit <i class="feather-arrow-right"></i> </button>
+                                            <button  type="button" id="RegisterBtn" class="site-button w-100">Submit <i class="feather-arrow-right"></i> </button>
                                         </div>
 
                                     </div>
@@ -321,32 +322,33 @@
 
 
     $("#RegisterBtn").on("click", function () {
-        var fullName = $("#FullName").val();
-        var userName = $("#UserName").val();
-        var email = $("#Email").val();
-        var password = $("#Password").val();
-        var passwordConfirm = $("#PasswordConfirm").val();
+        var FullName1 = $("#FullName1").val();
+        var UserName1 = $("#UserName1").val();
+        var email1 = $("#Email1").val();
+        var password1 = $("#Password1").val();
+        var ConfirmPassword1 = $("#PasswordConfirm1").val();
         var bodyFormData = new FormData();
 
-        bodyFormData.append('FullName', fullName);
-        bodyFormData.append('UserName', userName);
-        bodyFormData.append('Email', email);
-        bodyFormData.append('Password', password);
-        bodyFormData.append('PasswordConfirm', passwordConfirm);
+        bodyFormData.append('Email', email1);
+        bodyFormData.append('Password', password1);
+        bodyFormData.append('FullName', FullName1);
+        bodyFormData.append('UserName', UserName1);
+        bodyFormData.append('PasswordConfirm', ConfirmPassword1);
 
-
-        bodyFormData.append('RememberMe', false);
+        //bodyFormData.append('RememberMe', false);
 
         axios({
             method: "post",
             url: "/Account/Register/",
             data: bodyFormData,
             headers: { "Content-Type": "multipart/form-data" },
-        }).then(function (response) {
+        }).then(function (response)
+        {
+            console.log(response.data)
             if (response.data == "1") {
                 $(location).attr('href', '/Home');
             }
-            $("#errormessageRegister").text(response.data)
+            $("#errormessagesRegister").text(response.data)
 
             console.log(response);
         }).catch(function (response) {
@@ -354,9 +356,7 @@
         });
     })
 
-
-
-    
+ 
 
 
 </script>

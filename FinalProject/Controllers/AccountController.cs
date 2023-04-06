@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
 using System.Net;
+using FinalProject.Helpers;
 
 namespace FinalProject.Controllers
 {
@@ -19,39 +20,37 @@ namespace FinalProject.Controllers
             _signInManager = signInManager;
             _roleManager = roleManager;
         }
+
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
-
         public async Task<IActionResult> Register(RegisterVM register)
         {
-            if (!ModelState.IsValid) return Content("Pleas enter required fields");
 
-            //if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return Content("Pleas enter required fields");
             AppUser user = new AppUser()
             {
                 UserName = register.UserName,
                 Email = register.Email,
-                FullName = register.FullName,
-               
+                FullName = register.FullName
             };
             IdentityResult result = await _userManager.CreateAsync(user, register.Password);
 
             if (!result.Succeeded)
             {
-                //foreach (var error in result.Errors)
-                //{
-                //    ModelState.AddModelError("", error.Description);
-                //}
-                return Content("do not found");
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(register);
             }
 
-            //await _userManager.AddToRoleAsync(user, RolesEnum.Member.ToString());
+            await _userManager.AddToRoleAsync(user, RolesEnum.Admin.ToString());
 
-            return  Content("1"); ;
+            return Content("1");
         }
 
         public IActionResult Login()
@@ -153,6 +152,20 @@ namespace FinalProject.Controllers
             await _userManager.ResetPasswordAsync(appUser, token, forgetPassword.Password);
 
             return RedirectToAction("login", "account");
+
+        }
+        public async Task<IActionResult> AddRoles()
+        {
+            foreach (var role in Enum.GetValues(typeof(RolesEnum)))
+            {
+                if (!await _roleManager.RoleExistsAsync(role.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+                }
+
+            }
+            return Content("role elave olundu");
+
         }
     }
 }
