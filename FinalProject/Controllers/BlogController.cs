@@ -37,13 +37,17 @@ namespace FinalProject.Controllers
 
         public IActionResult Detail(int? id)
         {
-            var blog = _context.Articles.Include(t => t.Blog).
+            BlogDetailVM article = new BlogDetailVM();
+            article.Categories = _context.Category.ToList();
+            article.Articles = _context.Articles.Include(t => t.Blog).
                 Include(c => c.Comments).
                 ThenInclude(c => c.AppUser).
                 FirstOrDefault(t => t.Id == id);
+            
 
+          
 
-            return View(blog);
+            return View(article);
         }
 
         [HttpPost]

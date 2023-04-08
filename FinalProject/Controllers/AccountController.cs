@@ -62,7 +62,7 @@ namespace FinalProject.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM login)
         {
-            if (!ModelState.IsValid) return Content("Pleas enter required fields");
+            if (!ModelState.IsValid) return Content("Please enter required fields");
 
             AppUser user = await _userManager.FindByEmailAsync(login.Email);
             if (user == null)

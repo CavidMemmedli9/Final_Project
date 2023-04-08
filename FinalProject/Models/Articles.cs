@@ -17,5 +17,7 @@ namespace FinalProject.Models
         public int? BlogId { get; set; }
         public Blog Blog { get; set; }
         public List<Comment> Comments { get; set; }
+
+
     }
 }

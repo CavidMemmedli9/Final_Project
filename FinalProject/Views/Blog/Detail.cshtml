@@ -1,4 +1,4 @@
-﻿@model Articles
+﻿@model BlogDetailVM
 
 @{
     ViewData["Title"] = "Detail";
@@ -155,7 +155,7 @@
                                 <div class="post-bx">
                                     <!-- Content section for blogs start -->
                                     <div class="post-thum">
-                                        <img title="title" alt="" src="~/assets/images/popular-categories/@Model.ImageUrl">
+                                        <img title="title" alt="" src="~/assets/images/popular-categories/@Model.Articles.ImageUrl">
                                     </div>
                                     <div class="post-info">
                                         <div class="post-meta sf-icon-post-meta">
@@ -166,12 +166,12 @@
                                             <h4 class="post-title">
                                                Requirements
                                             </h4>
-                                            <p>@Model.Blog.Title</p>
+                                            <p>@Model.Articles.Blog.Title</p>
 
 
                                             <h4 class="post-title-sm">Skills</h4>
 
-                                            <p>@Model.Blog.Desc</p>
+                                            <p>@Model.Articles.Blog.Desc</p>
 
                                             <blockquote>
                                                 <h4>
@@ -214,11 +214,11 @@
                             <!-- Comment section for blogs start -->
                             <div class="clear sf-blog-comment-wrap" id="comment-list">
                                 <div class="comments-area" id="comments">
-                                    <h2 class="comments-title m-t0">@Model.Comments.Count<span>Comments</span></h2>
+                                    <h2 class="comments-title m-t0">@Model.Articles.Comments.Count<span>Comments</span></h2>
                                     <div>
                                         <!-- COMMENT LIST START -->
                                         <ol class="comment-list">
-                                            @foreach (var item in Model.Comments)
+                                            @foreach (var item in Model.Articles.Comments)
                                             {
                                                 <li class="comment">
                                                     <!-- COMMENT BLOCK -->
@@ -273,7 +273,7 @@
                                                 <p class="comment-form-comment">
                                                     <label for="comment">Comment</label>
                                                     <textarea class="form-control" rows="8" name="text" placeholder="Write a Comment" id="comment"></textarea>
-                                              <input type="hidden" name="blogId" value="@Model.Id" />
+                                              <input type="hidden" name="blogId" value="@Model.Articles.Id" />
                                                 </p>
 
                                                 <p class="form-submit">
@@ -337,13 +337,12 @@
                                     <h3 class="widget-title">Categories</h3>
                                 </div>
                                 <ul>
+                                   @foreach (var item in Model.Categories)
+                                    {
+                                        <li><a href="/Job?s=&categoryid=@item.Id">@item.Name</a></li>
+                                    }
+                                  
                                    
-                                    <li><a href="javascript:void(0);">Teacher</a></li>
-                                    <li><a href="javascript:void(0);">Front-End Developer</a></li>
-                                    <li><a href="javascript:void(0);">Back-End Developer</a></li>
-                                    <li><a href="javascript:void(0);">Accountant</a></li>
-                                    <li><a href="javascript:void(0);">Design</a></li>
-                                    <li><a href="javascript:void(0);">Sales Manager</a></li>
 
                                 </ul>
                             </div>
