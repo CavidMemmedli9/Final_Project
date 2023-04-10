@@ -1,10 +1,13 @@
 ﻿using FinalProject.DAL;
 using FinalProject.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace FinalProject.Controllers
 {
+   
     public class JobController : Controller
     {
         private readonly AppDbContext _context;
@@ -14,7 +17,7 @@ namespace FinalProject.Controllers
             _context = context;
         }
 
-        public IActionResult Index(int? cityid,int? categoryid,int? minprice,int? maxprice)
+        public IActionResult Index(int? cityid,int? categoryid,int? maxprice)
         {
             var query = _context.JobInfo.Include(j=>j.Category).Include(x=>x.City).AsQueryable();
             JobVM jobVM = new JobVM();
@@ -26,9 +29,9 @@ namespace FinalProject.Controllers
             {
                 query = query.Where(j => j.CityId == cityid);
             }
-            if (minprice != null && maxprice != null)
+            if (maxprice != null)
             {
-                query = query.Where(q => q.Price <= maxprice && q.Price >= minprice);
+                query = query.Where(q => q.Price <= maxprice);
             }
 
             jobVM.JobInfo = query.ToList();

@@ -142,34 +142,29 @@
         <div class="aon-page-jobs-wrap">
             <div class="container">
                 <div class="row">
-
+                    
                     <!-- Side bar start -->
                     <div class="col-lg-4 col-md-12">
-
+                        <form asp-action="Index" asp-controller="Job" method="get">
                         <aside class="side-bar sf-rounded-sidebar">
-                            <!--Find a Job-->
-                            <div class="sf-job-sidebar-blocks">
-                                <h4 class="sf-title">Find a Job</h4>
-                                <div class="form-group">
-                                    <input type="text" placeholder="Search Keywords" class="form-control">
-                                </div>
-                                <button class="sf-btn-large" type="submit">Search Keywords</button>
-                            </div>
-
                             <!--Location-->
                             <div class="sf-job-sidebar-blocks">
-                                <h4 class="sf-title">Location</h4>
+                                <h4 class="sf-title">City</h4>
                                 <div class="form-group sf-location-ring-wrap">
-                                    <input name="minprice" type="text" placeholder="Enter Locaton" class="form-control">
-                                   
+                                        <select name="cityid" id="cityid" class="form-control sf-select-box" title="All category">
+                                            @foreach (var item in Model.City)
+                                            {
 
-                                        <a href="#" class="sf-location-ring"></a>
+                                                <option value="@item.Id">@item.Name </option>
+                                            }
+
+                                        </select>
                                     
                                 </div>
 
                                 <div class="sf-range-slider">
                                     <div class="sf-range-slider-control"> <span>Price</span></div>
-                                    <input id="ex1" name="maxprice" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="1400" data-slider-step="1" data-slider-value="14" />
+                                        <input id="ex1" name="maxprice" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="2000" data-slider-step="1" data-slider-value="14" />
                                 </div>
 
                             </div>
@@ -179,21 +174,21 @@
                                 <h4 class="sf-title">Category</h4>
 
                                 <div class="category-select">
-                                    <select class="form-control sf-select-box" title="All category">
+                                        <select id="categoryid" name="categoryid" class="form-control sf-select-box" title="All category">
                                         @foreach (var item in Model.Category)
                                         {
 
-                                            <option>@item.Name </option>
+                                                <option value="@item.Id">@item.Name </option>
                                         }
 
                                     </select>
                                 </div>
-
+                                <button class="sf-btn-large" type="submit">Search Keywords</button>
                             </div>
      
 
                         </aside>
-
+                        </form>
                     </div>
                     <!-- Side bar END -->
                     <!-- Right part start -->

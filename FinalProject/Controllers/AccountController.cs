@@ -48,7 +48,7 @@ namespace FinalProject.Controllers
                 return View(register);
             }
 
-            await _userManager.AddToRoleAsync(user, RolesEnum.Admin.ToString());
+            await _userManager.AddToRoleAsync(user, RolesEnum.Member.ToString());
 
             return Content("1");
         }

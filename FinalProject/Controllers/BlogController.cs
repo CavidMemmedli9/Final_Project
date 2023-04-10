@@ -45,8 +45,6 @@ namespace FinalProject.Controllers
                 FirstOrDefault(t => t.Id == id);
             
 
-          
-
             return View(article);
         }
 
