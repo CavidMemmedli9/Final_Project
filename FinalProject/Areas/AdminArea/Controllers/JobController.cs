@@ -11,8 +11,7 @@ using System.Data;
 namespace FinalProject.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
-
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Moderator")]
     public class JobController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -31,7 +30,6 @@ namespace FinalProject.Areas.AdminArea.Controllers
 
             return View(jobs);
         }
-
 
         public IActionResult Create()
         {

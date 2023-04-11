@@ -233,10 +233,12 @@
                                                         </div>
                                                         <p>@item.Text</p>
                                                         <div class="reply">
+
                                                             @if (User.Identity.Name==item.AppUser.UserName)
                                                             {
                                                                <span><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></span>
                                                             }
+
                                                         </div>
                                                     </div>
 
@@ -244,27 +246,6 @@
                                             }
                                            
 
-                                     @*       <li class="comment">
-                                                <!-- COMMENT BLOCK -->
-                                                <div class="comment-body">
-                                                    <div class="comment-author vcard">
-                                                        <img class="avatar photo" src="~/assets/images/sf-post-coment/2.jpg" alt="">
-                                                        <cite class="fn">Janice Brown</cite>
-                                                        <span class="says">says:</span>
-                                                    </div>
-                                                    <div class="comment-meta">
-                                                        <a href="javascript:void(0);">MAR 18,2022 AT 2:14pm</a>
-                                                    </div>
-                                                    <p>Qui officia deserunt mollit anim id est labrum. Duis aute iruret dolor in prehenderit in voludptate velit esse cillum toret eu giat enerit in volptate.</p>
-                                                    <div class="reply">
-                                                        <a href="javscript:;" class="comment-reply-link">Reply</a>
-                                                    </div>
-                                                </div>
-
-                                            </li>*@
-                                        </ol>
-                                        <!-- COMMENT LIST END -->
-                                        <!-- LEAVE A REPLY START -->
                                         <div class="comment-respond m-t30" id="respond">
                                             <form asp-action="AddComment" class="comment-form" id="commentform" method="post">
 

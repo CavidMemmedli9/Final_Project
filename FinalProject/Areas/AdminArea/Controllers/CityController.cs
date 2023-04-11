@@ -1,11 +1,15 @@
 ﻿using FinalProject.DAL;
 using FinalProject.Models;
 using FinalProject.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace FinalProject.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles = "Admin,Moderator")]
+
     public class CityController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -21,7 +25,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _appDbContext.SaveChanges();
             return View(city);
         }
-
+    
         public IActionResult Create()
         {
 

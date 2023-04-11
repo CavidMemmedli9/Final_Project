@@ -10,7 +10,8 @@ namespace FinalProject.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
 
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Moderator")]
+
     public class CategoryController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -29,7 +30,6 @@ namespace FinalProject.Areas.AdminArea.Controllers
 
             return View(categories);
         }
-
 
         public IActionResult Create()
         {

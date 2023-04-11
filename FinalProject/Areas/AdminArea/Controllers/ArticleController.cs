@@ -12,8 +12,8 @@ namespace FinalProject.Areas.AdminArea.Controllers
 {
 
     [Area("AdminArea")]
-
     [Authorize(Roles = "Admin")]
+
     public class ArticleController : Controller
     {
         private readonly AppDbContext _appDbContext;
