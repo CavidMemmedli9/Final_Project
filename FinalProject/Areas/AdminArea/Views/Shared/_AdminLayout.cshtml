@@ -291,7 +291,7 @@
             <div class="admin-nav">
                 <ul class="">
                     <li class="active">
-                        <a href="mc-dashboard.html"><i class="fa fa-dashboard"></i><span class="admin-nav-text">Dashboard</span></a>
+                        <a asp-area="adminarea" asp-controller="dashboard" asp-action="index"><i class="fa fa-dashboard"></i><span class="admin-nav-text">Dashboard</span></a>
                     </li>
                     <li>
                         <a asp-area ="adminarea" asp-controller="article" asp-action="index"><i class="fa fa-user-circle-o"></i><span class="admin-nav-text">Blog</span></a>
@@ -306,9 +306,9 @@
                         <a asp-area="adminarea" asp-controller="job" asp-action="index"><i class="fa fa-envelope-o"></i><span class="admin-nav-text">Job</span></a>
                     </li>
                     <li>
-                        <a asp-area="adminarea" asp-controller="user" asp-action="index"><i class="fa fa-calendar-check-o"></i><span class="admin-nav-text">User</span></a>
+                        <a asp-area="adminarea" asp-controller="contact" asp-action="index"><i class="fa fa-calendar-check-o"></i><span class="admin-nav-text">Contact</span></a>
                     </li>
-                    <li>
+                    @*<li>
                         <a href="mc-featured-member.html"><i class="fa fa-user-secret"></i><span class="admin-nav-text">Featured Member</span></a>
                     </li>
                     <li>
@@ -322,7 +322,7 @@
                     </li>
                     <li>
                         <a href="mc-upgrade-account.html"><i class="fa fa-cloud-upload"></i><span class="admin-nav-text">Upgrade Account</span></a>
-                    </li>
+                    </li>*@
 
                 </ul>
             </div>

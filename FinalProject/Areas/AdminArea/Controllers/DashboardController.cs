@@ -10,10 +10,8 @@ namespace FinalProject.Areas.AdminArea.Controllers
     [Authorize(Roles = "Admin")]
     public class DashboardController : Controller
     {
-
         public IActionResult Index()
         {
-
             return View();
         }
     }
