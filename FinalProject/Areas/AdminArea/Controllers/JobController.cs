@@ -3,10 +3,13 @@ using FinalProject.Helpers.Extension;
 using FinalProject.Models;
 using FinalProject.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using System.Security.Claims;
+using System.Security.Principal;
 
 namespace FinalProject.Areas.AdminArea.Controllers
 {
@@ -16,16 +19,19 @@ namespace FinalProject.Areas.AdminArea.Controllers
     {
         private readonly AppDbContext _appDbContext;
         private readonly IWebHostEnvironment _env;
-
+    
         public JobController(AppDbContext appDbContext, IWebHostEnvironment env)
         {
             _appDbContext = appDbContext;
             _env = env;
-        }
+              }
 
         public IActionResult Index()
         {
-            var jobs = _appDbContext.JobInfo.Include(c=>c.Category).Include(t=>t.City).ToList();
+
+            var userId = HttpContext.User.Identity.Name;
+            var user = _appDbContext.Users.FirstOrDefault(p=>p.UserName==userId);
+            var jobs = _appDbContext.JobInfo.Include(c=>c.Category).Include(t=>t.City).Where(p=>p.EmailAddress==user.Email).ToList();
             _appDbContext.SaveChanges();
 
             return View(jobs);
