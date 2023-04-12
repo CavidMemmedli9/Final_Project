@@ -7,7 +7,8 @@
         <div class="container">
             <div class="sf-news-letter">
                 <span>Subscribe Our Newsletter</span>
-                <form asp-action="Subscribe" asp-controller="Contact" method="post">
+                <form asp-action="Subscribe" asp-controller="Home" method="post">
+
                     <div class="form-group sf-news-l-form">
                         <input type="text" class="form-control" name="email" placeholder="Enter Your Email">
                         <button type="submit" class="sf-sb-btn">Submit</button>
@@ -356,9 +357,15 @@
         });
     })
 
- 
+   
 
 
 </script>
+@if (TempData["Error"] != null)
+{
+    <script>
+        alert("@TempData["Error"]");
+    </script>
+}
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

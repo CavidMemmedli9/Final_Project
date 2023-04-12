@@ -19,12 +19,13 @@ namespace FinalProject.Areas.AdminArea.Controllers
     {
         private readonly AppDbContext _appDbContext;
         private readonly IWebHostEnvironment _env;
-    
-        public JobController(AppDbContext appDbContext, IWebHostEnvironment env)
+    private readonly RoleManager<Job> _roleManager;
+        public JobController(AppDbContext appDbContext, IWebHostEnvironment env, RoleManager<Job> roleManager)
         {
             _appDbContext = appDbContext;
             _env = env;
-              }
+            _roleManager = roleManager;
+        }
 
         public IActionResult Index()
         {

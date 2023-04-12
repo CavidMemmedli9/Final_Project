@@ -50,5 +50,18 @@ namespace FinalProject.Helpers.Extension
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddScoped<IBasketCount, BasketCountService>();
         }
+
+        public static bool IsRegisteredEmail(this AppDbContext dbContext, string email)
+        {
+            var existingEmail = dbContext.Subscribes.FirstOrDefault(e => e.Email == email);
+            return existingEmail != null;
+        }
+
+        public static void SaveEmail(this AppDbContext dbContext, string email)
+        {
+            var newEmail = new Models.Subscribe { Email = email };
+            dbContext.Subscribes.Add(newEmail);
+            dbContext.SaveChanges();
+        }
     }
 }

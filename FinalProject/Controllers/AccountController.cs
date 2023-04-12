@@ -130,7 +130,7 @@ namespace FinalProject.Controllers
             smtpClient.Port = 587;
             smtpClient.EnableSsl = true;
 
-            smtpClient.Credentials = new NetworkCredential("javidsm@code.edu.az", "crkqdlpawcqimxyg");
+            smtpClient.Credentials = new NetworkCredential("javidsm@code.edu.az", "tvikjyuwqtlnlyty");
 
             smtpClient.Send(mailMessage);
             return RedirectToAction("Index");
