@@ -6,5 +6,8 @@ namespace FinalProject.ViewModels
     {
         public List<Articles> Articles { get; set; }
         public List<Category> Categories { get; set; }
+
+
+        public List<JobInfo> JobInfo { get; set; }
     }
 }

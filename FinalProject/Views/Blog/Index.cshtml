@@ -241,51 +241,23 @@
                             </div>
 
                             <div class="widget-post-bx">
-                                <div class="widget-post clearfix">
-                                    <div class="wt-post-media">
-                                        <img src="/assets/images/blog/recent-post/1.jpg" alt="">
-                                    </div>
-                                    <div class="wt-post-info">
-                                        <div class="wt-post-header">
-                                            <h5 class="post-title"> <a href="#">Helping Companies in Green Transition area.</a></h5>
+                               @foreach (var item in Model.JobInfo.Take(3))
+                                    {
+                                        <div class="widget-post clearfix">
+                                            <div class="wt-post-media">
+                                                <img src="~/assets/images/popular-categories/@item.ImageUrl" alt="">
+                                            </div>
+                                            <div class="wt-post-info">
+                                                <div class="wt-post-header">
+                                                    <h5 class="post-title"> <a >@item.Title</a></h5>
+                                                </div>
+                                                <div class="wt-post-meta">
+                                                   
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="wt-post-meta">
-                                            <ul>
-                                                <li class="post-date">Sep 18, 2022</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="widget-post clearfix">
-                                    <div class="wt-post-media">
-                                        <img src="/assets/images/blog/recent-post/2.jpg" alt="">
-                                    </div>
-                                    <div class="wt-post-info">
-                                        <div class="wt-post-header">
-                                            <h5 class="post-title"><a href="#">There are two thing is very important in Consectetur</a></h5>
-                                        </div>
-                                        <div class="wt-post-meta">
-                                            <ul>
-                                                <li class="post-date">Sep 20, 2022</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="widget-post clearfix">
-                                    <div class="wt-post-media">
-                                        <img src="/assets/images/blog/recent-post/3.jpg" alt="">
-                                    </div>
-                                    <div class="wt-post-info">
-                                        <div class="wt-post-header">
-                                            <h5 class="post-title"> <a href="#">Officia deserunt mollit anim id est labrum. Duis aute iruret </a> </h5>
-                                        </div>
-                                        <div class="wt-post-meta">
-                                            <ul>
-                                                <li class="post-date">Sep 22, 2022</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                    }
+                            
                             </div>
 
                         </div>

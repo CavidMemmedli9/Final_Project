@@ -22,6 +22,7 @@ namespace FinalProject.Controllers
             ArticlesVM model = new();
             model.Categories = await _context.Category.ToListAsync();
             model.Articles = await _context.Articles.OrderByDescending(p=>p.Id).ToListAsync();
+            model.JobInfo = await _context.JobInfo.OrderByDescending(p => p.Id).ToListAsync();
             return View(model);
         }
 
