@@ -92,7 +92,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
             newJobInfo.CityId = job.CityId;
             _appDbContext.JobInfo.Add(newJobInfo);
             _appDbContext.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
 
         }
 

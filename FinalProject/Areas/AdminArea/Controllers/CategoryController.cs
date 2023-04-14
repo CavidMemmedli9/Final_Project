@@ -60,7 +60,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
             newcategory.Name = category.Name;
             _appDbContext.Category.Add(newcategory);
             _appDbContext.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
 
 

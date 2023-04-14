@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CoGhOfm2x1+dyBRQZASNRzqlREo4gyE5juY4XkE6iXw=",
+  "Hash": "WI9MUGg/WytqCcuruDk7g53ROWPZKq1/ZjqryaVcex0=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -2822,6 +2822,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\2.jpg"
     },
     {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\22d88eaf-ff14-4465-9151-978ea9aa5afcwhat_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/22d88eaf-ff14-4465-9151-978ea9aa5afcwhat_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\22d88eaf-ff14-4465-9151-978ea9aa5afcwhat_is_a_blog_used_for-f_mobile.png"
+    },
+    {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\3.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -2958,6 +2975,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\7.jpg"
     },
     {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\7855e126-f795-4ca0-b8b8-db059d789138what_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/7855e126-f795-4ca0-b8b8-db059d789138what_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\7855e126-f795-4ca0-b8b8-db059d789138what_is_a_blog_used_for-f_mobile.png"
+    },
+    {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\7d7ec2d4-83ec-4a68-9685-ad9f8ad8235a8.jpg.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -3026,6 +3060,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\b35d04a2-4180-4e80-9a96-02bbb0d7b8bd8.jpg.png"
     },
     {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\c99decf6-b56c-45a5-bbf3-5b2b8f41c110what_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/c99decf6-b56c-45a5-bbf3-5b2b8f41c110what_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\c99decf6-b56c-45a5-bbf3-5b2b8f41c110what_is_a_blog_used_for-f_mobile.png"
+    },
+    {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\db95c7c6-c732-44c8-8d41-ecea741ffff8what_is_a_blog_used_for-f_mobile.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -3075,6 +3126,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\e99bb0b0-8edd-4b6f-a4f4-cb50f685815f8.jpg.png"
+    },
+    {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\ee49a2a7-9d81-4d7b-a07e-c3632e989051what_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/popular-categories/ee49a2a7-9d81-4d7b-a07e-c3632e989051what_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\popular-categories\\ee49a2a7-9d81-4d7b-a07e-c3632e989051what_is_a_blog_used_for-f_mobile.png"
     },
     {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\popular-categories\\f43bf44f-f37a-463d-98ec-34dd3a6eb2788.jpg.png",
@@ -3587,6 +3655,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\providers\\31463838-6b2d-4036-806d-1677093612e2ABB_Logo.png"
     },
     {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\providers\\3782704a-11a7-4b55-8a01-f8c7a4a19bcewhat_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/providers/3782704a-11a7-4b55-8a01-f8c7a4a19bcewhat_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\providers\\3782704a-11a7-4b55-8a01-f8c7a4a19bcewhat_is_a_blog_used_for-f_mobile.png"
+    },
+    {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\providers\\50b02e7b-21b9-4944-a42c-2f3b49d7fa87what_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/providers/50b02e7b-21b9-4944-a42c-2f3b49d7fa87what_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\providers\\50b02e7b-21b9-4944-a42c-2f3b49d7fa87what_is_a_blog_used_for-f_mobile.png"
+    },
+    {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\providers\\530b9c09-951f-421b-a926-46e5adac1f288.jpg.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -3619,6 +3721,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\providers\\53a67156-4c61-4d17-bb61-9b54a7fc4f64Javid's Resume.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\providers\\5e5f3f77-06dc-4b97-918e-35465f231e27what_is_a_blog_used_for-f_mobile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/providers/5e5f3f77-06dc-4b97-918e-35465f231e27what_is_a_blog_used_for-f_mobile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\providers\\5e5f3f77-06dc-4b97-918e-35465f231e27what_is_a_blog_used_for-f_mobile.png"
     },
     {
       "Identity": "C:\\Users\\javid\\OneDrive\\Desktop\\Final_Project\\FinalProject\\wwwroot\\assets\\images\\providers\\6af10b76-6eaa-462f-a4b2-c3009a23e4bf8.jpg.png",

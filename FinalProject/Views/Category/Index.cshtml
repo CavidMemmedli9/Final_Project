@@ -176,7 +176,7 @@
                                         <span class="sf-caty-num"></span>
                                         <a href="#" class="sf-caty-link"></a>
                                     </div>
-                                    <h5 class="sf-catyitem-title"><a href="categories-detail.html">@Model.Category[i].Name</a></h5>
+                                    <h5 class="sf-catyitem-title"><a >@Model.Category[i].Name</a></h5>
                                 </div>
                                 @if (i + 1 < Model.Category.Count)
                                 {
@@ -185,7 +185,7 @@
                                         <span class="sf-caty-num"></span>
                                         <a href="#" class="sf-caty-link"></a>
                                     </div>
-                                    <h5 class="sf-catyitem-title"><a href="categories-detail.html">@Model.Category[i+1].Name</a></h5>
+                                    <h5 class="sf-catyitem-title"><a >@Model.Category[i+1].Name</a></h5>
                                 </div>    
                                 }
 
@@ -218,11 +218,11 @@
                                 <div class="sf-vender-list-wrap">
                                     <div class="sf-vender-list-box d-flex">
                                         <div class="sf-vender-list-pic" style="background-image:url(@item.ImageUrl)">
-                                            <a class="sf-vender-pic-link" href="profile-full.html"></a>
+                                            <a class="sf-vender-pic-link" ></a>
                                         </div>
                                         <div class="sf-vender-list-info">
                                             <h4 class="sf-venders-title"><a >@item.Name</a></h4>
-                                            <span class="sf-venders-address"><i class="fa fa-map-marker"></i>@item.Title</span>
+                                            <span class="sf-venders-address">@*<i class="fa fa-map-marker"></i>*@@item.Title</span>
                                             <div class="sf-ow-pro-rating">
                                                 <span class="fa fa-star"></span>
                                                 <span class="fa fa-star"></span>
@@ -235,7 +235,6 @@
                                             <div class="sf-pro-favorite"><a href="#"><i class="fa fa-heart-o"></i></a></div>
 
                                             <div class="dropdown action-dropdown dropdown-left">
-                                                <button class="action-button gray dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
 
                                             </div>
 

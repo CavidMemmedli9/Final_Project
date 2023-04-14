@@ -17,7 +17,7 @@ namespace FinalProject.Controllers
             _context = context;
         }
         [HttpPost]
-        public async Task<IActionResult> Subscribe(string email)
+        public async Task<IActionResult> Subscribes(string email)
         {
             Subscribe data = new()
             {
