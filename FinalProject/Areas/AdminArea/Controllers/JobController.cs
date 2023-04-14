@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 
@@ -19,20 +20,21 @@ namespace FinalProject.Areas.AdminArea.Controllers
     {
         private readonly AppDbContext _appDbContext;
         private readonly IWebHostEnvironment _env;
-    private readonly RoleManager<Job> _roleManager;
+        private readonly RoleManager<Job> _roleManager;
         public JobController(AppDbContext appDbContext, IWebHostEnvironment env, RoleManager<Job> roleManager)
         {
             _appDbContext = appDbContext;
             _env = env;
             _roleManager = roleManager;
         }
-
+        
         public IActionResult Index()
         {
 
             var userId = HttpContext.User.Identity.Name;
             var user = _appDbContext.Users.FirstOrDefault(p=>p.UserName==userId);
             var jobs = _appDbContext.JobInfo.Include(c=>c.Category).Include(t=>t.City).Where(p=>p.EmailAddress==user.Email).ToList();
+          
             _appDbContext.SaveChanges();
 
             return View(jobs);

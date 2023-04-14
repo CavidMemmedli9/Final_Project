@@ -44,7 +44,7 @@ namespace FinalProject.Controllers
                 Include(c => c.Comments).
                 ThenInclude(c => c.AppUser).
                 FirstOrDefault(t => t.Id == id);
-            
+            article.JobInfo =  _context.JobInfo.OrderByDescending(p => p.Id).ToList();
 
             return View(article);
         }
