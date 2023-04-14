@@ -8,6 +8,6 @@ namespace FinalProject.ViewModels
 
         public List<Category> Category { get; set; }
 
-        public List<Person> Person { get; set; }
+        public List<People> People { get; set; }
     }
 }
