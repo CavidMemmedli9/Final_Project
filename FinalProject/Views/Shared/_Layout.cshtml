@@ -1,14 +1,14 @@
-﻿ <!DOCTYPE html>
- <html class="no-js" lang="zxx">
+﻿<!DOCTYPE html>
+<html class="no-js" lang="zxx">
 
- <head>
+<head>
 
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <meta name="robots" content="" />    
+    <meta name="robots" content="" />
     <meta name="description" content="" />
 
     <link rel="icon" href="~/assets/images/favicon.html" type="image/x-icon" />
@@ -21,32 +21,32 @@
 
     <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap4-toggle.min.css">
-    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-select.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-select.min.css" />
 
     <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-slider.min.css" />
-  
+
     <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap4.min.css">
- 
+
     <link rel="stylesheet" type="text/css" href="~/assets/css/dropzone.css">
 
-    <link rel="stylesheet" type="text/css" href="~/assets/css/font.css" />    
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font.css" />
 
-    <link rel="stylesheet" type="text/css" href="~/assets/css/feather.css" />  
+    <link rel="stylesheet" type="text/css" href="~/assets/css/feather.css" />
 
     <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" type="text/css" href="~/assets/css/lc_lightbox.css" />     
-  
+    <link rel="stylesheet" type="text/css" href="~/assets/css/lc_lightbox.css" />
+
     <link rel="stylesheet" type="text/css" href="~/assets/css/magnific-popup.min.css">
-  
+
     <link rel="stylesheet" type="text/css" href="~/assets/css/m-custom-scrollbar.min.css" />
 
     <link rel="stylesheet" type="text/css" href="~/assets/css/owl.carousel.min.css">
-   
+
     <link rel="stylesheet" type="text/css" href="~/assets/css/slick.min.css">
-  
-    <link rel="stylesheet" type="text/css" href="~/assets/css/slick-theme.css">  
-   
+
+    <link rel="stylesheet" type="text/css" href="~/assets/css/slick-theme.css">
+
     <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
 
 </head>
@@ -79,9 +79,9 @@
 
         <header class="site-header header-style-1 mobile-sider-drawer-menu header-full-width">
             <div class="sticky-header main-bar-wraper  navbar-expand-lg">
-                <div class="main-bar">  
+                <div class="main-bar">
 
-                    <div class="container clearfix"> 
+                    <div class="container clearfix">
                         <div class="logo-header">
                             <div class="logo-header-inner logo-header-one">
                                 <a href="index-2.html">
@@ -89,42 +89,46 @@
                                     <img src="~/assets/images/logo-dark.png" alt="" class="site-logo-sticky">
                                 </a>
                             </div>
-                        </div>  
+                        </div>
                         <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar icon-bar-first"></span>
                             <span class="icon-bar icon-bar-two"></span>
                             <span class="icon-bar icon-bar-three"></span>
-                        </button> 
+                        </button>
 
                         <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
 
                             <ul class=" nav navbar-nav">
-                                <li class="has-child current-menu-item"><a href="javascript:;">Home</a>
-                                    
+                                <li class="has-child current-menu-item">
+                                    <a href="javascript:;">Home</a>
+
                                 </li>
 
                                 <li class="has-child">
                                     <a href="javascript:;">Pages</a>
                                     <ul class="sub-menu">
                                         <li><a asp-controller="about" asp-action="index">About us</a></li>
-                                        <li><a  asp-controller="category" asp-action="index">Categories</a>
-                                           
+                                        <li>
+                                            <a asp-controller="category" asp-action="index">Categories</a>
+
                                         </li>
 
-                                          
-                                        </li>
-                                    </ul>                                
-                                </li>
 
-                                <li class="has-child"><a asp-controller="profile" asp-action="index" >Profile</a>
                                 </li>
+                            </ul>
+                            </li>
 
-                                <li class="has-child"><a asp-controller="job" asp-action="index">Jobs</a>
-                                    <ul class="sub-menu">
+                            <li class="has-child">
+                                <a asp-controller="profile" asp-action="index">Profile</a>
+                            </li>
+
+                            <li class="has-child">
+                                <a asp-controller="job" asp-action="index">Jobs</a>
+                                <ul class="sub-menu">
                                     <li><a asp-controller="job" asp-action="jobDetail">Job detail</a></li>
-                                </ul>                                
-                                </li>
+                                </ul>
+                            </li>
 
                             <li class="has-child">
                                 <a asp-controller="blog" asp-action="index">Blog</a>
@@ -134,7 +138,7 @@
 
                             </li>
 
-                                <li><a asp-controller="contact" asp-action="index">Contact</a></li>  
+                            <li><a asp-controller="contact" asp-action="index">Contact</a></li>
 
                             </ul>
 
@@ -144,34 +148,45 @@
                             <div class="extra-cell">
                                 <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
 
-                                     @if (User.Identity.IsAuthenticated)
-                            {
-                           
-                                <span>@User.Identity.Name</span>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
 
-                               
+                                        <span>@User.Identity.Name</span>
 
-                                 
-                                    <a class="nav-link" asp-controller="account" asp-action="logout">Logout</a>
+                                        <a class="nav-link" asp-controller="account" asp-action="logout">Logout</a>
 
-                                        
                                     }
                                     else
                                     {
-                                        <i  class="fa fa-user">Login</i>
-                                    
-                                                 
+                                        <i class="fa fa-user">Login</i>
+
                                     }
-                                
+
                                 </button>
-                                <a asp-area="adminarea" asp-controller="category" asp-action="index" class="site-button aon-btn-signup m-l20">
-                                    <i class="fa fa-plus"></i> Add Listing
-                                </a>
+                                @if (!User.Identity.IsAuthenticated)
+                                {
+                                    <a class="site-button aon-btn-signup m-l20">
+
+                                        <i class="fa fa-plus"></i> Add Listing
+
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a asp-area="adminarea" asp-controller="category" asp-action="index" class="site-button aon-btn-signup m-l20">
+
+                                        <i class="fa fa-plus"></i> Add Listing
+
+                                    </a>
+                                }
+
+
+
                             </div>
 
-                            </div>                            
+                        </div>
 
-                    </div>    
+                    </div>
 
                 </div>
             </div>
@@ -179,13 +194,10 @@
 
         @RenderBody()
 
-       @await Component.InvokeAsync("Footer");
+        @await Component.InvokeAsync("Footer");
 
 </body>
 
 
 
 </html>
-
-
-
