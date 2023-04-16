@@ -66,7 +66,7 @@
                             <li class="has-child">
                                 <a href="javascript:;">Pages</a>
                                 <ul class="sub-menu">
-                                    <li><a href="about-us.html">About us</a></li>
+                                    <li><a asp-controller="about" asp-action="index">About us</a></li>
                                     <li>
                                         <a asp-controller="category" asp-action="index">Categories</a>
 
@@ -94,7 +94,7 @@
                                     <li><a asp-controller="blog" asp-action="index">Blog detail</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a asp-controller="contact" asp-action="index">Contact</a></li>
                         </ul>
 
                     </div>
@@ -147,7 +147,7 @@
                             <span class="job-meta-icon"><img src="~/assets/images/job-cin/location.png" alt=""></span>
                             <div class="sf-job-meta-info">
                                 <h5 class="job-meta-title">Location:</h5>
-@*                                <span class="job-meta-text"><a class="google_map_link" href="http://maps.google.com/" target="_blank">@Model.City.Name</a></span>*@
+                         
                             </div>
                         </li>
                         <li>
@@ -223,7 +223,7 @@
                         <aside class="sf-jobdetail-sidebar">
 
                             <div class="sf-jobdetail-blocks">
-                                <span id="ApplyNow">   <a class="sf-btn-large2"  style="cursor:pointer">Show EmailAddress <i class="fa fa-send"></i>   </a></span>
+                                <span id="ApplyNow">   <a class="sf-btn-large2"  style="cursor:pointer">Show Email <i class="fa fa-send"></i>   </a></span>
                                 <div style="font-size:1.5rem;position:absolute;margin-left:120px;margin-top:-50px;display:none" id="Gmail"><a href="mailto:@Model.EmailAddress">@Model.EmailAddress</a></div>
                             </div>
                      
