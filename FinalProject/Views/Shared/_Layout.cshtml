@@ -146,18 +146,17 @@
 
                         <div class="extra-nav header-2-nav">
                             <div class="extra-cell">
-                                <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
 
+                                <button  type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
                                     @if (User.Identity.IsAuthenticated)
                                     {
-
                                         <span>@User.Identity.Name</span>
-
                                         <a class="nav-link" asp-controller="account" asp-action="logout">Logout</a>
 
                                     }
                                     else
                                     {
+                                   
                                         <i class="fa fa-user">Login</i>
 
                                     }
@@ -197,7 +196,5 @@
         @await Component.InvokeAsync("Footer");
 
 </body>
-
-
 
 </html>

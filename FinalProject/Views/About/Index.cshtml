@@ -2,144 +2,168 @@
 
 @{
     ViewData["Title"] = "Index";
+
 }
 
-    <div class="loading-area">
-        <div class="loading-box"></div>
-        <div class="loading-pic">
-            <div class="windows8">
-                <div class="wBall" id="wBall_1">
-                    <div class="wInnerBall"></div>
-                </div>
-                <div class="wBall" id="wBall_2">
-                    <div class="wInnerBall"></div>
-                </div>
-                <div class="wBall" id="wBall_3">
-                    <div class="wInnerBall"></div>
-                </div>
-                <div class="wBall" id="wBall_4">
-                    <div class="wInnerBall"></div>
-                </div>
-                <div class="wBall" id="wBall_5">
-                    <div class="wInnerBall"></div>
-                </div>
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="windows8">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
             </div>
         </div>
     </div>
-    
-	<div class="page-wraper">       
-        <header class="site-header header-style-2 mobile-sider-drawer-menu header-full-width">
-          <div class="sticky-header main-bar-wraper  navbar-expand-lg">
-            <div class="main-bar">  
+</div>
 
-            <div class="container clearfix"> 
-               
-                <div class="logo-header">
-                    <div class="logo-header-inner logo-header-one">
-                      <a href="index-2.html">
-                      <img src="~/assets/images/logo-dark.png" alt="">
-                      </a>
-                    </div>
-                </div>  
+<div class="page-wraper">
+    <header class="site-header header-style-2 mobile-sider-drawer-menu header-full-width">
+        <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+            <div class="main-bar">
+
+                <div class="container clearfix">
+                   
+
+                        <div class="logo-header">
+                            <div  class="logo-header-inner logo-header-one">
+                                <a href="index-2.html">
+                                    <img  src="~/assets/images/logo-dark.png" alt="">
+                                </a>
+                            </div>
+                        </div>
 
 
-                <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar icon-bar-first"></span>
-                    <span class="icon-bar icon-bar-two"></span>
-                    <span class="icon-bar icon-bar-three"></span>
-                </button> 
+                    <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar icon-bar-first"></span>
+                        <span class="icon-bar icon-bar-two"></span>
+                        <span class="icon-bar icon-bar-three"></span>
+                    </button>
 
-                <!-- MAIN Vav -->
-                <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
+                    <!-- MAIN Vav -->
+                    <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
 
-                    <ul class=" nav navbar-nav">
+                        <ul class=" nav navbar-nav">
                             <li class="has-child current-menu-item">
                                 <a asp-controller="home" asp-action="index">Home</a>
-                          <ul class="sub-menu">
-                          </ul>
-                      </li>
+                                <ul class="sub-menu">
+                                </ul>
+                            </li>
 
-                      <li class="has-child">
-                          <a href="javascript:;">Pages</a>
-                          <ul class="sub-menu">
+                            <li class="has-child">
+                                <a href="javascript:;">Pages</a>
+                                <ul class="sub-menu">
                                     <li><a asp-controller="about" asp-action="index">About us</a></li>
                                     <li>
                                         <a asp-controller="category" asp-action="index">Categories</a>
-                                  
-                              </li>
 
-                          </ul>                                
-                      </li>
+                                    </li>
 
-                      <li class="has-child"><a  asp-controller="profile" asp-action="index" >Profile</a>  
-                      </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-child">
+                                <a asp-controller="profile" asp-action="index">Profile</a>
+                            </li>
 
                             <li class="has-child">
                                 <a asp-controller="job" asp-action="index">Jobs</a>
-                          <ul class="sub-menu">
+                                <ul class="sub-menu">
                                     <li><a asp-controller="job" asp-action="jobdetail">Job detail</a></li>
-                                </ul>                                
-                      </li>
+                                </ul>
+                            </li>
 
                             <li class="has-child">
                                 <a asp-controller="blog" asp-action="index">Blog</a>
                                 <ul class="sub-menu">
                                     <li><a asp-controller="blog" asp-action="detail">Blog detail</a></li>
                                 </ul>
-                      </li>
+                            </li>
 
-                      <li><a asp-controller="contact" asp-action="index">Contact</a></li>  
-                    </ul>
+                            <li><a asp-controller="contact" asp-action="index">Contact</a></li>
+                        </ul>
 
-                </div>
+                    </div>
 
-                <div class="extra-nav header-2-nav">
-                            <div class="extra-cell">
-                                <!--Login-->
-                                <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                    <div class="extra-nav header-2-nav">
+                        <div class="extra-cell">
+                            <!--Login-->
+                            @if (User.Identity.IsAuthenticated)
+                            {
+
+
+                                <button style="display:none" type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                                    <i class="fa fa-user"></i> Login
+
+                                </button>
+
+                                <!--Sign up-->
+                                <a style="display:none" href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                    <i class="fa fa-plus"></i> Add Listing
+                                </a>
+
+                            }
+                            else
+                            {
+
+                                <button style="display:none" type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
                                     <i class="fa fa-user"></i> Login
                                 </button>
                                 <!--Sign up-->
-                                <a href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                <a style="display:none" href="mc-profile.html" class="site-button aon-btn-signup m-l20">
                                     <i class="fa fa-plus"></i> Add Listing
                                 </a>
-                            </div>
-                                
-                            </div>                             
-            </div>    
+
+                            }
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
-          </div>
-        </header>
-        <!-- HEADER END -->
-    
-        <!-- Content -->
-        <div class="page-content">
-         
-            <div class="aon-page-benner-area">
-                <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/@Model.Background.ImageUrl">
-                    <div class="sf-overlay-main" style="opacity:0.8; background-color:#022279;"></div>
-                    <div class="sf-banner-heading-wrap">
-                        <div class="sf-banner-heading-area">
-                            <div class="sf-banner-heading-large">About Us</div>
-                            <div class="sf-banner-breadcrumbs-nav">
-                                <ul class="list-inline">
-                                <li><a asp-controller="home" asp-action="index" > Home </a></li>
-                                    <li>About Us</li>
-                                </ul>
-                            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- Content -->
+    <div class="page-content">
+
+        <div class="aon-page-benner-area">
+            <div class="aon-page-banner-row" style="background-image: url(/assets/images/banner/@Model.Background.ImageUrl">
+                <div class="sf-overlay-main" style="opacity:0.8; background-color:#022279;"></div>
+                <div class="sf-banner-heading-wrap">
+                    <div class="sf-banner-heading-area">
+                        <div class="sf-banner-heading-large">About Us</div>
+                        <div class="sf-banner-breadcrumbs-nav">
+                            <ul class="list-inline">
+                                <li><a asp-controller="home" asp-action="index"> Home </a></li>
+                                <li>About Us</li>
+                            </ul>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
+        </div>
 
-       
-            <!-- Banner Area -->
- 
 
+        <!-- Banner Area -->
         <!-- Banner Area End -->
-            <!-- Why Choose us -->
+        <!-- Why Choose us -->
         <div style="margin-top:200px" class="aon-whycoose-area sf-curve-pos">
             <div class="container-fluid">
                 <div class="sf-whycoose-section">
@@ -152,7 +176,7 @@
                                         <div class="col-md-12  margin-b-50">
                                             <span class="aon-sub-title">Choose</span>
                                             <h2 class="sf-title">Why Choose us</h2>
-                                        
+
                                         </div>
 
                                         @await Component.InvokeAsync("Choose");
@@ -171,85 +195,79 @@
                 </div>
             </div>
         </div>
-            <!-- Why Choose us END -->
-            <!-- About Area -->
+
         <div style="margin-top:100px" class="aon-about-area">
-                <div class="container">
-                 
-                    <div class="section-content">
-                        <div class="row d-flex flex-wrap align-items-center a-b-none">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="aon-about-pic">
-                                    <img src="~/assets/images/@Model.About.ImageUrl" alt="" />
-                                </div>
+            <div class="container">
+
+                <div class="section-content">
+                    <div class="row d-flex flex-wrap align-items-center a-b-none">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="aon-about-pic">
+                                <img src="~/assets/images/@Model.About.ImageUrl" alt="" />
                             </div>
-                            <div class="col-lg-6 col-md-12">
-                                <!--Title Section Start-->
-                                <div class="section-head">
-                                    <span class="aon-sub-title">About</span>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <!--Title Section Start-->
+                            <div class="section-head">
+                                <span class="aon-sub-title">About</span>
                                 <h2 class="sf-title">@Model.About.Title</h2>
-                                    <p>@Model.About.Desc </p>
-                                </div>
-                                <!--Title Section End-->
+                                <p>@Model.About.Desc </p>
                             </div>
+
                         </div>
                     </div>
-                
-
                 </div>
+
+
             </div>
-            <!-- About Area END -->
-            <!-- How it Work -->
-            <!-- How it Work END -->
-            <!-- Statics -->
-
-             <div class="site-bg-primary aon-statics-area sf-curve-pos">
-        <div class="container">
-
-            <div class="section-content">
-                <div class="row d-flex flex-wrap align-items-center a-b-none">
-                    <div class="col-lg-6 col-md-12">
-                        <!--Title Section Start-->
-                        <div class="section-head">
-                            <span class="aon-sub-title">Statics</span>
-                            <h2 class="sf-title">Trusted by thousands of people all over the world</h2>
-                          
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        
-                        <div class="aon-statics-blocks">
-                        @await Component.InvokeAsync("Static");
-                        <!--Statics-blocks Section End-->
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
-    </div>
-            <!-- Provider END -->
-            <!-- Testimonial Section -->
-            <div class="aon-testmonials-area sf-curve-pos">
-                <div class="container">
-                    <!--Title Section Start-->
-                    <div class="section-head">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <span class="sf-sub-title">Testimonial</span>
-                                <h2 class="sf-title">What People Say</h2>
+
+
+        <div class="site-bg-primary aon-statics-area sf-curve-pos">
+            <div class="container">
+
+                <div class="section-content">
+                    <div class="row d-flex flex-wrap align-items-center a-b-none">
+                        <div class="col-lg-6 col-md-12">
+
+                            <div class="section-head">
+                                <span class="aon-sub-title">Statics</span>
+                                <h2 class="sf-title">Trusted by thousands of people all over the world</h2>
+
                             </div>
-                            <div class="col-lg-6 col-md-12">
+
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+
+                            <div class="aon-statics-blocks">
+                                @await Component.InvokeAsync("Static");
 
                             </div>
                         </div>
                     </div>
-                    <!--Title Section End-->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="aon-testmonials-area sf-curve-pos">
+            <div class="container">
+
+                <div class="section-head">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <span class="sf-sub-title">Testimonial</span>
+                            <h2 class="sf-title">What People Say</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                        </div>
+                    </div>
+                </div>
+
                 @await Component.InvokeAsync("People");
 
-                </div>
             </div>
-            
+        </div>
 
-      
+
+

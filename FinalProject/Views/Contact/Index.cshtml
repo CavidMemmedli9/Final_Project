@@ -169,21 +169,30 @@
 
                         <div class="extra-cell">
 
-                            <!--Login-->
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <button style="display:none" type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                                    <i class="fa fa-user"></i> Login
+                                </button>
+                                <!--Sign up-->
+                                <a style="display:none" href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                    <i class="fa fa-plus"></i> Add Listing
+                                </a>
+                                
 
-                            <button type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                            }
+                            else
+                            {
+                                <button style="display:none" type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
+                                    <i class="fa fa-user"></i> Login
+                                </button>
+                                <!--Sign up-->
+                                <a style="display:none"  class="site-button aon-btn-signup m-l20">
+                                    <i class="fa fa-plus"></i> Add Listing
+                                </a>
 
-                                <i class="fa fa-user"></i> Login
+                            }
 
-                            </button>
-
-                            <!--Sign up-->
-
-                            <a href="mc-profile.html" class="site-button aon-btn-signup m-l20">
-
-                                <i class="fa fa-plus"></i> Add Listing
-
-                            </a>
 
                         </div>
                     </div>
