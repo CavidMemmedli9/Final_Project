@@ -36,12 +36,10 @@
                 <div class="container clearfix">
                    
 
-                        <div class="logo-header">
+                      <div class="logo-header">
                             <div  class="logo-header-inner logo-header-one">
-                                <a href="index-2.html">
-                                    <img  src="~/assets/images/logo-dark.png" alt="">
-                                </a>
-                            </div>
+                            
+                                <img  src="~/assets/images/logo-dark.png" alt=""> </div>
                         </div>
 
 
@@ -52,12 +50,15 @@
                         <span class="icon-bar icon-bar-three"></span>
                     </button>
 
-                    <!-- MAIN Vav -->
+
                     <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
 
                         <ul class=" nav navbar-nav">
                             <li class="has-child current-menu-item">
-                                <a asp-controller="home" asp-action="index">Home</a>
+                               
+                                    <a  asp-controller="home" asp-action="index">Home</a>
+                                
+                              
                                 <ul class="sub-menu">
                                 </ul>
                             </li>
@@ -68,7 +69,6 @@
                                     <li><a asp-controller="about" asp-action="index">About us</a></li>
                                     <li>
                                         <a asp-controller="category" asp-action="index">Categories</a>
-
                                     </li>
 
                                 </ul>
@@ -102,34 +102,27 @@
                             <!--Login-->
                             @if (User.Identity.IsAuthenticated)
                             {
-
-
                                 <button style="display:none" type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
                                     <i class="fa fa-user"></i> Login
-
                                 </button>
 
                                 <!--Sign up-->
-                                <a style="display:none" href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                <a style="display:none"  class="site-button aon-btn-signup m-l20">
                                     <i class="fa fa-plus"></i> Add Listing
                                 </a>
 
                             }
                             else
                             {
-
                                 <button style="display:none" type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
                                     <i class="fa fa-user"></i> Login
                                 </button>
                                 <!--Sign up-->
-                                <a style="display:none" href="mc-profile.html" class="site-button aon-btn-signup m-l20">
+                                <a style="display:none" asp-area="adminarea" asp-controller="category" asp-action="index" class="site-button aon-btn-signup m-l20">
                                     <i class="fa fa-plus"></i> Add Listing
                                 </a>
 
                             }
-
-
-
 
                         </div>
 
@@ -182,9 +175,6 @@
                                         @await Component.InvokeAsync("Choose");
                                     </div>
                                 </div>
-
-
-
 
                             </div>
                         </div>
@@ -268,6 +258,3 @@
 
             </div>
         </div>
-
-
-

@@ -91,9 +91,7 @@
 
         <!-- Sidebar Holder -->
         <nav id="sidebar-admin-wraper">
-          @*  <div class="pro-my-account-wrap">
-                Vender My Account
-            </div>*@
+          
             <div class="admin-nav">
                 <ul class="">
                     <li class="active">
@@ -117,18 +115,7 @@
                     <li>
                         <a asp-area="adminarea" asp-controller="Subscribe" asp-action="index"><i class="fa fa-user-secret"></i><span class="admin-nav-text">Subscribe</span></a>
                     </li>
-                  @*  <li>
-                        <a href="mc-team-members.html"><i class="fa fa-users"></i><span class="admin-nav-text">Team Members</span></a>
-                    </li>
-                    <li>
-                        <a href="mc-business-hours.html"><i class="fa  fa-clock-o"></i><span class="admin-nav-text">Business Hour</span></a>
-                    </li>
-                    <li>
-                        <a href="mc-upload-identity.html"><i class="fa fa-id-card-o"></i><span class="admin-nav-text">Upload Identity </span></a>
-                    </li>
-                    <li>
-                        <a href="mc-upgrade-account.html"><i class="fa fa-cloud-upload"></i><span class="admin-nav-text">Upgrade Account</span></a>
-                    </li>*@
+              
 
                 </ul>
             </div>
@@ -138,74 +125,14 @@
         <div id="content">
 
             <div class="content-admin-main">
-@*
-                <div class="admin-top-area d-flex flex-wrap justify-content-between m-b30 align-items-center">*
-                    <div class="admin-left-area">
-                        <a class="nav-btn-admin d-flex justify-content-between align-items-center" id="sidebarCollapse">
-                            <span class="nav-btn-text">Dashboard Menu</span>
-                            <span class="fa fa-reorder"></span>
-                        </a>
-                    </div>
 
-                   <div class="admin-area-mid">
-                        <div class="admin-area-heading">
-                            <span>Your Tariff Plan : </span>
-                            <strong>Extended <i class="fa fa-caret-down"></i></strong>
-                        </div>
-                        <div class="admin-area-content">you Are on Extended . Use link bellow to view details or upgrade.Details </div>
-
-                    </div
-
-                   <div class="admin-right-area">
-                        <div class="pro-pic-info-wrap d-flex">
-                            <div class="pro-pic-box">
-                                <img src="images/user.jpg" alt="" />
-                            </div>
-                            <div class="pro-pic-info">
-                                <strong>David Wood</strong>
-                                <span>Designer</span>
-                            </div>
-                            <span class="feather-icon has-toltip">
-                                <i class="feather-power"></i>
-                                <span class="header-toltip">Notification</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>*@
 
 
                 <div class="aon-admin-heading">
         @RenderBody()
                 </div>                
 
-@*
-                <div class="card aon-card">
-                    <div class="card-header aon-card-header"><h4><i class="fa fa-user"></i> Upload Identity Proof</h4>
-                    </div>
 
-                    <div class="card-body aon-card-body">
-                        <div class="alert alert-warning m-b30">
-                            Document verification process is going on.  
-                        </div>
-                        <form action="https://aonetheme.com/sf-html-demo/upload.php" class="dropzone dropzone-custom m-b30">
-                            <div class="dz-message">    
-                                <span class="note">
-                                    Upload Front side document
-                                </span>
-                            </div>
-                        </form>
-                        <form action="https://aonetheme.com/sf-html-demo/upload.php" class="dropzone dropzone-custom">
-                            <div class="dz-message">    
-                                <span class="note">
-                                    Upload Back side document
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-
-
-
-                </div>*@
 
             </div>
 

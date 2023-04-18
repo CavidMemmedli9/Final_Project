@@ -84,10 +84,10 @@
                     <div class="container clearfix">
                         <div class="logo-header">
                             <div class="logo-header-inner logo-header-one">
-                                <a href="index-2.html">
+                            @*    <a>
                                     <img src="~/assets/images/logo-light.png" alt="" class="site-logo-has">
                                     <img src="~/assets/images/logo-dark.png" alt="" class="site-logo-sticky">
-                                </a>
+                                </a>*@
                             </div>
                         </div>
                         <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
@@ -100,10 +100,10 @@
                         <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-start">
 
                             <ul class=" nav navbar-nav">
-                                <li class="has-child current-menu-item">
-                                    <a href="javascript:;">Home</a>
-
-                                </li>
+                                
+                                    <li  class="has-child ">
+                                        <a asp-controller="home" asp-action="index">Home</a>
+                                    </li>
 
                                 <li class="has-child">
                                     <a href="javascript:;">Pages</a>
@@ -111,12 +111,10 @@
                                         <li><a asp-controller="about" asp-action="index">About us</a></li>
                                         <li>
                                             <a asp-controller="category" asp-action="index">Categories</a>
-
                                         </li>
-
-
+                                    </ul>
                                 </li>
-                            </ul>
+                           
                             </li>
 
                             <li class="has-child">
@@ -150,33 +148,33 @@
                                 <button  type="button" class="site-button aon-btn-login" data-toggle="modal" data-target="#login-signup-model">
                                     @if (User.Identity.IsAuthenticated)
                                     {
-                                        <span>@User.Identity.Name</span>
-                                        <a class="nav-link" asp-controller="account" asp-action="logout">Logout</a>
+                                            <span>@User.Identity.Name</span>
+                                            <a class="nav-link" asp-controller="account" asp-action="logout">Logout</a>
 
                                     }
                                     else
                                     {
-                                   
-                                        <i class="fa fa-user">Login</i>
+
+                                            <i class="fa fa-user">Login</i>
 
                                     }
 
                                 </button>
                                 @if (!User.Identity.IsAuthenticated)
                                 {
-                                    <a class="site-button aon-btn-signup m-l20">
+                                        <a class="site-button aon-btn-signup m-l20">
 
-                                        <i class="fa fa-plus"></i> Add Listing
+                                            <i class="fa fa-plus"></i> Add Listing
 
-                                    </a>
+                                        </a>
                                 }
                                 else
                                 {
-                                    <a asp-area="adminarea" asp-controller="category" asp-action="index" class="site-button aon-btn-signup m-l20">
+                                        <a asp-area="adminarea" asp-controller="category" asp-action="index" class="site-button aon-btn-signup m-l20">
 
-                                        <i class="fa fa-plus"></i> Add Listing
+                                            <i class="fa fa-plus"></i> Add Listing
 
-                                    </a>
+                                        </a>
                                 }
 
 
@@ -189,6 +187,7 @@
 
                 </div>
             </div>
+    </div>
         </header>
 
         @RenderBody()

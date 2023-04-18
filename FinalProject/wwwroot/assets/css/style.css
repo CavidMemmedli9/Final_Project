@@ -4552,7 +4552,7 @@ THEMEFOREST REQUIRED CLASSES
 
   background-color: transparent;
 
-  color: #ffb600;
+  color: black;
 
 }
 
@@ -5144,39 +5144,29 @@ THEMEFOREST REQUIRED CLASSES
 
 .header-style-1 .header-nav .nav > li > a {
 
-  color: #fff;
+  color: white;
 
 }
 
-.header-style-1 .header-nav .nav > li:hover > a {
+    .header-style-1 .header-nav .nav > li:hover > a {
+        color: burlywood;
+    }
 
-  color: #ffb600;
+    .header-style-1 .header-nav .nav > li.active > a, .header-style-1 .header-nav .nav > li.current-menu-item > a {
+        color: burlywood;
+    }
 
-}
+    .header-style-1 .color-fill .header-nav .nav > li > a {
+        color: burlywood;
+    }
 
-.header-style-1 .header-nav .nav > li.active > a, .header-style-1 .header-nav .nav > li.current-menu-item > a {
+    .header-style-1 .color-fill .header-nav .nav > li:hover > a {
+        color: burlywood;
+    }
 
-  color: #ffb600;
-
-}
-
-.header-style-1 .color-fill .header-nav .nav > li > a {
-
-  color: #000;
-
-}
-
-.header-style-1 .color-fill .header-nav .nav > li:hover > a {
-
-  color: #ffb600;
-
-}
-
-.header-style-1 .color-fill .header-nav .nav > li.active > a, .header-style-1 .color-fill .header-nav .nav > li.current-menu-item > a {
-
-  color: #ffb600;
-
-}
+    .header-style-1 .color-fill .header-nav .nav > li.active > a, .header-style-1 .color-fill .header-nav .nav > li.current-menu-item > a {
+        color: burlywood;
+    }
 
 /*Header Style 2*/
 
